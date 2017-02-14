@@ -28,3 +28,121 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+#sub-nav{
+
+background-color: #fff;
+border-top: 1px solid #bfc1c3;
+border-bottom: 1px solid #bfc1c3;
+padding-top: 0.75em;
+padding-bottom: 0.75em;
+padding: 0;
+z-index: 999;
+
+}
+#sub-nav li{
+position:relative;
+display:inline;
+}
+#sub-nav a{
+display: inline-block;
+font-weight: bold;
+margin: 0;
+outline: 0;
+padding: 15px 30px;
+text-decoration: none;
+}
+#sub-nav ul{
+position:absolute;
+/*top:100%; Uncommenting this makes the dropdowns work in IE7 */
+left:-9999px;
+margin:0;
+padding:0;
+text-align:left;
+}
+#sub-nav ul li{
+display:block;
+}
+#sub-nav li:hover ul{
+left:0;
+}
+#sub-nav li:hover a{
+text-decoration:underline;
+background:#f1f1f1;
+}
+#sub-nav li:hover ul a{
+text-decoration:none;
+background:#dde0e2;
+}
+#sub-nav li:hover ul a:hover{
+text-decoration:underline;
+background:#f1f1f1;
+}
+#sub-nav ul a{
+white-space:nowrap;
+display:block;
+border-bottom:1px solid #ccc;
+}
+
+#sub-nav li a.active{
+font-weight: bold;
+background-color: #004A83;
+color:#fff;
+
+
+}
+
+
+ul.sub-tabs {
+    border-bottom:2px solid #ccc;
+    display:block;
+    width:100%;
+    overflow:auto;
+    margin:0!important;
+}
+
+ul.sub-tabs li a{
+    background: #dde0e2;
+    padding:15px 25px;
+    margin: 0 4px 0px 0;
+    display:inline-block;
+    position:relative;
+    float:left;
+    text-decoration:none;
+    color:#000;
+}
+
+ul.sub-tabs li a:hover{
+    background: #dde0e2;
+}
+
+ul.sub-tabs li a.active{
+    background: #ffc136;
+    display:block;
+    text-decoration:none;
+}
+
+
+
+ul.sub-tabs li a span.badge  {
+    font-size: 14px;
+    padding:1px 3px 0px 4px;
+    min-width: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    background:#004A83;
+    margin:0 0 0 10px;
+    font-weight:bold;
+    color:#fff;
+}
+
+ul.sub-tabs li a.active span.badge {
+    background:#fff;
+    background:#b10e1e;
+}
+
+.form-control.full{
+    width:100%;
+}

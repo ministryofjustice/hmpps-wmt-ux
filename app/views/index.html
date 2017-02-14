@@ -1,7 +1,9 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+  {% block service_name %}
+            {% if serviceName %} {{ serviceName }} {% endif %}
+          {% endblock %}
 {% endblock %}
 
 {% block content %}
@@ -20,7 +22,7 @@
       <h2 class="heading-medium">Sprint 1</h2>
 
       <ul class="list list-bullet">
-						<li><a href="">V 1.0</a>
+						<li><a href="alpha/v1/index">V 1.0</a>
 						</li>
 					</ul>
 
