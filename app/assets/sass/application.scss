@@ -146,3 +146,44 @@ ul.sub-tabs li a.active span.badge {
 .form-control.full{
     width:100%;
 }
+
+table.detail-view tr th{
+text-align:center;
+}
+
+span.rotate{
+    -webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+writing-mode: tb-rl;
+text-align:center;
+}
+
+table.detail-view tr td{
+    font-size:12px;
+}
+
+table.detail-view tr td{
+    font-size:14px;
+    text-align:center;
+}
+
+table.detail-view tr td:first-child{
+    padding-left:10px;
+    text-align:left;
+}
+
+table.detail-view tr:nth-child(even){
+    background:#f4f4f4;
+}
+
+table.detail-view tr th{
+    font-size:18px;
+    background:#e1f2fd;
+}
+
+table tr.table-sub-header td{
+    font-size:15px;
+    font-weight:bold;
+    background:#e9f4fb;
+}
