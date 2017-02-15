@@ -235,7 +235,7 @@ table.case-detail-view tr td:first-child, table.case-detail-view tr th:first-chi
 }
 
 table.case-detail-view tr:nth-child(even){
-    background:#f4f4f4;
+    
 }
 
 table.case-detail-view tr th{
@@ -252,6 +252,46 @@ table.case-detail-view tr th a{
 }
 
 table.case-detail-view tr th a.active{
+    display:inline-block;
+    width:100px;
+    float:left;
+    position:relative;
+    text-align:left;
+}
+
+
+table.case-detail-view-expanded tr td{
+    font-size:12px;
+}
+
+table.case-detail-view-expanded tr td{
+    font-size:13px;
+    text-align:center;
+}
+
+table.case-detail-view-expanded tr td:first-child, table.case-detail-view tr th:first-child{
+    padding-left:10px;
+    text-align:left;
+}
+
+table.case-detail-view-expanded tr:nth-child(even){
+    
+}
+
+table.case-detail-view-expanded tr th{
+    font-size:14px;
+    background:#e1f2fd;
+    text-align:center;
+}
+
+table.case-detail-view-expanded tr th a{
+    display:inline-block;
+    width:100px;
+    float:left;
+    position:relative;
+}
+
+table.case-detail-view-expanded tr th a.active{
     display:inline-block;
     width:100px;
     float:left;
@@ -279,4 +319,35 @@ tr.border-none th, tr.border-none td{
     width:100%;
     overflow-x:scroll;
 }
+
+
+
+table.case-detail-view-expanded th.active{
+    background:#f9e8ab;
+}
+
+
+table.case-detail-view-expanded td:nth-child(n+2){
+    background:#f9e8ab;
+}
+
+table.case-detail-view-expanded td:nth-child(n+11){
+    
+}
+
+
+.pad-left {
+    padding-left:10px;
+}
+
+table.case-detail-view-expanded tr .bg-blue{
+    background:#e1f2fd;
+}
+
+table.case-detail-view-expanded tr .bg-white{
+    background:#fff;
+}
+
+
+
 
