@@ -29,6 +29,9 @@ $path: "/public/images/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+.bold td{
+    font-weight:bold!important;
+}
 
 #sub-nav{
 
@@ -395,6 +398,54 @@ table.case-detail-index-expanded tr .bg-white{
     background:#fff;
 }
 
+////
+
+table.case-detail-index-expanded tr th{
+   font-size:16px;
+}
+
+table.case-detail-index-expanded tr th:nth-child(1){
+    border-right:2px solid #c4c4c4;
+}
+
+table.case-detail-index-expanded tr th:nth-child(2){
+    border-right:2px solid #c4c4c4;
+}
+
+
+
+
+
+table.case-detail-index-expanded tr th:nth-child(3){
+    border-right:2px solid #c4c4c4;
+}
+
+table.case-detail-index-expanded tr td:nth-child(2){
+    border-right:2px solid #c4c4c4;
+}
+
+table.case-detail-index-expanded tr td:nth-child(16){
+    border-right:2px solid #c4c4c4;
+}
+
+table.case-detail-index-expanded tr td:nth-child(18){
+    border-right:2px solid #c4c4c4;
+}
+
+td.b-left {
+padding-left:10px;
+    border-left:2px solid #c4c4c4;
+
+}
+
+
+
+
+
+////
+
 #global-header-bar, #global-cookie-message p, #footer .footer-wrapper, #content, #global-header .header-wrapper {
     max-width:1240px!important;
+    padding-left:20px;
+    padding-right:20px;
 }
