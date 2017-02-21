@@ -11,9 +11,16 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  <h2 class="heading-medium">Search</h2>
+ <!--  <h1 class="heading-medium grey">Medway</h1>
+  <h2 class="heading-medium">Kent</h2>
+  <h3 class="heading-medium">South East and Eastern</h3> -->
 
-  <div class="grid-row">
+  <h1 class="heading-xlarge">
+      <span class="heading-secondary">South East and Eastern</span>
+       Kent - Medway
+    </h1>
+
+  <!-- <div class="grid-row">
 
 
     <div class="column-one-third">
@@ -39,14 +46,14 @@
     
 
   </div>
+ -->
 
-
-   <div class="row">
+   <!-- <div class="row">
     <a href="" class="button search">Search</a>
-    <a href="search" class="link link-left">Advanced search</a>
-  </div>
+    <a href="search" class="link link-left">Change</a>
+  </div> -->
 
-<br>
+
   <ul id="sub-nav">
 
     <li>
@@ -55,31 +62,39 @@
     <li>
       <a href="capacity">Capacity</a>
     </li>
-    <li>
+    <!-- <li>
       <a href="cases">Cases</a>
-    </li>
-    <li>
+    </li>  -->
+    <!-- <li>
       <a href="">LDU Notes</a>
-    </li>  
+    </li>  -->
   </ul>
 
   <br>
 
+
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/1spRTpSmul62T9Vhjpm8uwL41oIegW4e3iaOhagHQnGs/pubhtml?gid=0&amp;single=true&amp;chrome=false&amp;widget=false&amp;headers=false" width="100%" height="500px" frameborder="0"></iframe>
+
+
+<!-- 
 <div class="table-container">
   <table class="detail-view">
     
     <tr>
       <th colspan="2">Officer</th>
-      <th colspan="6" class="b-left">Cases</th>
+      <th colspan="2" class="b-left">Capacity</th>
+      <th colspan="4" class="b-left">Cases</th>
       <th colspan="2" class="b-left">Hours</th>
     </tr>
 
     <tr class="table-sub-header">
       <td>Name</td>
       <td>Grade</td>
-      <td class="b-left">Points</td>
-      <td>%</td>
-      <td><a href="index-expand">Community <span class="expand">[+]</span></a></td>
+      <td class="b-left">Points Remaining</td>
+      <td>Utilisation</td>
+      <td class="b-left"><a href="index-expand">Community <span class="expand">[+]</span></a></td>
       <td><a href="index-expand">Licence <span class="expand">[+]</span></a></td>
       <td><a href="index-expand">Custody <span class="expand">[+]</span></a></td>
 
@@ -90,48 +105,165 @@
     </tr>
 
     <tr>
-      <td>Christopher Sisk</td>
-      <td>PSO</td>
-      <td class="b-left">35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td class="b-left">0</td>
-      <td>0</td>
-    </tr>
-
-    <tr>
-      <td>Christopher Sisk</td>
-      <td>PSO</td>
-      <td class="b-left">35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td class="b-left">0</td>
+      <td>Christopher Kelly</td>
+      <td>PO</td>
+      <td class="b-left"> <span class="o-u">&#8211;208</span></td>
+      <td> <span class="o-u">109%</span></td>
+      <td class="b-left">20</td>
+      <td>10</td>
+      <td>5</td>
+      <td>35</td>
+      <td class="b-left">37</td>
       <td>0</td>
     </tr>
 
     <tr>
-      <td>Christopher Sisk</td>
+      <td>Simon Brown</td>
       <td>PSO</td>
-      <td class="b-left">35</td>
+      <td class="b-left"> <span class="o-u">&#8211;404</span></td>
+      <td> <span class="o-u">124%</span></td>
+      <td class="b-left">5</td>
+      <td>31</td>
+      <td>5</td>
+      <td>41</td>
+      <td class="b-left">37</td>
       <td>0</td>
+    </tr>
+
+    <tr>
+      <td>Conor Smitt</td>
+      <td>PO</td>
+      <td class="b-left">120</td>
+      <td>89%</td>
+      <td class="b-left">8</td>
+      <td>10</td>
+      <td>12</td>
+      <td>30</td>
+      <td class="b-left">37</td>
+      <td>22.60</td>
+    </tr>
+
+    <tr>
+      <td>Thomas Sweeney</td>
+      <td>PO</td>
+      <td class="b-left">30</td>
+      <td>93%</td>
+      <td class="b-left">15</td>
+      <td>15</td>
+      <td>1</td>
+      <td>31</td>
+      <td class="b-left">33.60</td>
       <td>0</td>
-      <td>1000</td>
+    </tr>
+
+    <tr>
+      <td>Joe Bloggs</td>
+      <td>PO</td>
+      <td class="b-left">80</td>
+      <td>96%</td>
+      <td class="b-left">15</td>
+      <td>15</td>
+      <td>1</td>
+      <td>31</td>
+      <td class="b-left">33.60</td>
       <td>0</td>
+    </tr>
+
+    <tr>
+      <td>Jim Wright</td>
+      <td>PO</td>
+      <td class="b-left"><span class="o-u">&#8211;210</span></td>
+      <td><span class="o-u">110%</span></td>
+      <td class="b-left">20</td>
+      <td>10</td>
+      <td>9</td>
+      <td>39</td>
+      <td class="b-left">37</td>
       <td>0</td>
-      <td class="b-left">0</td>
+    </tr>
+
+    <tr>
+      <td>Betty White</td>
+      <td>PO</td>
+      <td class="b-left"> <span class="o-u">&#8211; 208</span></td>
+      <td> <span class="o-u">109%</span></td>
+      <td class="b-left">20</td>
+      <td>10</td>
+      <td>5</td>
+      <td>35</td>
+      <td class="b-left">37</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td>John Orange</td>
+      <td>PQF</td>
+      <td class="b-left"> <span class="o-u">&#8211; 404</span></td>
+      <td> <span class="o-u">124%</span></td>
+      <td class="b-left">5</td>
+      <td>31</td>
+      <td>5</td>
+      <td>41</td>
+      <td class="b-left">37</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td>Colin Black</td>
+      <td>PSO</td>
+      <td class="b-left">67</td>
+      <td>97%</td>
+      <td class="b-left">8</td>
+      <td>10</td>
+      <td>12</td>
+      <td>30</td>
+      <td class="b-left">37</td>
+      <td>22.60</td>
+    </tr>
+
+    <tr>
+      <td>Tim Purple</td>
+      <td>PQF</td>
+      <td class="b-left">99</td>
+      <td>91%</td>
+      <td class="b-left">15</td>
+      <td>15</td>
+      <td>1</td>
+      <td>31</td>
+      <td class="b-left">33.60</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td>Sam Blue</td>
+      <td>PO</td>
+      <td class="b-left">97</td>
+      <td>98%</td>
+      <td class="b-left">15</td>
+      <td>15</td>
+      <td>1</td>
+      <td>31</td>
+      <td class="b-left">33.60</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td>Joe Green</td>
+      <td>PO</td>
+      <td class="b-left"><span class="o-u">&#8211;210</span></td>
+      <td><span class="o-u">110%</span></td>
+      <td class="b-left">20</td>
+      <td>10</td>
+      <td>9</td>
+      <td>39</td>
+      <td class="b-left">37</td>
       <td>0</td>
     </tr>
 
     
 </table>
 </div>
- 
+  -->
 
 
 
