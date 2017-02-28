@@ -98,6 +98,10 @@ layout = {
     domain: [0, 1], 
     fixedrange: true, 
     range: [-0.5, 11.5], 
+    showline: false, 
+    ticklen: 4, 
+    ticks: 'outside', 
+    tickwidth: 1, 
     title: '2016', 
     type: 'category'
   }, 
@@ -108,6 +112,10 @@ layout = {
     fixedrange: true, 
     range: [0, 126.315789474], 
     showexponent: 'last', 
+    showline: true, 
+    ticklen: 4, 
+    ticks: 'outside', 
+    tickwidth: 1, 
     title: 'Utilisation %', 
     type: 'linear'
   }

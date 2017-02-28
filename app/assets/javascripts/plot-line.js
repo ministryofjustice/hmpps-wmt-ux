@@ -72,7 +72,8 @@ layout = {
     autorange: false, 
     fixedrange: true, 
     range: [0, 120], 
-    ticks: 'inside', 
+    showline: true, 
+    ticks: 'outside', 
     title: 'Utilisation %', 
     type: 'linear'
   }
