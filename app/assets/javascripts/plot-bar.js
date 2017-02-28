@@ -61,8 +61,8 @@ layout = {
   barmode: 'stack', 
   height: 472, 
   legend: {
-    x: 0.358562991037, 
-    y: -0.255198030077, 
+    x: 0.35039602189, 
+    y: -0.219941619821, 
     orientation: 'h', 
     traceorder: 'normal'
   }, 
