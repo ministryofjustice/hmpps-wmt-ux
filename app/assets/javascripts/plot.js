@@ -53,6 +53,7 @@ layout = {
   title: 'Caseload Utilisation', 
   xaxis: {
     autorange: true, 
+    fixedrange: true, 
     mirror: false, 
     nticks: 0, 
     range: [-0.689098746526, 11.6890987465], 
@@ -68,6 +69,7 @@ layout = {
   }, 
   yaxis: {
     autorange: false, 
+    fixedrange: true, 
     range: [0, 120], 
     ticks: 'inside', 
     title: 'Utilisation %', 
