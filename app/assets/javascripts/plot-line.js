@@ -38,7 +38,7 @@ layout = {
       line: {
         color: 'rgba(68, 68, 68, 100)', 
         dash: 'dot', 
-        width: 2
+        width: 1
       }, 
       opacity: 0.3, 
       type: 'rectangle', 

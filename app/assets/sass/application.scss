@@ -36,7 +36,11 @@ $path: "/public/images/";
 
 // plotly
 
-
+.full-width-chart {
+    background:Red;
+    max-width:100%!important;
+    overflow:hidden;
+}
 //
 
 #sub-nav{
