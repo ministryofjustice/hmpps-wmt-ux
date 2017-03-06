@@ -92,7 +92,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Caseload Breakdown', 
+  title: '', 
   xaxis: {
     autorange: true, 
     domain: [0, 1], 

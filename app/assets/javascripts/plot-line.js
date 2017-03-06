@@ -51,7 +51,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Caseload Utilisation', 
+  title: '', 
   xaxis: {
     autorange: true, 
     fixedrange: true, 
