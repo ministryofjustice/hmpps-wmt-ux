@@ -1,10 +1,11 @@
 trace1 = {
-  x: ['12', '10', '10', '20', '10'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
+  x: ['7', '4', '2', '6', '5'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
   hoverinfo: 'x', 
-  name: 'Community <16WK ', 
+  marker: {color: 'rgb(131, 202, 207)'}, 
+  name: 'Community <16WK', 
   orientation: 'h', 
-  text: ['12', '10', '10', '20', '10'], 
+  text: ['7', '4', '2', '6', '5'], 
   textsrc: 'chrisisk:11:492485', 
   type: 'bar', 
   uid: 'ccd732', 
@@ -12,13 +13,13 @@ trace1 = {
   ysrc: 'chrisisk:11:f8a329'
 };
 trace2 = {
-  x: ['50', '10', '20', '10', '20'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
+  x: ['20', '15', '20', '15', '26'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
   hoverinfo: 'x', 
-  marker: {color: 'rgb(215,48,39)'}, 
+  marker: {color: 'rgb(65, 157, 197)'}, 
   name: 'Licence <16WK', 
   orientation: 'h', 
-  text: ['50', '10', '20', '10', '20'], 
+  text: ['20', '15', '20', '15', '26'], 
   textsrc: 'chrisisk:11:3159d3', 
   type: 'bar', 
   uid: '37661e', 
@@ -26,13 +27,13 @@ trace2 = {
   ysrc: 'chrisisk:11:f8a329'
 };
 trace3 = {
-  x: ['20', '30', '30', '20', '50'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
+  x: ['80', '78', '99', '84', '110'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
   hoverinfo: 'x', 
-  marker: {color: 'rgb(252,141,89)'}, 
+  marker: {color: 'rgb(52, 116, 172)'}, 
   name: 'Total Active Cases', 
   orientation: 'h', 
-  text: ['20', '30', '30', '20', '50'], 
+  text: ['80', '78', '99', '84', '110'], 
   textsrc: 'chrisisk:11:7d33a4', 
   type: 'bar', 
   uid: 'afc4b3', 
@@ -40,11 +41,11 @@ trace3 = {
   ysrc: 'chrisisk:11:f8a329'
 };
 trace4 = {
-  x: ['10', '10', '30', '30', '50'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
+  x: ['69', '42', '30', '10', '10'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
   hoverinfo: 'x', 
   marker: {
-    color: 'rgb(254,224,144)', 
+    color: 'rgb(30, 48, 130)', 
     line: {color: 'rgb(148, 103, 189)'}
   }, 
   name: 'Active Warrants', 
@@ -55,10 +56,10 @@ trace4 = {
   ysrc: 'chrisisk:11:f8a329'
 };
 trace5 = {
-  x: ['6', '10', '10', '10', '20'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
+  x: ['7', '3', '3', '1', '6'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
   hoverinfo: 'x', 
-  marker: {color: 'rgb(224,243,248)'}, 
+  marker: {color: 'rgb(227, 119, 194)'}, 
   name: 'UPW', 
   orientation: 'h', 
   type: 'bar', 
@@ -67,12 +68,15 @@ trace5 = {
   ysrc: 'chrisisk:11:f8a329'
 };
 trace6 = {
-  x: ['10', '30', '20', '20', '20'], 
-  y: ['Canterbury', 'Dartford & <br> Gravesham', 'Maidstone', 'Medway', 'South East Kent'], 
-  hoverinfo: 'x', 
-  marker: {color: 'rgb(145,191,219)'}, 
+  x: ['5', '6', '2', '9', '2'], 
+  y: ['Chris Smith', 'Simon Brown', 'Conor Smitt', 'Tom Sweeney', 'Joe Bloggs'], 
+  hoverinfo: 'x+name', 
+  marker: {color: 'rgb(214, 39, 40)'}, 
   name: 'Overdue Terminations', 
   orientation: 'h', 
+  showlegend: true, 
+  text: ['5', '6', '2', '9', '2'], 
+  textsrc: 'chrisisk:11:d1d342', 
   type: 'bar', 
   uid: '06b618', 
   xsrc: 'chrisisk:11:d1d342', 
@@ -81,15 +85,15 @@ trace6 = {
 data = [trace1, trace2, trace3, trace4, trace5, trace6];
 layout = {
   autosize: true, 
-  bargap: 0.07, 
+  bargap: 0.2, 
   barmode: 'stack', 
   dragmode: 'zoom', 
   font: {family: 'Open Sans'}, 
   height: 500, 
-  hovermode: 'closest', 
+  hovermode: 'y', 
   legend: {
-    x: 0.0368303571429, 
-    y: -0.122331906873, 
+    x: -0.0234375, 
+    y: -0.117923557914, 
     bgcolor: '#fff', 
     bordercolor: '#444', 
     borderwidth: 0, 
@@ -121,7 +125,7 @@ layout = {
     exponentformat: 'none', 
     gridwidth: 1, 
     nticks: 0, 
-    range: [0, 178.947368421], 
+    range: [0, 197.894736842], 
     showgrid: false, 
     showline: true, 
     showticklabels: true, 
