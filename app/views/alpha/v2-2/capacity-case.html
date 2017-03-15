@@ -22,14 +22,14 @@
 
     <div class="column-one-quarter">
       <div class="form-group">
-        <label class="form-label-bold">Region
+        <label class="form-label-bold">Division
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
             <option value="index">All</option>
             <option value="index" selected>South East and Eastern</option>
-            <option value="index">Region 1</option>
-            <option value="index">Region 2</option>
-            <option value="index">Region 3</option>
-            <option value="index">Region 4</option>
+            <option value="index">Division 1</option>
+            <option value="index">Division 2</option>
+            <option value="index">Division 3</option>
+            <option value="index">Division 4</option>
           </select>
         </label>
       </div>
@@ -37,10 +37,10 @@
 
     <div class="column-one-quarter">
       <div class="form-group">
-        <label class="form-label-bold">LDU
+        <label class="form-label-bold">LDU Cluster
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
             <option value="ldu">All</option>
-            <option value="ldu" selected>Kent</option>
+            <option value="LDU Cluster" selected>Kent</option>
             <option value="ldu">Essex North</option>
             <option value="ldu">Essex South</option>
             <option value="ldu">Surrey</option>
@@ -87,17 +87,20 @@
       <a href="cases">Cases</a>
     </li>  -->
     <!-- <li>
-      <a href="">LDU Notes</a>
+      <a href="">LDU Cluster Notes</a>
     </li>  -->   
   </ul>
 
 <br>
   <ul class="sub-tabs">
     <li>
-      <a href="capacity" class="active">Team Utilisation</a>
+      <a href="capacity">Utilisation</a>
     </li>
     <li>
       <a href="capacity-bar">Caseload Breakdown</a>
+    </li>
+    <li>
+      <a href="capacity-case" class="active">Cases</a>
     </li>
   </ul>
 

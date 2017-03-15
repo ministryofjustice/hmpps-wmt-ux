@@ -88,7 +88,7 @@ layout = {
   bargap: 0.2, 
   barmode: 'stack', 
   dragmode: 'zoom', 
-  font: {family: 'Open Sans'}, 
+  font: {family: 'Arial'}, 
   height: 500, 
   hovermode: 'y', 
   legend: {
@@ -116,8 +116,7 @@ layout = {
   }, 
   plot_bgcolor: 'rgb(255, 255, 255)', 
   showlegend: true, 
-  titlefont: {family: 'Open Sans'}, 
-  width: 996, 
+  titlefont: {family: 'Arial'}, 
   xaxis: {
     anchor: 'y', 
     autorange: true, 
@@ -146,7 +145,8 @@ layout = {
     domain: [0.07, 0.97], 
     range: [-0.5, 4.5], 
     showgrid: false, 
-    showline: false, 
+    showline: false,
+
     side: 'left', 
     tickfont: {
       family: 'Arial', 
