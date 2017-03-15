@@ -11,10 +11,73 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  <h1 class="heading-xlarge">
-      <span class="heading-secondary">South East and Eastern</span>
-       Kent - Medway
-    </h1>
+ <!--  <h1 class="heading-medium grey">Medway</h1>
+  <h2 class="heading-medium">Kent</h2>
+  <h3 class="heading-medium">South East and Eastern</h3> -->
+
+  <br>
+
+  <div class="grid-row">
+
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Region
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="index">All</option>
+            <option value="index" selected>South East and Eastern</option>
+            <option value="index">Region 1</option>
+            <option value="index">Region 2</option>
+            <option value="index">Region 3</option>
+            <option value="index">Region 4</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">LDU
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="ldu">All</option>
+            <option value="ldu" selected>Kent</option>
+            <option value="ldu">Essex North</option>
+            <option value="ldu">Essex South</option>
+            <option value="ldu">Surrey</option>
+            <option value="ldu">Sussex</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Team
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="kent">All</option>
+            <option value="kent" selected>Medway</option>
+            <option value="kent">Maidstone</option>
+            <option value="kent">Swale</option>
+            <option value="kent">Thanet</option>
+            <option value="kent">Canterbury</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+      
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+   
+
 
   <ul id="sub-nav">
 
