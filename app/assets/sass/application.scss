@@ -38,6 +38,16 @@ $path: "/public/images/";
     padding: 10px;
 }
 
+
+.column-one-fifth {
+    width: 20%;
+    float: left;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .bold td{
@@ -525,7 +535,8 @@ a .expand {
 
 a.link-left {
     padding:8px 20px;
-    display:inline-block;
+    display:block;
+    float: left;
 }
 
 h1.heading-medium{
