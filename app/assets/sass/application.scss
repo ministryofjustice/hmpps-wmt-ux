@@ -48,6 +48,134 @@ $path: "/public/images/";
     box-sizing: border-box;
 }
 
+.form-group.inline {
+    float: left;
+    display: inline;
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group.inline input {
+    width: 100%;
+}
+
+//// dropdown
+
+
+.dropdown {
+  position: relative;
+}
+
+a {
+  color: #fff;
+}
+
+.dropdown dd,
+.dropdown dt {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdown ul {
+  margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+  position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+  color: #0b0c0c;
+  font-size: 19px;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.dropdown dt a {
+  background-color: #dde0e2;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  min-height: 25px;
+  line-height: 24px;
+  overflow: hidden;
+  border: 0;
+  width: auto;
+}
+
+.dropdown dt a span,
+.multiSel span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+  background-color: #dde0e2;
+  border: 0;
+  color: #0b0c0c;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: relative;
+  list-style: none;
+  height: 100px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.dropdown dd ul::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+.dropdown dd ul::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.dropdown dd ul li{
+  background-color: #fff;
+}
+
+.dropdown dd ul li label{
+  display: inline-block!important;
+  margin-left:30px!important;
+}
+
+
+.dropdown dd ul li input {
+    width: 12px;
+    border: none;
+    margin: 3px 10px 0 10px;
+    vertical-align: top;
+    position: absolute;
+}
+
+.dropdown span.value {
+  display: none;
+}
+
+.dropdown dd ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.dropdown dd ul li a:hover {
+  background-color: #fff;
+}
+
+span.down-arrow {
+    float: right;
+    display: inline-block;
+}
+
+//// dropdown
+
+
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .bold td{

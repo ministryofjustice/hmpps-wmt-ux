@@ -20,23 +20,39 @@
   <h3 class="heading-medium">South East and Eastern</h3> -->
 
  
+<div class="grid-row">
 
-  <h1 class="heading-large">Search</h1>
+<div class="column-one-quarter">
+
+<div class="filter">
+      
+<div class="head">
+            <span class="legend">Organisations</span>
+            <div class="controls">
+              <a class="clear-selected js-hidden">Remove filters</a>
+              <div class="toggle"></div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="checkbox-container">
+  <ul>
+    <li>
+                  <input type="checkbox" name="filter_organisations[]" value="cabinet-office" id="cabinet-office">
+                  <label for="cabinet-office">Cabinet Office (1,691)</label>
+                </li>
+  </ul>
+</div>
+
+</div><!--  row-->
   
 
  <div class="grid-row grey-bg">
 
-  <div class="column-one-fifth">
-      <div class="form-group">
-        <label class="form-label">Division
-        </label>
-        <label class="form-label-bold">South East and Eastern
-        </label>
-      </div>
-    </div>
     
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label">LDU Cluster
         </label>
@@ -45,7 +61,7 @@
       </div>
     </div>
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label">Team
         </label>
@@ -54,7 +70,7 @@
       </div>
     </div>
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label">Offender Manager
         </label>
@@ -63,14 +79,10 @@
       </div>
     </div>
 
-
-
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
-      <br>
-  <a href="index" class="link">Remove filter</a>
-
-
+      
+  <a href="index" class="link">remove</a>
       </div>
     </div>
 
@@ -82,54 +94,54 @@
 
   <div class="grid-row grey-bg">
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label-bold">Division
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="">All</option>
-            <option value="" selected>South East and Eastern</option>
-            <option value="">Division 1</option>
-            <option value="">Division 2</option>
-            <option value="">Division 3</option>
-            <option value="">Division 4</option>
+            <option value="index">All</option>
+            <option value="index" selected>South East and Eastern</option>
+            <option value="index">Division 1</option>
+            <option value="index">Division 2</option>
+            <option value="index">Division 3</option>
+            <option value="index">Division 4</option>
           </select>
         </label>
       </div>
     </div>
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label-bold">LDU Cluster
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="">All</option>
-            <option value="" selected>Kent</option>
-            <option value="">Essex North</option>
-            <option value="">Essex South</option>
-            <option value="">Surrey</option>
-            <option value="">Sussex</option>
+            <option value="ldu">All</option>
+            <option value="LDU Cluster" selected>Kent</option>
+            <option value="ldu">Essex North</option>
+            <option value="ldu">Essex South</option>
+            <option value="ldu">Surrey</option>
+            <option value="ldu">Sussex</option>
           </select>
         </label>
       </div>
     </div>
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
         <label class="form-label-bold">Team
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="">All</option>
-            <option value="" selected>Medway</option>
-            <option value="">Maidstone</option>
-            <option value="">Swale</option>
-            <option value="">Thanet</option>
-            <option value="">Canterbury</option>
+            <option value="kent">All</option>
+            <option value="kent" selected>Medway</option>
+            <option value="kent">Maidstone</option>
+            <option value="kent">Swale</option>
+            <option value="kent">Thanet</option>
+            <option value="kent">Canterbury</option>
           </select>
         </label>
       </div>
     </div>
 
-    <div class="column-one-fifth">
+    <div class="column-one-quarter">
       <div class="form-group">
-        <label class="form-label-bold">Offender Manager
+        <label class="form-label-bold">Individual
           <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
             <option value="" selected>All</option>
             <option value="">Chris Smith</option>
@@ -142,23 +154,10 @@
       </div>
     </div>
 
-    <div class="column-one-fifth">
-      <div class="form-group">
-      <br>
-     <a href="compare" class="link">Remove filter</a>
-      
-      </div>
-    </div>
-
     <div class="column-one-quarter">
       <div class="form-group">
-      <a href="index" class="link">+ add another filter</a>
-      
-      <br>
-      <br>
-  <a href="" class="button">Apply filters</a> 
-
- 
+     <a href="compare" class="link">remove</a>
+  <a href="" class="button">Apply filters</a>
       </div>
     </div>
 
