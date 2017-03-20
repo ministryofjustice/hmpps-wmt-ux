@@ -27,6 +27,17 @@ $path: "/public/images/";
   }
 }
 
+.filter{
+    background: red;
+    width: 100%!important;
+}
+
+.filter .head{
+    background: #ccc;
+    font-weight: bold;
+    padding: 10px;
+}
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .bold td{
@@ -38,7 +49,20 @@ $path: "/public/images/";
     cursor: not-allowed;
 }
 
+.button.grey {
+    background:#ccc;
+}
 
+.grey-bg{
+    background:#e6e6e6;
+    padding:25px 10px 0px 10px;
+    margin:0px 0 0px 0;
+    overflow:auto;
+}
+
+select {
+    background:#fff!important;
+}
 // plotly
 
 .full-width-chart {

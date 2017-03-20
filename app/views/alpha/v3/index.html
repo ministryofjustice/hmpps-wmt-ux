@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+ <!--  <h1 class="heading-medium grey">Medway</h1>
+  <h2 class="heading-medium">Kent</h2>
+  <h3 class="heading-medium">South East and Eastern</h3> -->
+
+  <br>
+
+  <h1 class="heading-large">Search</h1>
+
+ <!--  <div class="breadcrumbs">
+    <ol>
+      <li><a href="">South East and Eastern</a></li>
+      <li><a href="">Kent</a></li>
+      <li><a href="">Medway</a></li>
+    </ol>
+
+    <a href="" class="link">remove</a>
+
+  </div> -->
+
+  <div class="grid-row grey-bg">
+
+
+
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Division
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="index">All</option>
+            <option value="index" selected>South East and Eastern</option>
+            <option value="index">Division 1</option>
+            <option value="index">Division 2</option>
+            <option value="index">Division 3</option>
+            <option value="index">Division 4</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">LDU Cluster
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="ldu">All</option>
+            <option value="LDU Cluster" selected>Kent</option>
+            <option value="ldu">Essex North</option>
+            <option value="ldu">Essex South</option>
+            <option value="ldu">Surrey</option>
+            <option value="ldu">Sussex</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Team
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="kent">All</option>
+            <option value="kent" selected>Medway</option>
+            <option value="kent">Maidstone</option>
+            <option value="kent">Swale</option>
+            <option value="kent">Thanet</option>
+            <option value="kent">Canterbury</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Individual
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="" selected>All</option>
+            <option value="">Chris Smith</option>
+            <option value="">Simon Brown</option>
+            <option value="">Conor Smitt</option>
+            <option value="">Tom Sweeney</option>
+            <option value="">Joe Bloggs</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+      
+  <a href="compare" class="link">+ add another filter</a>
+  <br>
+  <br>
+  <a href="" class="button">Apply filters</a>
+      </div>
+    </div>
+
+    
+
+  </div>
+  
+  
+   
+  <br>
+  <br>
+  
+
+  
+
+  <ul id="sub-nav">
+
+    <li>
+      <a href="index" class="active">Overview</a>
+    </li>
+    <li>
+      <a href="capacity">Utilisation</a>
+    </li>
+    <li>
+      <a href="capacity-bar">Caseload</a>
+    </li> 
+    <li>
+      <a href="capacity-case">Case progress</a>
+    </li>
+
+    <li>
+      <a href="notes">Notes</a>
+    </li> 
+  </ul>
+
+ <br>
+
+ <div class="grid-row">
+
+
+    <div class="column-one-third">
+      <div class="form-group">
+        <label class="form-label-bold">
+          <select class="form-control">
+            <option>This week</option>
+            <option>This month</option>
+            <option>Select date range</option>
+          </select>
+          <!-- <a href="" class="link link-left">Search</a> -->
+        </label>
+
+
+      </div>
+    </div>
+
+
+
+    
+
+  </div>
+
+ 
+
+
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/1yUinmg79o4Ph-qLoDPQFEDkq80J08SjCXhmvM5R9Dls/pubhtml?gid=0&amp;single=true&amp;chrome=false&amp;widget=false&amp;headers=false" width="100%" height="250px" frameborder="0"></iframe>
+<a href="" class="link">Export</a>
+
+
+
+
+
+
+
+</main>
+
+{% endblock %}
+
+
