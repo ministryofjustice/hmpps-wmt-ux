@@ -35,176 +35,53 @@
 
 <div class="grid-row">
 
+    <div class="filter-form">
+        <div class="inner-block">
+            <p class="info">Filter by:</p>
+            <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+                <div class="head">
+                    <span class="legend">Region</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="region-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="north" id="north"/>
+                            <label for='north'>North </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-
-
-  <div class="column-one-quarter">
-    <dl class="dropdown"> 
-
-      <dt>
-        <a href="#">
-          <span class="hida">Division</span>
-          <span class="down-arrow">&#9660;</span> 
-          <span class="multiSel"></span>  
-        </a>
-      </dt>
-
-      <dd>
-        <div class="mutliSelect">
-          <ul>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="South-East-and-Eastern" id="South-East-and-Eastern">
-              <label for="South-East-and-Eastern">South East and Eastern</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
-              <label for="Division-1">Division 1</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Division 2</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Division 2</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Division 2</label>
-            </li>
-
-          </ul>
+            <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+                <div class="head">
+                    <span class="legend">LDU Cluster</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="ldu-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]"
+                            value="other" id="other"/>
+                            <label for='other'>Other </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </dd>
-
-    </dl>
-  </div>
-
-  <div class="column-one-quarter">
-   <dl class="dropdown"> 
-
-      <dt>
-        <a href="#">
-          <span class="hida">LDU Cluster</span>
-          <span class="down-arrow">&#9660;</span> 
-          <span class="multiSel"></span>  
-        </a>
-      </dt>
-
-      <dd>
-        <div class="mutliSelect">
-          <ul>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
-              <label for="Kent">Kent</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
-              <label for="Division-1">Division 1</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Division 2</label>
-            </li>
-
-          </ul>
-        </div>
-      </dd>
-
-    </dl>
-  </div>
-
-  <div class="column-one-quarter">
-   <dl class="dropdown"> 
-
-      <dt>
-        <a href="#">
-          <span class="hida">Team</span>
-          <span class="down-arrow">&#9660;</span> 
-          <span class="multiSel"></span>  
-        </a>
-      </dt>
-
-      <dd>
-        <div class="mutliSelect">
-          <ul>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
-              <label for="Kent">Team</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
-              <label for="Division-1">Team</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Team</label>
-            </li>
-
-          </ul>
-        </div>
-      </dd>
-
-    </dl>
-  </div>
-
-  <div class="column-one-quarter">
-   <dl class="dropdown"> 
-
-      <dt>
-        <a href="#">
-          <span class="hida">Individual</span>
-          <span class="down-arrow">&#9660;</span> 
-          <span class="multiSel"></span>  
-        </a>
-      </dt>
-
-      <dd>
-        <div class="mutliSelect">
-          <ul>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
-              <label for="Kent">Individual</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
-              <label for="Division-1">Individual 1</label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
-              <label for="Division-2">Individual 2</label>
-            </li>
-
-          </ul>
-        </div>
-      </dd>
-
-    </dl>
-  </div>
-
-  <div class="column-one-quarter">
-    <div class="form-group">
-
-      <br>
-      <a href="filter" class="button">Apply filters</a>
     </div>
-  </div>
 
+    <div class="column-one-quarter">
+        <div class="form-group">
 
+            <br>
+            <a href="filter" class="button">Apply filters</a>
+        </div>
+    </div>
 
 </div>
 
@@ -222,22 +99,22 @@
 
 <ul id="sub-nav">
 
-  <li>
-    <a href="index" class="active">Overview</a>
-  </li>
-  <li>
-    <a href="capacity">Utilisation</a>
-  </li>
-  <li>
-    <a href="capacity-bar">Caseload</a>
-  </li> 
-  <li>
-    <a href="capacity-case">Case progress</a>
-  </li>
+    <li>
+        <a href="index" class="active">Overview</a>
+    </li>
+    <li>
+        <a href="capacity">Utilisation</a>
+    </li>
+    <li>
+        <a href="capacity-bar">Caseload</a>
+    </li> 
+    <li>
+        <a href="capacity-case">Case progress</a>
+    </li>
 
-  <li>
-    <a href="notes">Notes</a>
-  </li> 
+    <li>
+        <a href="notes">Notes</a>
+    </li> 
 </ul>
 
 <br>
