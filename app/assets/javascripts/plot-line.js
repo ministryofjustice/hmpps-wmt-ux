@@ -1,14 +1,14 @@
 trace1 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
   y: ['88', '90', '100', '118', '117', '111', '107', '118', '80', '99', '102', '105'], 
-  hoverinfo: 'x+y', 
+  hoverinfo: 'y+name', 
   line: {width: 3.5}, 
   marker: {
     line: {width: -0.5}, 
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: 'Utilisation %', 
+  name: '% Utilisation', 
   type: 'scatter', 
   uid: '1f15fb', 
   xsrc: 'chrisisk:7:2e4c95', 
@@ -17,6 +17,7 @@ trace1 = {
 trace2 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
   y: ['2', '6', '14', '10', '5', '2', '7', '16', '4', '8', '20', '25'], 
+  hoverinfo: 'y+name', 
   line: {
     dash: 'dot', 
     shape: 'linear', 
@@ -27,7 +28,7 @@ trace2 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: 'Reduction', 
+  name: '% Reduction', 
   type: 'scatter', 
   uid: '8ff319', 
   xsrc: 'chrisisk:7:2e4c95', 
@@ -73,18 +74,20 @@ layout = {
   title: 'Caseload Utilisation', 
   xaxis: {
     autorange: true, 
+    domain: [0, 1], 
     fixedrange: true, 
     mirror: false, 
     nticks: 0, 
     range: [-0.665000979816, 11.6650009798], 
     showgrid: false, 
     showline: true, 
+    showticklabels: true, 
     side: 'bottom', 
     ticks: 'outside', 
     title: '2016', 
     titlefont: {size: 15}, 
     type: 'category', 
-    zeroline: false, 
+    zeroline: true, 
     zerolinewidth: 11
   }, 
   yaxis: {
@@ -93,7 +96,7 @@ layout = {
     range: [-5.76611065536, 125.766110655], 
     showline: true, 
     ticks: 'outside', 
-    title: 'Utilisation %', 
+    title: '% Utilisation', 
     type: 'linear'
   }
 };
