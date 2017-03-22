@@ -8,33 +8,74 @@ trace1 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: '% Utilisation', 
+  name: 'Medway % Utilisation', 
   type: 'scatter', 
   uid: '1f15fb', 
-  xsrc: 'chrisisk:7:2e4c95', 
-  ysrc: 'chrisisk:7:87e338'
+  xsrc: 'chrisisk:13:2e4c95', 
+  ysrc: 'chrisisk:13:87e338'
 };
 trace2 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-  y: ['2', '6', '14', '10', '5', '2', '7', '16', '4', '8', '20', '25'], 
+  y: ['7', '6', '5', '4', '2', '2', '7', '6', '5', '4', '2', '2'], 
   hoverinfo: 'y+name', 
   line: {
+    color: 'rgb(31, 119, 180)', 
     dash: 'dot', 
     shape: 'linear', 
     width: 3.5
   }, 
   marker: {
+    color: 'rgb(31, 119, 180)', 
+    line: {color: 'rgb(31, 119, 180)'}, 
     opacity: 1, 
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: '% Reduction', 
+  name: 'Medway % Reduction', 
   type: 'scatter', 
   uid: '8ff319', 
-  xsrc: 'chrisisk:7:2e4c95', 
-  ysrc: 'chrisisk:7:263bc7'
+  xsrc: 'chrisisk:13:2e4c95', 
+  ysrc: 'chrisisk:13:2dee79'
 };
-data = [trace1, trace2];
+trace3 = {
+  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
+  y: ['105', '107', '102', '105', '111', '102', '105', '107', '111', '117', '118', '118'], 
+  line: {
+    color: 'rgb(227, 119, 194)', 
+    width: 3.5
+  }, 
+  marker: {
+    color: 'rgb(227, 119, 194)', 
+    line: {color: 'rgb(227, 119, 194)'}, 
+    size: 9
+  }, 
+  mode: 'lines+markers', 
+  name: 'Maidstone % Utilisation', 
+  type: 'scatter', 
+  uid: 'a83a75', 
+  xsrc: 'chrisisk:13:2e4c95', 
+  ysrc: 'chrisisk:13:263bc7'
+};
+trace4 = {
+  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
+  y: ['5', '9', '16', '14', '10', '8', '3', '6', '9', '7', '16', '14'], 
+  line: {
+    dash: 'dot', 
+    width: 3
+  }, 
+  marker: {
+    color: 'rgb(227, 119, 194)', 
+    line: {color: 'rgb(227, 119, 194)'}, 
+    size: 9
+  }, 
+  mode: 'lines+markers', 
+  name: 'Maidstone % Reduction', 
+  type: 'scatter', 
+  uid: '67538b', 
+  xsrc: 'chrisisk:13:2e4c95', 
+  ysrc: 'chrisisk:13:c35985'
+};
+data = [trace1, trace2, trace3, trace4];
 layout = {
   autosize: true, 
   dragmode: 'pan', 
@@ -100,7 +141,7 @@ layout = {
     type: 'linear'
   }
 };
-Plotly.plot('plotly-div-line', {
+Plotly.plot('plotly-div-line-team-combined', {
   data: data,
   layout: layout
 });
