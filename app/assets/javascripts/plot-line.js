@@ -11,10 +11,29 @@ trace1 = {
   name: 'Utilisation %', 
   type: 'scatter', 
   uid: '1f15fb', 
-  xsrc: 'chrisisk:3:2e4c95', 
-  ysrc: 'chrisisk:3:87e338'
+  xsrc: 'chrisisk:7:2e4c95', 
+  ysrc: 'chrisisk:7:87e338'
 };
-data = [trace1];
+trace2 = {
+  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
+  y: ['2', '6', '14', '10', '5', '2', '7', '16', '4', '8', '20', '25'], 
+  line: {
+    dash: 'dot', 
+    shape: 'linear', 
+    width: 3.5
+  }, 
+  marker: {
+    opacity: 1, 
+    size: 9
+  }, 
+  mode: 'lines+markers', 
+  name: 'Reduction', 
+  type: 'scatter', 
+  uid: '8ff319', 
+  xsrc: 'chrisisk:7:2e4c95', 
+  ysrc: 'chrisisk:7:263bc7'
+};
+data = [trace1, trace2];
 layout = {
   autosize: true, 
   dragmode: 'pan', 
@@ -51,7 +70,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: '', 
+  title: 'Caseload Utilisation', 
   xaxis: {
     autorange: true, 
     fixedrange: true, 
@@ -69,9 +88,9 @@ layout = {
     zerolinewidth: 11
   }, 
   yaxis: {
-    autorange: false, 
+    autorange: true, 
     fixedrange: true, 
-    range: [0, 120], 
+    range: [-5.76611065536, 125.766110655], 
     showline: true, 
     ticks: 'outside', 
     title: 'Utilisation %', 
