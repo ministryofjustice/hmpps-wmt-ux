@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+ <!--  <h1 class="heading-medium grey">Medway</h1>
+  <h2 class="heading-medium">Kent</h2>
+  <h3 class="heading-medium">South East and Eastern</h3> -->
+
+  <br>
+
+  <div class="grid-row">
+
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Division
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="index">All</option>
+            <option value="index" selected>South East and Eastern</option>
+            <option value="index">Division 1</option>
+            <option value="index">Division 2</option>
+            <option value="index">Division 3</option>
+            <option value="index">Division 4</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">LDU Cluster
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="ldu">All</option>
+            <option value="LDU Cluster" selected>Kent</option>
+            <option value="ldu">Essex North</option>
+            <option value="ldu">Essex South</option>
+            <option value="ldu">Surrey</option>
+            <option value="ldu">Sussex</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+        <label class="form-label-bold">Team
+          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
+            <option value="kent">All</option>
+            <option value="kent" selected>Medway</option>
+            <option value="kent">Maidstone</option>
+            <option value="kent">Swale</option>
+            <option value="kent">Thanet</option>
+            <option value="kent">Canterbury</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-quarter">
+      <div class="form-group">
+      
+      </div>
+    </div>
+
+    
+
+  </div>
+
+  <ul id="sub-nav">
+
+    <li>
+    <a href="index">Overview</a>
+    </li>
+    <li>
+      <a href="capacity" class="active">Capacity</a>
+    </li>
+    <!-- <li>
+      <a href="cases">Cases</a>
+    </li>  -->
+    <!-- <li>
+      <a href="">LDU Cluster Notes</a>
+    </li>  -->   
+  </ul>
+
+
+  <!-- <ul class="sub-tabs">
+    <li>
+      <a href="" class="active">Line Chart</a>
+    </li>
+    <li>
+      <a href="">Role</a>
+    </li>
+  </ul> -->
+
+ 
+
+ <!--  <div class="grid-row">
+
+
+    <div class="column-one-third">
+      <div class="form-group">
+        <label class="form-label-bold">
+          <select class="form-control">
+            <option>This week</option>
+            <option>This month</option>
+            <option>Select date range</option>
+          </select>
+          <a href="" class="link link-left">Search</a>
+        </label>
+
+
+      </div>
+    </div>
+
+
+
+    
+
+  </div> -->
+
+   <div class="breadcrumbs">
+    <ol>
+      <li><a href="Kent">Kent</a></li>
+      <li><a href="kent">Medway</a></li>
+      <li><a href="capacity-in">Chris Smith</a></li>
+    </ol>
+  </div>
+<ul class="sub-tabs">
+    <li>
+      <a href="capacity-in" class="active">Utilisation</a>
+    </li>
+    <li>
+      <a href="capacity-bar-in">Caseload Breakdown</a>
+    </li>
+  </ul>
+
+<!-- <br>
+   <div class="grid-row">
+
+
+    <div class="column-one-third">
+      <div class="form-group">
+        <label class="form-label-bold">
+          <select class="form-control">
+            <option>This week</option>
+            <option>This month</option>
+            <option>Select date range</option>
+          </select>
+          <a href="" class="link link-left">Search</a> 
+        </label>
+
+
+      </div>
+    </div> -->
+
+
+
+    
+
+  </div>
+  <div id="plotly-div-line"></div>
+
+  
+
+
+
+
+</main>
+
+{% endblock %}
+
+

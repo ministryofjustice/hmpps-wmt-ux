@@ -18,9 +18,9 @@
         // setupHeight is called on open,
         // but filters containing checked
         // checkboxes will already be open
-        if (this.isOpen() || !allowCollapsible) {
-            this.setupHeight();
-        }
+        // if (this.isOpen() || !allowCollapsible) {
+        //     this.setupHeight();
+        // }
 
         if(allowCollapsible){
             this.$filter.find('.head').on('click', $.proxy(this.toggleFinder, this));
@@ -30,23 +30,23 @@
 
     }
 
-    CheckboxFilter.prototype.setupHeight = function
-        setupHeight(){
-            var checkboxContainer = this.$filter.find('.checkbox-container');
-            var checkboxList = checkboxContainer.children('ul');
-            var initCheckboxContainerHeight = checkboxContainer.height();
-            var height = checkboxList.height();
+    // CheckboxFilter.prototype.setupHeight = function
+    //     setupHeight(){
+    //         var checkboxContainer = this.$filter.find('.checkbox-container');
+    //         var checkboxList = checkboxContainer.children('ul');
+    //         var initCheckboxContainerHeight = checkboxContainer.height();
+    //         var height = checkboxList.height();
 
-            if (height < initCheckboxContainerHeight)
-            { 
-                checkboxContainer.height(height);
+    //         if (height < initCheckboxContainerHeight)
+    //         { 
+    //             checkboxContainer.height(height);
 
-            }
-            else
-                if (checkboxList.height() < initCheckboxContainerHeight + 50) {
-                    checkboxContainer.height(checkboxList.height());
-                }
-        }
+    //         }
+    //         else
+    //             if (checkboxList.height() < initCheckboxContainerHeight + 50) {
+    //                 checkboxContainer.height(checkboxList.height());
+    //             }
+    //     }
 
     CheckboxFilter.prototype.isOpen = function isOpen(){
         return !this.$filter.hasClass('closed');
