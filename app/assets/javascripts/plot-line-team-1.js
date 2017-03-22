@@ -1,6 +1,6 @@
 trace1 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-  y: ['88', '90', '100', '118', '117', '111', '107', '118', '80', '99', '102', '105'], 
+  y: ['105', '107', '102', '105', '111', '102', '105', '107', '111', '117', '118', '118'], 
   hoverinfo: 'y+name', 
   line: {width: 3.5}, 
   marker: {
@@ -16,7 +16,7 @@ trace1 = {
 };
 trace2 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], 
-  y: ['2', '6', '14', '10', '5', '2', '7', '16', '4', '8', '20', '25'], 
+  y: ['7', '6', '5', '4', '2', '2', '7', '6', '5', '4', '2', '2'], 
   hoverinfo: 'y+name', 
   line: {
     dash: 'dot', 
@@ -24,6 +24,7 @@ trace2 = {
     width: 3.5
   }, 
   marker: {
+    color: 'rgb(31, 119, 180)', 
     opacity: 1, 
     size: 9
   }, 
@@ -71,7 +72,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Caseload Utilisation', 
+  title: 'Medway Caseload Utilisation', 
   xaxis: {
     autorange: true, 
     domain: [0, 1], 
@@ -100,7 +101,7 @@ layout = {
     type: 'linear'
   }
 };
-Plotly.plot('plotly-div-line', {
+Plotly.plot('plotly-div-line-team-1', {
   data: data,
   layout: layout
 });
