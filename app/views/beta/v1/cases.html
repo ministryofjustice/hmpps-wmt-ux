@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <h2 class="heading-medium">Search</h2>
+
+  <div class="grid-row">
+
+
+    <div class="column-one-third">
+      <div class="form-group">
+        <label class="form-label-bold">Division
+          <select class="form-control full">
+            <option>NPS South East and Eastern</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-third">
+      <div class="form-group">
+        <label class="form-label-bold">LDU Cluster
+          <select class="form-control full">
+            <option>Kent</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="column-one-third">
+      <br>
+      <a href="" class="button search">Search</a>
+    </div>
+
+  </div>
+  <ul id="sub-nav">
+
+    <li>
+    <a href="index">Overview</a>
+    </li>
+    <li>
+      <a href="capacity">Capacity</a>
+    </li>
+    <li>
+      <a href="cases" class="active">Cases</a>
+    </li>
+    <!-- <li>
+      <a href="">LDU Cluster Notes</a>
+    </li>  -->
+  </ul>
+
+<br>
+  <ul class="sub-tabs">
+    <li>
+      <a href="" class="active">Overview</a>
+    </li>
+    <li>
+      <a href="">Bar chart</a>
+    </li>
+    <li>
+      <a href="">Line chart</a>
+    </li>
+  </ul>
+
+  <br>
+
+
+
+</main>
+
+{% endblock %}
+
+
