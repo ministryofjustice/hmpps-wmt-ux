@@ -1,22 +1,43 @@
+/*#content {
+    max-width: 80%!important;
+}
+
+#global-header-bar .header-wrapper {
+    max-width: 100%!important;
+    width: 100%!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+*/
+
+
 .data-container {
     overflow-y: scroll;
+    margin-bottom: 20px;
 }
 
 table.data-table {
     font-size: 12px;
-    width:auto; 
+    max-width: 1024px!important; 
 }
 
 table.data-table tr th{
     font-size: 18px;
-    padding: 0 5px;
+    padding: 0 10px;
+    background: #dcf3fd;
+    border-left: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+}
+
+table.data-table tr th:nth-child(2){
+    font-size: 18px;
 }
 
 table.data-table tr td{
     font-size: 15px;
-    padding:15px 5px 5px 5px;
+    padding:15px 10px 5px 10px;
     text-align: center;
-    border-left: 1px solid blue;
+    border-left: 1px solid #d9d9d9;
 }
 
 table.data-table tr:nth-child(odd){
@@ -33,7 +54,7 @@ table.data-table tr th:first-child{
 table.data-table tr td:first-child{
     font-size: 15px;
     min-width: 130px!important;
-    padding:0px 5px 0px 15px;
+    padding:0px 10px 0px 15px;
     text-align: left;
 }
 
@@ -41,6 +62,13 @@ table.data-table tr.data-sub-header td {
     min-width: 90px;
     text-align: center;
     font-weight: bold;
+    background: #e6f4fb;
+    padding: 5px 10px 5px 10px;
+}
+
+table.data-table tr.data-sub-header td:first-child{
+    
+    padding: 5px 5px 5px  15px;
 }
 
 table.data-table tr.data-sub-header td:first-child, 
@@ -55,11 +83,10 @@ table.data-table tr.data-sub-header td:nth-child(7) {
 
 
 ul.tier-header {
-width: 375px;
+width: 379px;
 display: block;
 float: left;
-background: red;
-margin: -15px -5px -15px -5px;
+margin: -5px -10px -10px -10px;
 }
 
 ul.tier-header li {
@@ -76,7 +103,8 @@ border-left: 1px solid #d9d9d9;
 
 ul.tier-header li:first-child {
 display: inline-block;
-width: 50px;
+width: 45px;
+padding:15px 5px;
 }
 
 ul.tier-header li:nth-child(2) {
@@ -86,11 +114,10 @@ width: 70px;
 
 
 ul.tier {
-width: 375px;
+width: 379px;
 display: block;
 float: left;
-background: red;
-margin: -15px 0px -5px -5px;
+margin: -15px -10px -5px -10px;
 }
 
 ul.tier li {
@@ -106,7 +133,8 @@ border-left: 1px solid #d9d9d9;
 
 ul.tier li:first-child {
 display: inline-block;
-width: 50px;
+width: 45px;
+padding:15px 5px;
 }
 
 ul.tier li:nth-child(2) {
