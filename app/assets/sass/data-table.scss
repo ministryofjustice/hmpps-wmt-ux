@@ -9,12 +9,19 @@ table.data-table {
 
 table.data-table tr th{
     font-size: 18px;
-    padding:5px;
+    padding: 0 5px;
 }
 
 table.data-table tr td{
     font-size: 15px;
-    padding:5px;
+    padding: 10px 5px;
+}
+
+table.data-table tr:nth-child(odd){
+    font-size: 15px;
+    padding: 10px 5px;
+
+    background: #efefef;
 }
 
 table.data-table tr th:first-child{
@@ -24,15 +31,17 @@ table.data-table tr th:first-child{
 table.data-table tr td:first-child{
     font-size: 15px;
     min-width: 130px!important;
-    padding:5px 5px 5px 15px;
+    padding:0px 5px 0px 15px;
 }
 
 
 
 ul.test {
-width: 400px;
+width: 375px;
 display: block;
 float: left;
+background: red;
+margin: -10px 0px -10px 0;
 }
 
 ul.test li {
@@ -40,6 +49,11 @@ display: inline-block;
 width: 35px;
 text-align: center;
 font-weight: bold;
+padding: 10px 0;
+background: #ffe49d;
+margin:0;
+float: left;
+border-left: 1px solid #d9d9d9; 
 }
 
 ul.test li:first-child {
@@ -54,15 +68,22 @@ width: 70px;
 
 
 ul.test-2 {
-width: auto;
+width: 375px;
 display: block;
 float: left;
+background: red;
+margin: -10px 0px -10px 0;
 }
 
 ul.test-2 li {
 display: inline-block;
 width: 35px;
 text-align: center;
+padding: 10px 0;
+background: #fff1ce;
+margin:0;
+float: left;
+border-left: 1px solid #d9d9d9; 
 }
 
 ul.test-2 li:first-child {
