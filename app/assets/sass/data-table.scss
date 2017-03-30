@@ -14,7 +14,9 @@ table.data-table tr th{
 
 table.data-table tr td{
     font-size: 15px;
-    padding: 10px 5px;
+    padding:15px 5px 5px 5px;
+    text-align: center;
+    border-left: 1px solid blue;
 }
 
 table.data-table tr:nth-child(odd){
@@ -32,66 +34,82 @@ table.data-table tr td:first-child{
     font-size: 15px;
     min-width: 130px!important;
     padding:0px 5px 0px 15px;
+    text-align: left;
+}
+
+table.data-table tr.data-sub-header td {
+    min-width: 90px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table.data-table tr.data-sub-header td:first-child, 
+table.data-table tr.data-sub-header td:nth-child(5),
+table.data-table tr.data-sub-header td:nth-child(6),
+table.data-table tr.data-sub-header td:nth-child(7) {
+    min-width: 70px;
+    text-align: left;
+    font-weight: bold;
 }
 
 
 
-ul.test {
+ul.tier-header {
 width: 375px;
 display: block;
 float: left;
 background: red;
-margin: -10px 0px -10px 0;
+margin: -15px -5px -15px -5px;
 }
 
-ul.test li {
+ul.tier-header li {
 display: inline-block;
 width: 35px;
 text-align: center;
 font-weight: bold;
-padding: 10px 0;
+padding: 15px 0;
 background: #ffe49d;
 margin:0;
 float: left;
 border-left: 1px solid #d9d9d9; 
 }
 
-ul.test li:first-child {
+ul.tier-header li:first-child {
 display: inline-block;
 width: 50px;
 }
 
-ul.test li:nth-child(2) {
+ul.tier-header li:nth-child(2) {
 display: inline-block;
 width: 70px;
 }
 
 
-ul.test-2 {
+ul.tier {
 width: 375px;
 display: block;
 float: left;
 background: red;
-margin: -10px 0px -10px 0;
+margin: -15px 0px -5px -5px;
 }
 
-ul.test-2 li {
+ul.tier li {
 display: inline-block;
 width: 35px;
 text-align: center;
-padding: 10px 0;
+padding: 15px 0;
 background: #fff1ce;
 margin:0;
 float: left;
 border-left: 1px solid #d9d9d9; 
 }
 
-ul.test-2 li:first-child {
+ul.tier li:first-child {
 display: inline-block;
 width: 50px;
 }
 
-ul.test-2 li:nth-child(2) {
+ul.tier li:nth-child(2) {
 display: inline-block;
 width: 70px;
 }
