@@ -21,12 +21,12 @@
 }
 
 table.data-table {
-    font-size: 12px;
+    font-size: 10px;
     max-width: 1024px!important; 
 }
 
 table.data-table tr th{
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 10px;
     background: #dcf3fd;
     border-left: 1px solid #d9d9d9;
@@ -34,36 +34,43 @@ table.data-table tr th{
 }
 
 table.data-table tr th:nth-child(2){
-    font-size: 18px;
+    font-size: 16px;
 }
 
 table.data-table tr td{
-    font-size: 15px;
-    padding:15px 10px 5px 10px;
+    font-size: 12px;
+    padding:5px 10px 5px 10px;
     text-align: center;
     border-left: 1px solid #d9d9d9;
+    border: 1px solid #d9d9d9!important;
 }
 
+table th, table td {
+    border:inherit!important;
+}
+
+
+
 table.data-table tr:nth-child(odd){
-    font-size: 15px;
+    font-size: 12px;
     padding: 10px 5px;
 
     background: #efefef;
 }
 
 table.data-table tr th:first-child{
-    padding:15px 5px 15px 15px;
+    padding:10px 5px 15px 15px;
 }
 
 table.data-table tr td:first-child{
-    font-size: 15px;
-    min-width: 130px!important;
-    padding:0px 10px 0px 15px;
+    font-size: 12px;
+    min-width: 120px!important;
+    padding:5px 10px 5px 10px;
     text-align: left;
 }
 
 table.data-table tr.data-sub-header td {
-    min-width: 90px;
+    min-width: 25px;
     text-align: center;
     font-weight: bold;
     background: #e6f4fb;
@@ -79,7 +86,7 @@ table.data-table tr.data-sub-header td:first-child,
 table.data-table tr.data-sub-header td:nth-child(5),
 table.data-table tr.data-sub-header td:nth-child(6),
 table.data-table tr.data-sub-header td:nth-child(7) {
-    min-width: 70px;
+    min-width: 60px;
     text-align: left;
     font-weight: bold;
 }
@@ -88,10 +95,10 @@ table.data-table tr.data-sub-header td:nth-child(7) {
 
 
 ul.tier-header {
-width: 379px;
+width: 369px;
 display: block;
 float: left;
-margin: -5px -10px -10px -10px;
+margin: -5px -10px -5px -10px;
 }
 
 ul.tier-header li {
@@ -99,8 +106,8 @@ display: inline-block;
 width: 35px;
 text-align: center;
 font-weight: bold;
-padding: 15px 0;
-background: #ffe49d;
+padding: 5px 0;
+background: rgba(255,228,157,0.8);
 margin:0;
 float: left;
 border-left: 1px solid #d9d9d9; 
@@ -109,28 +116,28 @@ border-left: 1px solid #d9d9d9;
 ul.tier-header li:first-child {
 display: inline-block;
 width: 45px;
-padding:15px 5px;
+padding:5px 5px;
 }
 
 ul.tier-header li:nth-child(2) {
 display: inline-block;
-width: 70px;
+width: 60px;
 }
 
 
 ul.tier {
-width: 379px;
+width: 369px;
 display: block;
 float: left;
-margin: -15px -10px -5px -10px;
+margin: -10px -10px -10px -10px;
 }
 
 ul.tier li {
 display: inline-block;
 width: 35px;
 text-align: center;
-padding: 15px 0;
-background: #fff1ce;
+padding: 5px 0;
+background: rgba(255,228,157,0.5);
 margin:0;
 float: left;
 border-left: 1px solid #d9d9d9; 
@@ -139,12 +146,12 @@ border-left: 1px solid #d9d9d9;
 ul.tier li:first-child {
 display: inline-block;
 width: 45px;
-padding:15px 5px;
+padding:5px 5px;
 }
 
 ul.tier li:nth-child(2) {
 display: inline-block;
-width: 70px;
+width: 60px;
 }
 
 
