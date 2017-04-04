@@ -11,9 +11,18 @@
 */
 
 
+.filter-form, .filtered-results {
+    background: red!important;
+    width: 100%;
+}
+
 .data-container {
     overflow-y: scroll;
     margin-bottom: 20px;
+    overflow-x:scroll;  
+            margin-left:5em;
+            overflow-y:visible;
+            padding:0;
 }
 
 table.data-table {
@@ -79,6 +88,17 @@ table.data-table tr.data-sub-header td:nth-child(7) {
     text-align: left;
     font-weight: bold;
 }
+
+.headcol {
+position:absolute;
+width:1020px;
+left:0;
+background: red;
+top:auto;
+border-top-width:1px; only relevant for first row
+
+}
+.headcol:before {content: 'Row ';}
 
 
 
