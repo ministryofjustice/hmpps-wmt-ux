@@ -116,7 +116,7 @@ layout = {
     ticklen: 4, 
     ticks: 'outside', 
     tickwidth: 1, 
-    title: 'Utilisation %', 
+    title: 'Capacity %', 
     type: 'linear'
   }
 };

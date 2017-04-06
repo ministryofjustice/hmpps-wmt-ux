@@ -8,7 +8,7 @@ trace1 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: 'Medway % Utilisation', 
+  name: 'Medway % Capacity', 
   type: 'scatter', 
   uid: '1f15fb', 
   xsrc: 'chrisisk:13:2e4c95', 
@@ -50,7 +50,7 @@ trace3 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: 'Maidstone % Utilisation', 
+  name: 'Maidstone % Capacity', 
   type: 'scatter', 
   uid: 'a83a75', 
   xsrc: 'chrisisk:13:2e4c95', 
@@ -112,7 +112,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Caseload Utilisation', 
+  title: 'Caseload Capacity', 
   xaxis: {
     autorange: true, 
     domain: [0, 1], 
@@ -137,7 +137,7 @@ layout = {
     range: [-5.73436526999, 125.73436527], 
     showline: true, 
     ticks: 'outside', 
-    title: '% Utilisation', 
+    title: '% Capacity', 
     type: 'linear'
   }
 };

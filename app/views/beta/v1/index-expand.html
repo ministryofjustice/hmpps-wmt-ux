@@ -8,72 +8,237 @@
 
 {% block content %}
 
+
+
+
+
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
- <!--  <h1 class="heading-medium grey">Medway</h1>
-  <h2 class="heading-medium">Kent</h2>
-  <h3 class="heading-medium">South East and Eastern</h3> -->
-
-  <br>
-
-  <div class="grid-row">
+<!--  <h1 class="heading-medium grey">Medway</h1>
+<h2 class="heading-medium">Kent</h2>
+<h3 class="heading-medium">South East and Eastern</h3> -->
 
 
-    <div class="column-one-quarter">
-      <div class="form-group">
-        <label class="form-label-bold">Division
-          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="index">All</option>
-            <option value="index" selected>South East and Eastern</option>
-            <option value="index">Division 1</option>
-            <option value="index">Division 2</option>
-            <option value="index">Division 3</option>
-            <option value="index">Division 4</option>
-          </select>
+<br>
+
+<!-- <div class="grid-row">
+
+<div class="column-one-quarter">
+        <div class="form-group">
+<label class="form-label-bold">Search
+          <input class="form-control full">
         </label>
-      </div>
-    </div>
-
-    <div class="column-one-quarter">
-      <div class="form-group">
-        <label class="form-label-bold">LDU Cluster
-          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="ldu">All</option>
-            <option value="LDU Cluster" selected>Kent</option>
-            <option value="ldu">Essex North</option>
-            <option value="ldu">Essex South</option>
-            <option value="ldu">Surrey</option>
-            <option value="ldu">Sussex</option>
-          </select>
-        </label>
-      </div>
-    </div>
-
-    <div class="column-one-quarter">
-      <div class="form-group">
-        <label class="form-label-bold">Team
-          <select onchange="location = this.options[this.selectedIndex].value;" class="form-control full">
-            <option value="kent">All</option>
-            <option value="kent" selected>Medway</option>
-            <option value="kent">Maidstone</option>
-            <option value="kent">Swale</option>
-            <option value="kent">Thanet</option>
-            <option value="kent">Canterbury</option>
-          </select>
-        </label>
-      </div>
-    </div>
-
-    <div class="column-one-quarter">
-      <div class="form-group">
-      
-      </div>
+        </div>
     </div>
 
     
+</div> -->
 
-  </div>
+<!--  <div class="breadcrumbs">
+<ol>
+<li><a href="">South East and Eastern</a></li>
+<li><a href="">Kent</a></li>
+<li><a href="">Medway</a></li>
+</ol>
+
+<a href="" class="link">remove</a>
+
+</div> -->
+
+
+<div class="grid-row">
+
+<div class="column-one-quarter">
+
+<div class="filter-form">
+        <div class="inner-block">
+<div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+                <div class="head">
+                    <span class="legend">Divisions</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="Division-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division1" id="division1"/>
+                            <label for='division1'>Select all </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division2" id="division2" checked />
+                            <label for='division2'>South East and Eastern </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division3" id="division3"/>
+                            <label for='division3'>London </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division4" id="division4"/>
+                            <label for='division4'>North East </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division5" id="division5"/>
+                            <label for='division5'>North West </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_division[]" value="division5" id="division5"/>
+                            <label for='division5'>Wales </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+</div>
+
+
+<div class="column-one-quarter">
+<div class="filter-form">
+        <div class="inner-block">
+            <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+                <div class="head">
+                    <span class="legend">LDU Clusters</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="ldu-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual1" id="individual1"/>
+                            <label for='individual1'>Select all </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]" value="ldu1" id="ldu1" checked />
+                            <label for='ldu1'>Kent </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]" value="ldu2" id="ldu2"/>
+                            <label for='ldu2'>Essex North </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]" value="ldu3" id="ldu3"/>
+                            <label for='ldu3'>Essex South</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]" value="ldu4" id="ldu4"/>
+                            <label for='ldu4'>Surrey </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_ldu[]" value="ldu5" id="ldu5"/>
+                            <label for='ldu5'>Sussex </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+</div>
+
+<div class="column-one-quarter">
+<div class="filter-form">
+        <div class="inner-block">
+            <div class="filter checkbox-filter js-openable-filter closed" tabindex="0" >
+                <div class="head">
+                    <span class="legend">Teams</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="region-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual1" id="individual1"/>
+                            <label for='individual1'>Select all </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="region1" id="region1" checked/>
+                            <label for='region1'>Medway </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="region2" id="region2"/>
+                            <label for='region2'>Maidstone </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="region3" id="region3"/>
+                            <label for='region3'>Swale </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="region4" id="region4"/>
+                            <label for='region4'>Thanet </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_region[]" value="region5" id="region5"/>
+                            <label for='region5'>Canterbury </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+</div>
+<div class="column-one-quarter">
+<div class="filter-form">
+        <div class="inner-block">
+            <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+                <div class="head">
+                    <span class="legend">Individuals</span>
+                    <div class="controls">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container" id="individual-filter">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual1" id="individual1" checked/>
+                            <label for='individual1'>Select all </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual1" id="individual1"/>
+                            <label for='individual1'>Chris Smith </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual2" id="individual2"/>
+                            <label for='individual2'>Simon Brown </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual3" id="individual3"/>
+                            <label for='individual3'>Conor Smitt </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual4" id="individual4"/>
+                            <label for='individual4'>Tom Sweeney </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="filter_individual[]" value="individual5" id="individual5"/>
+                            <label for='individual5'>Joe Bloggs </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+<div class="grid-row">
+
+<div class="column-one-quarter">
+        <div class="form-group">
+
+            <br>
+            <a href="filter" class="button">Apply new filters</a>
+        </div>
+    </div>
+
+    
+</div>
+
 
 
    
@@ -140,7 +305,7 @@
       <td>Name</td>
       <td>Grade</td>
       <td class="b-left">Points Assigned</td>
-      <td>Utilisation %</td>
+      <td>Capacity %</td>
       <td colspan="9" class="bg-yellow b-left"><a href="index"  class="active">Community <span class="expand">[-]</span></a></td>
       <td><a href="index-expand">Licence <span class="expand">[+]</span></a></td>
       <td><a href="index-expand">Custody <span class="expand">[+]</span></a></td>

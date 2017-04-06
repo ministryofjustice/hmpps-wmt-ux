@@ -9,7 +9,7 @@ trace1 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: '% Utilisation', 
+  name: '% Capacity', 
   type: 'scatter', 
   uid: '1f15fb', 
   xsrc: 'chrisisk:7:2e4c95', 
@@ -73,7 +73,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Maidstone Caseload Utilisation', 
+  title: 'Maidstone Caseload Capacity', 
   xaxis: {
     autorange: true, 
     domain: [0, 1], 
@@ -98,7 +98,7 @@ layout = {
     range: [-4.66768970732, 125.667689707], 
     showline: true, 
     ticks: 'outside', 
-    title: '% Utilisation', 
+    title: '% Capacity', 
     type: 'linear'
   }
 };

@@ -8,7 +8,7 @@ trace1 = {
     size: 9
   }, 
   mode: 'lines+markers', 
-  name: 'Utilisation %', 
+  name: 'Capacity %', 
   type: 'scatter', 
   uid: '1f15fb', 
   xsrc: 'chrisisk:3:2e4c95', 
@@ -51,7 +51,7 @@ layout = {
     }
   ], 
   showlegend: true, 
-  title: 'Caseload Utilisation', 
+  title: 'Caseload Capacity', 
   xaxis: {
     autorange: true, 
     fixedrange: true, 
@@ -73,7 +73,7 @@ layout = {
     fixedrange: true, 
     range: [0, 120], 
     ticks: 'inside', 
-    title: 'Utilisation %', 
+    title: 'Capacity %', 
     type: 'linear'
   }
 };
