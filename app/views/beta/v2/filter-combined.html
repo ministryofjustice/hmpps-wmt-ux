@@ -1,0 +1,273 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+<!--  <h1 class="heading-medium grey">Medway</h1>
+<h2 class="heading-medium">Kent</h2>
+<h3 class="heading-medium">South East and Eastern</h3> -->
+
+
+<h1 class="heading-large">Search</h1>
+
+<!--  <div class="breadcrumbs">
+<ol>
+<li><a href="">South East and Eastern</a></li>
+<li><a href="">Kent</a></li>
+<li><a href="">Medway</a></li>
+</ol>
+
+<a href="" class="link">remove</a>
+
+</div> -->
+
+<div class="grid-row">
+
+
+
+
+  <div class="column-one-quarter">
+    <dl class="dropdown"> 
+
+      <dt>
+        <a href="#">
+          <span class="hida">Division</span>
+          <span class="down-arrow">&#9660;</span> 
+          <span class="multiSel"></span>  
+        </a>
+      </dt>
+
+      <dd>
+        <div class="mutliSelect">
+          <ul>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="South-East-and-Eastern" id="South-East-and-Eastern">
+              <label for="South-East-and-Eastern">South East and Eastern</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
+              <label for="Division-1">Division 1</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Division 2</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Division 2</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Division 2</label>
+            </li>
+
+          </ul>
+        </div>
+      </dd>
+
+    </dl>
+  </div>
+
+  <div class="column-one-quarter">
+   <dl class="dropdown"> 
+
+      <dt>
+        <a href="#">
+          <span class="hida">LDU Cluster</span>
+          <span class="down-arrow">&#9660;</span> 
+          <span class="multiSel"></span>  
+        </a>
+      </dt>
+
+      <dd>
+        <div class="mutliSelect">
+          <ul>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
+              <label for="Kent">Kent</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
+              <label for="Division-1">Division 1</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Division 2</label>
+            </li>
+
+          </ul>
+        </div>
+      </dd>
+
+    </dl>
+  </div>
+
+  <div class="column-one-quarter">
+   <dl class="dropdown"> 
+
+      <dt>
+        <a href="#">
+          <span class="hida">Team</span>
+          <span class="down-arrow">&#9660;</span> 
+          <span class="multiSel"></span>  
+        </a>
+      </dt>
+
+      <dd>
+        <div class="mutliSelect">
+          <ul>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
+              <label for="Kent">Team</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
+              <label for="Division-1">Team</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Team</label>
+            </li>
+
+          </ul>
+        </div>
+      </dd>
+
+    </dl>
+  </div>
+
+  <div class="column-one-quarter">
+   <dl class="dropdown"> 
+
+      <dt>
+        <a href="#">
+          <span class="hida">Individual</span>
+          <span class="down-arrow">&#9660;</span> 
+          <span class="multiSel"></span>  
+        </a>
+      </dt>
+
+      <dd>
+        <div class="mutliSelect">
+          <ul>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Kent" id="Kent">
+              <label for="Kent">Individual</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-1" id="Division-1">
+              <label for="Division-1">Individual 1</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="filter_organisations[]" value="Division-2" id="Division-2">
+              <label for="Division-2">Individual 2</label>
+            </li>
+
+          </ul>
+        </div>
+      </dd>
+
+    </dl>
+  </div>
+
+  <div class="column-one-quarter">
+    <div class="form-group">
+
+      <br>
+      <a href="filter" class="button">Apply filters</a>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<p>Showing <span class="heading-small">North East</span> and <span class="heading-small">Midlands</span> divisions.</p>
+
+<p>Showing <span class="heading-small">Kent</span> and <span class="heading-small">Essex South</span> LDU clusters.</p>
+
+<p>Showing <span class="heading-small">Medway</span> and <span class="heading-small">Maidstone</span> teams.</p>
+
+
+<p>Showing <span class="heading-small">Joe Bloggs</span> and <span class="heading-small">Tim Smith</span>.</p>
+
+
+<ul id="sub-nav">
+
+  <li>
+    <a href="index" class="active">Overview</a>
+  </li>
+  <li>
+    <a href="capacity">Capacity</a>
+  </li>
+  <li>
+    <a href="capacity-bar">Caseload</a>
+  </li> 
+  <li>
+    <a href="capacity-case">Case progress</a>
+  </li>
+
+  <li>
+    <a href="notes">Notes</a>
+  </li> 
+</ul>
+
+<br>
+
+<div class="date-picker">Show data from: <select id="date-from"><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option></select> to <select id="date-to"><option value="2017-03-01T00:00:00Z">Mar 2017</option><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option></select></div>
+
+<br>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/1yUinmg79o4Ph-qLoDPQFEDkq80J08SjCXhmvM5R9Dls/pubhtml?gid=0&amp;single=true&amp;chrome=false&amp;widget=false&amp;headers=false" width="100%" height="250px" frameborder="0"></iframe>
+<a href="" class="link">Export</a>
+
+
+
+
+
+
+
+</main>
+
+{% endblock %}
+
+
