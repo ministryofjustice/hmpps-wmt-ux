@@ -25,16 +25,30 @@
 
 <script>
 $(document).ready(function(){
+	var isCommunityExpanded, isLicenceExpanded, isCustodyExpanded = false;
+	var dealWithTierHeader = function() {
+		if(isCommunityExpanded || isLicenceExpanded || isCustodyExpanded){
+			$(".tier-header").show()
+		} else {
+			$(".tier-header").hide()
+		}
+	}
     $(".open-community").click(function(){
-        $(".tier-header, .hide-community-total, .community-expanded").toggle();
+        $(".sub-tier-header-community, .hide-community-total, .community-expanded").toggle();
+        isCommunityExpanded = !isCommunityExpanded;
+        dealWithTierHeader()
     });
-
+ 
     $(".open-licence").click(function(){
-        $(".tier-header, .hide-licence-total, .licence-expanded").toggle();
+        $(".sub-tier-header-licence, .hide-licence-total, .licence-expanded").toggle();
+        isLicenceExpanded = !isLicenceExpanded
+        dealWithTierHeader()
     });
 
     $(".open-custody").click(function(){
-        $(".tier-header, .hide-custody-total, .custody-expanded").toggle();
+        $(".sub-tier-header-custody, .hide-custody-total, .custody-expanded").toggle();
+        isCustodyExpanded = !isCustodyExpanded
+        dealWithTierHeader()
     });
 });
 
