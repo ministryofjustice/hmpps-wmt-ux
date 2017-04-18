@@ -94,14 +94,14 @@ table.data-table tr.data-sub-header td:nth-child(7) {
 
 
 
-ul.tier-header {
+ul.sub-tier-header {
 width: 369px;
 display: block;
 float: left;
 margin: -5px -10px -5px -10px;
 }
 
-ul.tier-header li {
+ul.sub-tier-header li {
 display: inline-block;
 width: 35px;
 text-align: center;
@@ -113,13 +113,13 @@ float: left;
 border-left: 1px solid #d9d9d9; 
 }
 
-ul.tier-header li:first-child {
+ul.sub-tier-header li:first-child {
 display: inline-block;
 width: 45px;
 padding:5px 5px;
 }
 
-ul.tier-header li:nth-child(2) {
+ul.sub-tier-header li:nth-child(2) {
 display: inline-block;
 width: 60px;
 }
