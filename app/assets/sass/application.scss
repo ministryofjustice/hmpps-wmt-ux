@@ -276,56 +276,89 @@ color:#fff;
 
 }
 
+///
 
-ul.sub-tabs {
-    border-bottom:2px solid #ccc;
-    display:block;
-    width:100%;
-    overflow:auto;
-    margin:0!important;
+#sub-sub-nav{
+
+background-color: #fff;
+padding: 0;
+z-index: 999;
+text-decoration: none;
+border-bottom:1px solid;
+border-color: #bfc1c3;
+
+}
+#sub-sub-nav li{
+position:relative;
+display:inline;
+
+;
+}
+#sub-sub-nav a{
+display: inline-block;
+font-weight: bold;
+margin: 0;
+outline: 0;
+padding: 10px 20px;
+text-decoration: none;
+margin-bottom:-5px;
+}
+#sub-sub-nav ul{
+position:absolute;
+/*top:100%; Uncommenting this makes the dropdowns work in IE7 */
+left:-9999px;
+margin:0;
+padding:0;
+text-align:left;
+
+}
+#sub-sub-nav ul li{
+display:block;
+}
+#sub-sub-nav li:hover ul{
+left:0;
+}
+#sub-sub-nav li a{
+text-decoration:none;
+padding:10px 15px;
+background:$panel-colour;
+margin:5px 5px 0 0;
+}
+#sub-sub-nav li:hover a{
+background:#f1f1f1;
+}
+#sub-sub-nav li:hover ul a{
+background:#dde0e2;
+}
+#sub-sub-nav li:hover ul a:hover{
+text-decoration:none;
+background:$highlight-colour;
+}
+#sub-sub-nav ul a{
+color:$link-colour;
+white-space:nowrap;
+display:block;
+border-bottom:1px solid #ccc;
 }
 
-ul.sub-tabs li a{
-    background: #dde0e2;
-    padding:10px 15px;
-    margin: 0 4px 0px 0;
-    display:inline-block;
-    position:relative;
-    float:left;
-    text-decoration:none;
-    color:#000;
-    font-size: 18px;
-}
+#sub-sub-nav li a.active{
+font-weight: bold;
+background:#fff;
 
-ul.sub-tabs li a:hover{
-    background: #dde0e2;
-}
+border-left:1px solid $border-colour;
+border-right:1px solid $border-colour;
+border-top:1px solid $border-colour;
+border-bottom:1px solid #fff!important;
 
-ul.sub-tabs li a.active{
-    background: #ffc136;
-    display:block;
-    text-decoration:none;
+margin:5px 5px -1px 0;
+padding:10px 15px 15px 15px;
 }
 
 
+///
 
-ul.sub-tabs li a span.badge  {
-    font-size: 13px;
-    padding:1px 3px 0px 4px;
-    min-width: 15px;
-    display: inline-block;
-    border-radius: 20px;
-    text-align: center;
-    background:#004A83;
-    margin:0 0 0 10px;
-    font-weight:bold;
-    color:#fff;
-}
 
-ul.sub-tabs li a.active span.badge {
-    background:#fff;
-    background:#b10e1e;
-}
+
 
 .form-control.full{
     width:100%;
