@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  {% block service_name %}
+    {% if serviceName %} {{ serviceName }} {% endif %}
+  {% endblock %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <header class="heading-xlarge">
+    <span class="heading-secondary">
+      Your profile
+    </span>
+    Joe Blogs
+  </header>
+
+  <table>
+    <tbody>
+      <tr>
+        <th scope="row">Grade</th>
+        <td>Parole officer</td>
+      </tr>
+      <tr>
+        <th scope="row">Team</th>
+        <td><a href="">Maidstone</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Current capacity</th>
+        <td>110%</td>
+      </tr>
+      <tr>
+        <th scope="row">Current caseload</th>
+        <td>64</td>
+      </tr>
+      <tr>
+        <th scope="row">Contracted hours</th>
+        <td>37.5</td>
+      </tr>
+      <tr>
+        <th scope="row">Active reduction</th>
+        <td>7.5</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br><br>
+
+  <ul id="sub-nav">
+    <li><a href="#" class="active">Capacity</a></li>
+    <li><a href="#">Caseload</a></li>
+    <li><a href="#">Case progress</a></li>
+    <li><a href="#">Notes</a></li>
+  </ul>
+
+  <br>
+
+  <div id="plotly-div-line"></div>
+
+</main>
+{% endblock %}

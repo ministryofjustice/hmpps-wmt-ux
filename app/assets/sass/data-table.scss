@@ -23,14 +23,14 @@ table.settings td:nth-child(2) input{
 .data-container {
     overflow-y: scroll;
     margin-bottom: 20px;
-    overflow-x:scroll;  
+    overflow-x:scroll;
     overflow-y:visible;
     padding:0;
 }
 
 table.data-table {
     font-size: 10px;
-    max-width: 1024px!important; 
+    max-width: 1024px!important;
 }
 
 table.data-table tr th{
@@ -54,7 +54,7 @@ table.data-table tr td{
 }
 
 table th, table td {
-    border:inherit!important;
+    // border:inherit!important;
 }
 
 
@@ -86,11 +86,11 @@ table.data-table tr.data-sub-header td {
 }
 
 table.data-table tr.data-sub-header td:first-child{
-    
+
     padding: 5px 5px 5px  15px;
 }
 
-table.data-table tr.data-sub-header td:first-child, 
+table.data-table tr.data-sub-header td:first-child,
 table.data-table tr.data-sub-header td:nth-child(5),
 table.data-table tr.data-sub-header td:nth-child(6),
 table.data-table tr.data-sub-header td:nth-child(7) {
@@ -118,7 +118,7 @@ padding: 5px 0;
 background: rgba(255,228,157,0.8);
 margin:0;
 float: left;
-border-left: 1px solid #d9d9d9; 
+border-left: 1px solid #d9d9d9;
 }
 
 ul.sub-tier-header li:first-child {
@@ -148,7 +148,7 @@ padding: 5px 0;
 background: rgba(255,228,157,0.5);
 margin:0;
 float: left;
-border-left: 1px solid #d9d9d9; 
+border-left: 1px solid #d9d9d9;
 }
 
 ul.tier li:first-child {
@@ -161,5 +161,3 @@ ul.tier li:nth-child(2) {
 display: inline-block;
 width: 60px;
 }
-
-
