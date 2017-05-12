@@ -10,11 +10,11 @@
 }*/
 
 table.settings td:first-child{
-    width:125px;
+    // width:125px;
 }
 
 table.settings td:nth-child(2) input{
-    width:100px;
+    // width:100px;
 }
 
 
@@ -29,12 +29,12 @@ table.settings td:nth-child(2) input{
 }
 
 table.data-table {
-    font-size: 10px;
+    // font-size: 10px;
     max-width: 1024px!important;
 }
 
 table.data-table tr th{
-    font-size: 16px;
+    // font-size: 16px;
     padding: 0 10px;
     background: #dcf3fd;
     border-left: 1px solid #d9d9d9;
@@ -42,11 +42,11 @@ table.data-table tr th{
 }
 
 table.data-table tr th:nth-child(2){
-    font-size: 16px;
+    // font-size: 16px;
 }
 
 table.data-table tr td{
-    font-size: 12px;
+    // font-size: 12px;
     padding:5px 10px 5px 10px;
     text-align: center;
     border-left: 1px solid #d9d9d9;
@@ -60,7 +60,7 @@ table th, table td {
 
 
 table.data-table tr:nth-child(odd){
-    font-size: 12px;
+    // font-size: 12px;
     padding: 10px 5px;
 
     background: #efefef;
@@ -71,7 +71,7 @@ table.data-table tr th:first-child{
 }
 
 table.data-table tr td:first-child{
-    font-size: 12px;
+    // font-size: 12px;
     min-width: 120px!important;
     padding:5px 10px 5px 10px;
     text-align: left;

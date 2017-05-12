@@ -216,7 +216,7 @@ select {
 #sub-nav{
 
 background-color: #fff;
-border-top: 1px solid #bfc1c3;
+// border-top: 1px solid #bfc1c3;
 border-bottom: 1px solid #bfc1c3;
 padding-top: 0.75em;
 padding-bottom: 0.75em;
@@ -276,56 +276,89 @@ color:#fff;
 
 }
 
+///
 
-ul.sub-tabs {
-    border-bottom:2px solid #ccc;
-    display:block;
-    width:100%;
-    overflow:auto;
-    margin:0!important;
+#sub-sub-nav{
+
+background-color: #fff;
+padding: 0;
+z-index: 999;
+text-decoration: none;
+border-bottom:1px solid;
+border-color: #bfc1c3;
+
+}
+#sub-sub-nav li{
+position:relative;
+display:inline;
+
+;
+}
+#sub-sub-nav a{
+display: inline-block;
+font-weight: bold;
+margin: 0;
+outline: 0;
+padding: 10px 20px;
+text-decoration: none;
+margin-bottom:-5px;
+}
+#sub-sub-nav ul{
+position:absolute;
+/*top:100%; Uncommenting this makes the dropdowns work in IE7 */
+left:-9999px;
+margin:0;
+padding:0;
+text-align:left;
+
+}
+#sub-sub-nav ul li{
+display:block;
+}
+#sub-sub-nav li:hover ul{
+left:0;
+}
+#sub-sub-nav li a{
+text-decoration:none;
+padding:10px 15px;
+background:$panel-colour;
+margin:5px 5px 0 0;
+}
+#sub-sub-nav li:hover a{
+background:#f1f1f1;
+}
+#sub-sub-nav li:hover ul a{
+background:#dde0e2;
+}
+#sub-sub-nav li:hover ul a:hover{
+text-decoration:none;
+background:$highlight-colour;
+}
+#sub-sub-nav ul a{
+color:$link-colour;
+white-space:nowrap;
+display:block;
+border-bottom:1px solid #ccc;
 }
 
-ul.sub-tabs li a{
-    background: #dde0e2;
-    padding:10px 15px;
-    margin: 0 4px 0px 0;
-    display:inline-block;
-    position:relative;
-    float:left;
-    text-decoration:none;
-    color:#000;
-    font-size: 18px;
-}
+#sub-sub-nav li a.active{
+font-weight: bold;
+background:#fff;
 
-ul.sub-tabs li a:hover{
-    background: #dde0e2;
-}
+border-left:1px solid $border-colour;
+border-right:1px solid $border-colour;
+border-top:1px solid $border-colour;
+border-bottom:1px solid #fff!important;
 
-ul.sub-tabs li a.active{
-    background: #ffc136;
-    display:block;
-    text-decoration:none;
+margin:5px 5px -1px 0;
+padding:10px 15px 15px 15px;
 }
 
 
+///
 
-ul.sub-tabs li a span.badge  {
-    font-size: 13px;
-    padding:1px 3px 0px 4px;
-    min-width: 15px;
-    display: inline-block;
-    border-radius: 20px;
-    text-align: center;
-    background:#004A83;
-    margin:0 0 0 10px;
-    font-weight:bold;
-    color:#fff;
-}
 
-ul.sub-tabs li a.active span.badge {
-    background:#fff;
-    background:#b10e1e;
-}
+
 
 .form-control.full{
     width:100%;
@@ -421,7 +454,7 @@ table.case-detail-view tr td:first-child, table.case-detail-view tr th:first-chi
 }
 
 table.case-detail-view tr:nth-child(even){
-    
+
 }
 
 table.case-detail-view tr th{
@@ -461,7 +494,7 @@ table.case-detail-view-expanded tr td:first-child, table.case-detail-view tr th:
 }
 
 table.case-detail-view-expanded tr:nth-child(even){
-    
+
 }
 
 table.case-detail-view-expanded tr th{
@@ -518,7 +551,7 @@ table.case-detail-view-expanded td:nth-child(n+2){
 }
 
 table.case-detail-view-expanded td:nth-child(n+11){
-    
+
 }
 
 
@@ -656,7 +689,7 @@ table tr .bg-white{
 
 table.detail-view tr td:first-child {
     min-width:110px!important;
-    
+
 }
 
 a .expand {
@@ -716,4 +749,26 @@ h3.heading-medium{
     max-width:1040px!important;
     padding-left:20px;
     padding-right:20px;
+}
+
+.wmt-compare {
+  background: $ministry-of-justice;
+  color: $white;
+  padding-top: 1px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  a { color: $white !important; margin-top: 5px; display: inline-block;}
+}
+
+.wmt-compare__select {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-color: $white;
+  display: block;
+  color: $white;
+  width: auto !important;
+  max-width: 100%;
+  background-color: $ministry-of-justice !important;
 }

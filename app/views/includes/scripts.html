@@ -10,6 +10,8 @@
 <script src="/public/javascripts/nps.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+<script src="/public/javascripts/profile-capacity.js"></script>
+<script src="/public/javascripts/profile-caseload.js"></script>
 <script src="/public/javascripts/plot-line-team-1.js"></script>
 <script src="/public/javascripts/plot-line-team-2.js"></script>
 <script src="/public/javascripts/plot-line-team-combined.js"></script>
@@ -38,7 +40,7 @@ $(document).ready(function(){
         isCommunityExpanded = !isCommunityExpanded;
         dealWithTierHeader()
     });
- 
+
     $(".open-licence").click(function(){
         $(".sub-tier-header-licence, .hide-licence-total, .licence-expanded").toggle();
         isLicenceExpanded = !isLicenceExpanded

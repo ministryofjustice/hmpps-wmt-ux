@@ -9,14 +9,7 @@
 {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <br>
-  <ul id="sub-nav">
-    <li><a href="#" class="active">Overview</a></li>
-    <li><a href="#">Capacity</a></li>
-    <li><a href="#">Caseload</a></li>
-    <li><a href="#">Case progress</a></li>
-    <li><a href="#">Notes</a></li>
-  </ul>
+
 
   <header class="heading-xlarge">
     <span class="heading-secondary">
@@ -35,7 +28,7 @@
           </tr>
           <tr>
             <th scope="row">Team</th>
-            <td><a href="team-profile">Medway</a></td>
+            <td><a href="team-profile">Medway</a> - Kent</td>
           </tr>
           <tr>
             <th scope="row">Capacity</th>
@@ -82,14 +75,15 @@
   </div>
 
 
-
-  <br><br><br>
-
-
-
   <br>
 
-  <div id="plotly-div-line"></div>
+  <h2 class="heading-large">Capacity</h2>
+  <div id="profile-capacity"></div>
+
+  <h2 class="heading-large">Caseload</h2>
+  <div id="profile-caseload" class="js-plotly-plot">
+
+
 
 </main>
 {% endblock %}

@@ -102,7 +102,7 @@ layout = {
     ticklen: 4,
     ticks: 'outside',
     tickwidth: 1,
-    title: '2016',
+    title: 'January to December 2016',
     type: 'category'
   },
   yaxis: {
@@ -116,11 +116,11 @@ layout = {
     ticklen: 4,
     ticks: 'outside',
     tickwidth: 1,
-    title: 'Capacity %',
+    title: 'Number of cases',
     type: 'linear'
   }
 };
-Plotly.plot('plotly-div-bar', {
+Plotly.plot('profile-caseload', {
   data: data,
   layout: layout
 });
