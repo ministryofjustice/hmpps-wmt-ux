@@ -8,10 +8,28 @@ trace1 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Your capacity (%)',
+  name: 'Your capacity',
   type: 'scatter',
 };
+
 trace2 = {
+  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  y: ['0', '10', '0', '0', '20', '10', '0', '5', '0', '0', '10', '10'],
+  hoverinfo: 'y+name',
+  line: {
+    shape: 'linear',
+    width: 3.5
+  },
+  marker: {
+    opacity: 1,
+    size: 9
+  },
+  mode: 'lines+markers',
+  name: 'Your reduction',
+  type: 'scatter'
+};
+
+trace3 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   y: ['100', '95', '120', '120', '110', '110', '100', '100', '120', '100', '100', '110'],
   hoverinfo: 'y+name',
@@ -25,10 +43,10 @@ trace2 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Medway team average (%)',
+  name: 'Medway team average',
   type: 'scatter'
 };
-data = [trace1, trace2];
+data = [trace1, trace2, trace3];
 layout = {
   autosize: true,
   dragmode: 'pan',
@@ -41,31 +59,30 @@ layout = {
     orientation: 'h'
   },
   margin: {
-    r: 0,
-    t: 70,
-    b: 40,
-    l: 50
+    r: 30,
+    t: 15,
+    b: 30,
+    l: 45
   },
-  shapes: [
-    {
-      fillcolor: 'rgb(0, 94, 165)',
-      line: {
-        color: 'rgba(68, 68, 68, 100)',
-        dash: 'dot',
-        width: 1
-      },
-      opacity: 0.3,
-      type: 'rectangle',
-      x0: 0,
-      x1: 1,
-      xref: 'paper',
-      y0: 90,
-      y1: 110,
-      yref: 'y'
-    }
-  ],
+  // shapes: [
+  //   {
+  //     fillcolor: 'rgb(0, 94, 165)',
+  //     line: {
+  //       color: 'rgba(68, 68, 68, 100)',
+  //       dash: 'none',
+  //       width: 0
+  //     },
+  //     opacity: 0.3,
+  //     type: 'rectangle',
+  //     x0: 0,
+  //     x1: 1,
+  //     xref: 'paper',
+  //     y0: 90,
+  //     y1: 110,
+  //     yref: 'y'
+  //   }
+  // ],
   showlegend: true,
-  // title: 'Caseload Capacity',
   xaxis: {
     autorange: true,
     domain: [0, 1],
@@ -78,8 +95,8 @@ layout = {
     showticklabels: true,
     side: 'bottom',
     ticks: 'outside',
-    title: 'January to December 2016',
-    titlefont: {size: 15},
+    title: 'Months 2016',
+    titlefont: {size: 16},
     type: 'category',
     zeroline: true,
     zerolinewidth: 11
@@ -89,8 +106,9 @@ layout = {
     fixedrange: true,
     range: [-5.73436526999, 125.73436527],
     showline: true,
-    ticks: 'outside',
-    title: 'Capacity (%)',
+    ticks: 'inside',
+    title: 'Percentage (%)',
+    titlefont: {size: 16},
     type: 'linear'
   }
 };

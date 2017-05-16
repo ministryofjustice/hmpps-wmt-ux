@@ -1,0 +1,21 @@
+
+
+
+.dataTable thead .sorting,
+.dataTable thead .sorting_asc,
+.dataTable thead .sorting_desc {
+  cursor:pointer;*cursor:hand
+}
+
+.dataTable thead .sorting,
+.dataTable thead .sorting_asc,
+.dataTable thead .sorting_desc,
+.dataTable thead .sorting_asc_disabled,
+.dataTable thead .sorting_desc_disabled {
+  background-repeat: no-repeat;
+  background-position: center right
+}
+
+.dataTable thead .sorting{background-image:url("../images/sort_both.png")}
+.dataTable thead .sorting_asc{background-image:url("../images/sort_asc.png")}
+.dataTable thead .sorting_desc{background-image:url("../images/sort_desc.png")}

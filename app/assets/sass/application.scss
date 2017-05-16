@@ -218,10 +218,9 @@ select {
 background-color: #fff;
 // border-top: 1px solid #bfc1c3;
 border-bottom: 1px solid #bfc1c3;
-padding-top: 0.75em;
-padding-bottom: 0.75em;
+padding-top: 15px;
+padding-bottom: 15px;
 padding: 0;
-z-index: 999;
 
 }
 #sub-nav li{
@@ -233,17 +232,10 @@ display: inline-block;
 font-weight: bold;
 margin: 0;
 outline: 0;
-padding: 15px 30px;
+padding: 15px;
 text-decoration: none;
 }
-#sub-nav ul{
-position:absolute;
-/*top:100%; Uncommenting this makes the dropdowns work in IE7 */
-left:-9999px;
-margin:0;
-padding:0;
-text-align:left;
-}
+
 #sub-nav ul li{
 display:block;
 }
@@ -269,7 +261,7 @@ border-bottom:1px solid #ccc;
 }
 
 #sub-nav li a.active{
-font-weight: bold;
+// font-weight: bold;
 background-color: #004A83;
 color:#fff;
 

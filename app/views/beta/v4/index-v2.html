@@ -1,0 +1,560 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+ <h1 class="heading-medium grey">Medway</h1>
+<h2 class="heading-medium">Kent</h2>
+<h3 class="heading-medium">South East &amp; Eastern</h3>
+
+
+<br>
+
+<!-- <div class="grid-row">
+
+<div class="column-one-quarter">
+        <div class="form-group">
+<label class="form-label-bold">Search
+          <input class="form-control full">
+        </label>
+        </div>
+    </div>
+
+
+</div> -->
+
+<!--  <div class="breadcrumbs">
+<ol>
+<li><a href="">South East &amp; Eastern</a></li>
+<li><a href="">Kent</a></li>
+<li><a href="">Medway</a></li>
+</ol>
+
+<a href="" class="link">remove</a>
+
+</div> -->
+
+
+
+
+<ul id="sub-nav">
+
+  <li>
+    <a href="index" class="active">Medway Team</a>
+  </li>
+  <li>
+    <a href="index">Another Team</a>
+  </li>
+  <li>
+    <a href="" class="pull-right">Create new filter</a>
+  </li>
+</ul>
+
+<br>
+
+<ul id="sub-sub-nav">
+
+  <li>
+    <a href="index" class="active">Overview</a>
+  </li>
+  <li>
+    <a href="capacity">Capacity</a>
+  </li>
+  <li>
+    <a href="capacity-bar">Caseload</a>
+  </li>
+  <li>
+    <a href="capacity-case">Case progress</a>
+  </li>
+
+  <li>
+    <a href="notes">Notes</a>
+  </li>
+</ul>
+
+<br>
+<p><span class="heading-small"></span></p>
+
+
+
+
+<div class="date-picker">Showing <span class="bold">all division</span> data.<br><select id="date-from"><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option></select> to <select id="date-to"><option value="2017-03-01T00:00:00Z">Mar 2017</option><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option></select></div>
+
+<br>
+
+
+
+
+
+</div>
+
+
+<!-- <button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+This is my DIV element.
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p> -->
+
+<div class="data-container">
+
+    <table class="data-table">
+
+    <tr>
+        <th class="headcol" colspan="2">Division</th>
+        <th colspan="2">Capacity</th>
+        <th colspan="4">Cases</th>
+        <th colspan="2">Hours</th>
+    </tr>
+
+
+
+    <tr class="data-sub-header">
+        <td class="headcol">Name</td>
+        <td>OMs</td>
+        <td>Points <br> Remaining</td>
+        <td>Capacity</td>
+        <td>
+            <a class="link open-community">Community [+]</a>
+        </td>
+        <td>
+            <a class="link open-licence">Licence [+]</a>
+        </td>
+        <td>
+            <a class="link open-custody">Custody [+]</a>
+        </td>
+        <td>Total</td>
+        <td>Contracted</td>
+        <td>Reduced</td>
+    </tr>
+
+    <tr class="tier-header" style="display: none;">
+        <td colspan="4"></td>
+        <td>
+                <ul class="sub-tier-header sub-tier-header-community" style="display: none;">
+                    <li>Total</li>
+                    <li>Untiered</li>
+                    <li>D2</li>
+                    <li>D1</li>
+                    <li>C2</li>
+                    <li>C1</li>
+                    <li>B2</li>
+                    <li>B1</li>
+                    <li>A</li>
+                </ul>
+
+        </td>
+
+        <td>
+
+                <ul class="sub-tier-header sub-tier-header-licence" style="display: none;">
+                    <li>Total</li>
+                    <li>Untiered</li>
+                    <li>D2</li>
+                    <li>D1</li>
+                    <li>C2</li>
+                    <li>C1</li>
+                    <li>B2</li>
+                    <li>B1</li>
+                    <li>A</li>
+                </ul>
+
+        </td>
+
+        <td>
+                <ul class="sub-tier-header sub-tier-header-custody" style="display: none;">
+                    <li>Total</li>
+                    <li>Untiered</li>
+                    <li>D2</li>
+                    <li>D1</li>
+                    <li>C2</li>
+                    <li>C1</li>
+                    <li>B2</li>
+                    <li>B1</li>
+                    <li>A</li>
+                </ul>
+
+        </td>
+        <td colspan="3"></td>
+    </tr>
+
+    <tr>
+        <td class="headcol"><a href="ldu">South East &amp; Eastern</a></td>
+        <td>102</td>
+        <td>1000</td>
+        <td>120%</td>
+        <td>
+            <span class="hide-community-total">22</span>
+            <ul class="tier community-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-licence-total">99</span>
+            <ul class="tier licence-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-custody-total">929</span>
+            <ul class="tier custody-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>6</td>
+        <td>1</td>
+        <td><a href="reduction-individual">0</a></td>
+    </tr>
+
+    <tr>
+        <td class="headcol"><a href="ldu">London</a></td>
+        <td>92</td>
+        <td>1000</td>
+        <td>120%</td>
+        <td>
+            <span class="hide-community-total">22</span>
+            <ul class="tier community-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-licence-total">99</span>
+            <ul class="tier licence-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-custody-total">929</span>
+            <ul class="tier custody-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>6</td>
+        <td>1</td>
+        <td><a href="reduction-individual">0</a></td>
+    </tr>
+
+    <tr>
+        <td class="headcol"><a href="ldu">North East</a></td>
+        <td>67</td>
+        <td>1000</td>
+        <td>120%</td>
+        <td>
+            <span class="hide-community-total">22</span>
+            <ul class="tier community-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-licence-total">99</span>
+            <ul class="tier licence-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-custody-total">929</span>
+            <ul class="tier custody-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>6</td>
+        <td>1</td>
+        <td><a href="reduction-individual">0</a></td>
+    </tr>
+
+    <tr>
+        <td class="headcol"><a href="ldu">North West</a></td>
+        <td>122</td>
+        <td>1000</td>
+        <td>120%</td>
+        <td>
+            <span class="hide-community-total">22</span>
+            <ul class="tier community-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-licence-total">99</span>
+            <ul class="tier licence-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-custody-total">929</span>
+            <ul class="tier custody-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>6</td>
+        <td>1</td>
+        <td><a href="reduction-individual">0</a></td>
+    </tr>
+
+     <tr>
+        <td class="headcol"><a href="ldu">Wales</a></td>
+        <td>72</td>
+        <td>1000</td>
+        <td>120%</td>
+        <td>
+            <span class="hide-community-total">22</span>
+            <ul class="tier community-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-licence-total">99</span>
+            <ul class="tier licence-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>
+            <span class="hide-custody-total">929</span>
+            <ul class="tier custody-expanded" style="display: none;">
+                <li>22</li>
+                <li>2</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>2</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </td>
+        <td>6</td>
+        <td>1</td>
+        <td><a href="reduction-individual">0</a></td>
+    </tr>
+
+
+
+
+    </table><!-- end data-table  -->
+
+</div>
+<!-- <div class="data-container">
+
+    <ul class="data-header">
+        <li>Officer</li>
+        <li>Capacity</li>
+        <li>Cases</li>
+        <li>Hours</li>
+    </ul>
+
+    <ul class="data-sub-header">
+        <li></li>
+        <li>Grade</li>
+        <li>Points <br> Remaining</li>
+        <li>Capacity</li>
+        <li class="expanded"><a href="index-expanded.html" class="link">Community [+]</a></li>
+        <li>Licence [+]</li>
+        <li>Custody [+]</li>
+        <li>Total</li>
+        <li>Contracted</li>
+        <li>Reduced</li>
+    </ul>
+
+    <ul class="data-sub-header">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li  class="expanded">
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+
+     <ul class="data-content">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li  class="expanded">
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="data-content">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li  class="expanded">
+        </li>
+        <li  class="expanded">
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="data-content">
+        <li>Christopher Smith</li>
+        <li>SPO</li>
+        <li>122</li>
+        <li>88%</li>
+        <li>15</li>
+        <li>6</li>
+        <li>3</li>
+        <li>24</li>
+        <li>37</li>
+        <li>0</li>
+    </ul>
+
+
+
+
+
+</div> --><!-- end data-container  -->
+
+
+
+<a href="" class="link">Export</a>
+
+
+
+
+
+
+
+</main>
+
+{% endblock %}

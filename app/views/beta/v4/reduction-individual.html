@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+{% block service_name %}
+{% if serviceName %} {{ serviceName }} {% endif %}
+{% endblock %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+
+<a class="link-back" href="index">Back</a>
+  <form action="" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Reduction
+    </h1>
+
+    <p>Add a reduction to <span class="heading-small">Chris Smith</span>.</p>
+
+    <!-- Full name -->
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">From date</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">To date</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Amount of hours per week</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Reason</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Apply reduction">
+    </div>
+
+    <a href="" class="link">Cancel</a>
+  </form>
+
+</main>
+
+{% endblock %}
+
+
