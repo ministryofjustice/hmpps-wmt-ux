@@ -36,7 +36,7 @@ table.data-table {
 table.data-table tr th{
     // font-size: 16px;
     padding: 0 10px;
-    background: #dcf3fd;
+    // background: #dcf3fd;
     border: 1px solid #d9d9d9;
 }
 
@@ -47,7 +47,7 @@ table.data-table tr th:nth-child(2){
 table.data-table tr td{
     // font-size: 12px;
     padding:5px 10px 5px 10px;
-    text-align: center;
+    // text-align: center;
     border-left: 1px solid #d9d9d9;
     border: 1px solid #d9d9d9!important;
 }
@@ -62,7 +62,7 @@ table.data-table tr:nth-child(odd){
     // font-size: 12px;
     padding: 10px 5px;
 
-    background: #efefef;
+    // background: #efefef;
 }
 
 table.data-table tr th:first-child{
@@ -73,12 +73,12 @@ table.data-table tr td:first-child{
     // font-size: 12px;
     min-width: 120px!important;
     padding:5px 10px 5px 10px;
-    text-align: left;
+    // text-align: left;
 }
 
 table.data-table tr.data-sub-header td {
     min-width: 25px;
-    text-align: center;
+    // text-align: center;
     font-weight: bold;
     background: #e6f4fb;
     padding: 5px 10px 5px 10px;
@@ -94,7 +94,7 @@ table.data-table tr.data-sub-header td:nth-child(5),
 table.data-table tr.data-sub-header td:nth-child(6),
 table.data-table tr.data-sub-header td:nth-child(7) {
     min-width: 60px;
-    text-align: left;
+    // text-align: left;
     font-weight: bold;
 }
 
@@ -111,10 +111,10 @@ margin: -5px -10px -5px -10px;
 ul.sub-tier-header li {
 display: inline-block;
 width: 35px;
-text-align: center;
+// text-align: center;
 font-weight: bold;
 padding: 5px 0;
-background: rgba(255,228,157,0.8);
+background-color: rgba(255,228,157,0.8);
 margin:0;
 float: left;
 border-left: 1px solid #d9d9d9;
@@ -142,7 +142,7 @@ margin: -10px -10px -10px -10px;
 ul.tier li {
 display: inline-block;
 width: 35px;
-text-align: center;
+// text-align: center;
 padding: 5px 0;
 background: rgba(255,228,157,0.5);
 margin:0;

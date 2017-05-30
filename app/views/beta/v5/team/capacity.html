@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% set breadcrumbs = {
+      items: [
+        {
+          link: 'index',
+          title: 'South East and Easter'
+        },
+        {
+          link: '/beta/v5/LDU',
+          title: 'Kent'
+        },
+        {
+          link: 'index',
+          title: 'Medway'
+        },
+        {
+          title: 'Capacity'
+        }
+      ]
+    }
+  %}
+  {% include "includes/breadcrumbs.html" %}
+
+  <ul id="sub-nav">
+    <li><a href="/beta/v5/team">Overview</a></li>
+    <li><a href="#" class="active">Capacity</a></li>
+    <li><a href="/beta/v5/team/caseload">Caseload</a></li>
+    <li><a href="#">Case progress</a></li>
+    <li><a href="#">Notes</a></li>
+  </ul>
+
+  <header class="heading-xlarge">
+    <span class="heading-secondary">
+      Team capacity <span class="visuallyhidden">for</span>
+    </span>
+    Medway
+  </header>
+
+  <div id="team-capacity"></div>
+
+  <br><br>
+
+  <h2 class="heading-medium">Capacity by grade</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th rowspan="2">Offender manager</th>
+        <th class="u-table-colsplit" colspan="12">Monthly capacity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Grade</th>
+        <th class="u-table-colsplit">Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>
+        <th>June</th>
+        <th>July</th>
+        <th>Aug</th>
+        <th>Sept</th>
+        <th>Oct</th>
+        <th>Nov</th>
+        <th>Dec</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PO</td>
+        <td class="u-table-colsplit">110%</td>
+        <td>112%</td>
+        <td>100%</td>
+        <td>120%</td>
+        <td>110%</td>
+        <td>115%</td>
+        <td>100%</td>
+        <td>100%</td>
+        <td>112%</td>
+        <td>118%</td>
+        <td>123%</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>PSO</td>
+        <td class="u-table-colsplit">110%</td>
+        <td>112%</td>
+        <td>100%</td>
+        <td>120%</td>
+        <td>110%</td>
+        <td>115%</td>
+        <td>100%</td>
+        <td>100%</td>
+        <td>112%</td>
+        <td>118%</td>
+        <td>123%</td>
+        <td>100%</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+{% endblock %}

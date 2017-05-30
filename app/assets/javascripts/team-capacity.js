@@ -8,28 +8,11 @@ trace1 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Your capacity',
+  name: 'Medway team capacity',
   type: 'scatter',
 };
 
 trace2 = {
-  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  y: ['0', '10', '0', '0', '20', '10', '0', '5', '0', '0', '10', '10'],
-  hoverinfo: 'y+name',
-  line: {
-    shape: 'linear',
-    width: 3.5
-  },
-  marker: {
-    opacity: 1,
-    size: 9
-  },
-  mode: 'lines+markers',
-  name: 'Your reduction',
-  type: 'scatter'
-};
-
-trace3 = {
   x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   y: ['100', '95', '120', '120', '110', '110', '100', '100', '120', '100', '100', '110'],
   hoverinfo: 'y+name',
@@ -43,10 +26,10 @@ trace3 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Medway PO average',
+  name: 'Kent LDU average capacity',
   type: 'scatter'
 };
-data = [trace1, trace2, trace3];
+data = [trace1, trace2];
 layout = {
   autosize: true,
   dragmode: 'pan',
@@ -113,7 +96,7 @@ layout = {
   }
 };
 
-Plotly.plot('profile-capacity', {
+Plotly.plot('team-capacity', {
   data: data,
   layout: layout
 });

@@ -764,3 +764,11 @@ h3.heading-medium{
   max-width: 100%;
   background-color: $ministry-of-justice !important;
 }
+
+.wmt-table__head {
+  background-color: lighten($black, 75%);
+}
+
+.wmt-table__block {
+  border-bottom: 2px solid $black;
+}

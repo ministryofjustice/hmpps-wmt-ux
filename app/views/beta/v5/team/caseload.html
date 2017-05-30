@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% set breadcrumbs = {
+      items: [
+        {
+          link: 'index',
+          title: 'South East and Easter'
+        },
+        {
+          link: '/beta/v5/LDU',
+          title: 'Kent'
+        },
+        {
+          link: '/beta/v5/team',
+          title: 'Medway'
+        },
+        {
+          title: 'Caseload'
+        }
+      ]
+    }
+  %}
+  {% include "includes/breadcrumbs.html" %}
+
+  <ul id="sub-nav">
+    <li><a href="/beta/v5/team">Overview</a></li>
+    <li><a href="/beta/v5/team/capacity">Capacity</a></li>
+    <li><a href="#" class="active">Caseload</a></li>
+    <li><a href="#">Case progress</a></li>
+    <li><a href="#">Notes</a></li>
+  </ul>
+
+  <header class="heading-xlarge">
+    <span class="heading-secondary">
+      Team caseload <span class="visuallyhidden">for</span>
+    </span>
+    Medway
+  </header>
+  <br>
+
+  <h2 class="heading-medium">Caseload by grade</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Offender manager</th>
+        <th colspan="8">Cases by tier</th>
+      </tr>
+      <tr>
+        <th>Grade</th>
+        <th>Overall</th>
+        <th>D2</th>
+        <th>D1</th>
+        <th>C2</th>
+        <th>C1</th>
+        <th>B2</th>
+        <th>B1</th>
+        <th>A</th>
+      </tr>
+    </thead>
+
+    <tbody class="">
+      <tr>
+        <td>PO</td>
+        <td>63.2%</td>
+        <td>5.3%</td>
+        <td>16.7%</td>
+        <td>21.4%</td>
+        <td>43.4%</td>
+        <td>94.6%</td>
+        <td>93.4%</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>PSO</td>
+        <td>36.8%</td>
+        <td>94.7%</td>
+        <td>83.3%</td>
+        <td>78.6%</td>
+        <td>56.7%</td>
+        <td>5.4%</td>
+        <td>6.6%</td>
+        <td>0%</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+{% endblock %}

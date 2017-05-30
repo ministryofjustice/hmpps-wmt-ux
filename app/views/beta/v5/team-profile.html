@@ -1,0 +1,385 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  {% block service_name %}
+    {% if serviceName %} {{ serviceName }} {% endif %}
+  {% endblock %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <br>
+  <ul id="sub-nav">
+    <li><a href="#" class="active">Overview</a></li>
+    <li><a href="#">Capacity</a></li>
+    <li><a href="#">Caseload</a></li>
+    <li><a href="#">Case progress</a></li>
+    <li><a href="#">Notes</a></li>
+  </ul>
+
+  <header class="heading-xlarge">
+    <span class="heading-secondary">
+      Team overview <span class="visuallyhidden">for</span>
+    </span>
+    Medway
+  </header>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">LDU Cluster</th>
+            <td>Kent</td>
+          </tr>
+          <tr>
+            <th scope="row">Team size</th>
+            <td>4</td>
+          </tr>
+          <tr>
+            <th scope="row">Current capacity average</th>
+            <td>120%</td>
+          </tr>
+          <tr>
+            <th scope="row">Current caseload</th>
+            <td>64</td>
+          </tr>
+          <tr>
+            <th scope="row">Contracted hours</th>
+            <td>37.5</td>
+          </tr>
+          <tr>
+            <th scope="row">Active reduction</th>
+            <td>7.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="column-one-third">
+      <section class="wmt-compare">
+        <form class="" action="" method="post">
+          <h1 class="heading-medium">Compare</h1>
+          <div>
+            Compare Medway to:
+          </div>
+          <select class="wmt-compare__select form-control" name="">
+            <option selected>Maidstone</option>
+          </select>
+          <input type="submit" class="button" value="Compare now">
+          <div><a href="#">or use the compare tool</a></div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+
+  <br>
+
+  <div class="data-container">
+
+      <table class="data-table">
+
+      <tr>
+          <th class="headcol" colspan="2">Division</th>
+          <th colspan="2">Capacity</th>
+          <th colspan="4">Cases</th>
+          <th colspan="2">Hours</th>
+      </tr>
+
+
+
+      <tr class="data-sub-header">
+          <td class="headcol">Name</td>
+          <td>OMs</td>
+          <td>Points <br> Remaining</td>
+          <td>Capacity</td>
+          <td>
+              <a class="link open-community">Community [+]</a>
+          </td>
+          <td>
+              <a class="link open-licence">Licence [+]</a>
+          </td>
+          <td>
+              <a class="link open-custody">Custody [+]</a>
+          </td>
+          <td>Total</td>
+          <td>Contracted</td>
+          <td>Reduced</td>
+      </tr>
+
+      <tr class="tier-header" style="display: none;">
+          <td colspan="4"></td>
+          <td>
+                  <ul class="sub-tier-header sub-tier-header-community" style="display: none;">
+                      <li>Total</li>
+                      <li>Untiered</li>
+                      <li>D2</li>
+                      <li>D1</li>
+                      <li>C2</li>
+                      <li>C1</li>
+                      <li>B2</li>
+                      <li>B1</li>
+                      <li>A</li>
+                  </ul>
+
+          </td>
+
+          <td>
+
+                  <ul class="sub-tier-header sub-tier-header-licence" style="display: none;">
+                      <li>Total</li>
+                      <li>Untiered</li>
+                      <li>D2</li>
+                      <li>D1</li>
+                      <li>C2</li>
+                      <li>C1</li>
+                      <li>B2</li>
+                      <li>B1</li>
+                      <li>A</li>
+                  </ul>
+
+          </td>
+
+          <td>
+                  <ul class="sub-tier-header sub-tier-header-custody" style="display: none;">
+                      <li>Total</li>
+                      <li>Untiered</li>
+                      <li>D2</li>
+                      <li>D1</li>
+                      <li>C2</li>
+                      <li>C1</li>
+                      <li>B2</li>
+                      <li>B1</li>
+                      <li>A</li>
+                  </ul>
+
+          </td>
+          <td colspan="3"></td>
+      </tr>
+
+
+
+      <tr>
+          <td class="headcol"><a href="om-profile">Joe Blogs</a></td>
+          <td>122</td>
+          <td>1000</td>
+          <td>120%</td>
+          <td>
+              <span class="hide-community-total">22</span>
+              <ul class="tier community-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-licence-total">Maidstone</span>
+              <ul class="tier licence-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-custody-total">929</span>
+              <ul class="tier custody-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>6</td>
+          <td>37.5</td>
+          <td><a href="reduction-individual">0</a></td>
+      </tr>
+
+       <tr>
+          <td class="headcol"><a href="ldu">User 2</a></td>
+          <td>72</td>
+          <td>1000</td>
+          <td>120%</td>
+          <td>
+              <span class="hide-community-total">22</span>
+              <ul class="tier community-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-licence-total">99</span>
+              <ul class="tier licence-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-custody-total">929</span>
+              <ul class="tier custody-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>6</td>
+          <td>37.5</td>
+          <td><a href="reduction-individual">0</a></td>
+      </tr>
+       <tr>
+          <td class="headcol"><a href="ldu">User 3</a></td>
+          <td>72</td>
+          <td>1000</td>
+          <td>120%</td>
+          <td>
+              <span class="hide-community-total">22</span>
+              <ul class="tier community-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-licence-total">99</span>
+              <ul class="tier licence-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-custody-total">929</span>
+              <ul class="tier custody-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>6</td>
+          <td>37.5</td>
+          <td><a href="reduction-individual">10</a></td>
+      </tr>
+       <tr>
+          <td class="headcol"><a href="ldu">User 4</a></td>
+          <td>72</td>
+          <td>1000</td>
+          <td>120%</td>
+          <td>
+              <span class="hide-community-total">22</span>
+              <ul class="tier community-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-licence-total">99</span>
+              <ul class="tier licence-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>
+              <span class="hide-custody-total">929</span>
+              <ul class="tier custody-expanded" style="display: none;">
+                  <li>22</li>
+                  <li>2</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>1</li>
+                  <li>4</li>
+              </ul>
+          </td>
+          <td>6</td>
+          <td>37.5</td>
+          <td><a href="reduction-individual">18.75</a></td>
+      </tr>
+
+
+      </table><!-- end data-table  -->
+
+  </div>
+
+
+
+
+  <a href="" class="button">Export</a>
+
+
+</main>
+{% endblock %}
