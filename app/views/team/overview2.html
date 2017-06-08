@@ -1,0 +1,229 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% set breadcrumbs = {
+      items: [
+        {
+          link: 'index',
+          title: 'South East and Easter'
+        },
+        {
+          link: '/beta/v5/ldu/capacity',
+          title: 'Kent'
+        },
+        {
+          title: 'Medway'
+        }
+      ]
+    }
+  %}
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  {% set subnav = {
+      links: [
+        {
+          link: '/team/medway',
+          title: 'Overview',
+          active: true
+        },
+        {
+          link: '/team/medway/capacity',
+          title: 'Capacity'
+        },
+        {
+          link: '/team/medway/caseload',
+          title: 'Caseload'
+        },
+        {
+          link: '/team/medway/reductions',
+          title: 'Reductions'
+        }
+      ]
+    }
+  %}
+  {% include "includes/sub_nav.html" %}
+
+  <br />
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">LDU</th>
+            <td><a href="/beta/v5/LDU/capacity">Kent</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Offender managers</th>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th scope="row">Capacity</th>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <th scope="row">Reduction</th>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <th scope="row">Number of cases</th>
+            <td>44</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+  <table id="example" class="data-table dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+    <thead>
+      <tr>
+        <th colspan="2">Officer</th>
+        <th colspan="4">Total</th>
+        <th colspan="2">Hours</th>
+      </tr>
+
+      <tr>
+        <th>Name</th>
+        <th>Grade</th>
+        <th>Cases</th>
+        <th>Priority</th>
+        <th>PAROMs (Due)</th>
+        <th>Points</th>
+        <th>Contracted</th>
+        <th>Reduced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ademola Akinola</td>
+        <td>PSO</td>
+        <td>35</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1462</td>
+        <td>37</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Amanda Steyn</td>
+        <td>PO</td>
+        <td>39</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2369</td>
+        <td>37</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Chelsea Luckham</td>
+        <td>PSO</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td>80</td>
+        <td>37</td>
+        <td>22.60</td>
+      </tr>
+      <tr>
+        <td>Clare Hastings</td>
+        <td>PO</td>
+        <td>19</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1262</td>
+        <td>37</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>David Ashley</td>
+        <td>PO</td>
+        <td>38</td>
+        <td>0</td>
+        <td>2</td>
+        <td>2353</td>
+        <td>37</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Evonne Samuda</td>
+        <td>PO</td>
+        <td>36</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2140</td>
+        <td>37</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td><a href="/om/15?name=Jane%20Brown">Jane Brown</a></td>
+        <td>PO</td>
+        <td>44</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2515</td>
+        <td>37</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Martin Smith</td>
+        <td>PSO</td>
+        <td>16</td>
+        <td>0</td>
+        <td>0</td>
+        <td>533</td>
+        <td>37</td>
+        <td>37</td>
+      </tr>
+      <tr>
+        <td>Mavis Tonkin</td>
+        <td>PSO</td>
+        <td>16</td>
+        <td>0</td>
+        <td>0</td>
+        <td>484</td>
+        <td>37</td>
+        <td>22.20</td>
+      </tr>
+      <tr>
+        <td>Mick Essen</td>
+        <td>PO</td>
+        <td>39</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2386</td>
+        <td>37</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Pauline Hughes</td>
+        <td>PO</td>
+        <td>31</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1598</td>
+        <td>33.60</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Rebecca Ashade</td>
+        <td>PSO</td>
+        <td>7</td>
+        <td>0</td>
+        <td>0</td>
+        <td>426</td>
+        <td>30</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+{% endblock %}

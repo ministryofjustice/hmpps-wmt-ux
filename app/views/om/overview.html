@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+
+  {% set subnav = {
+      links: [
+        {
+          link: '',
+          title: 'Overview',
+          active: true
+        },
+        {
+          link: '/om/capacity',
+          title: 'Capacity'
+        },
+        {
+          link: '/om/caseload',
+          title: 'Caseload'
+        },
+        {
+          link: '/om/reductions',
+          title: 'Reductions'
+        }
+      ]
+    }
+  %}
+  {% include "includes/sub_nav.html" %}
+  <br>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">Grade</th>
+            <td>PO</td>
+          </tr>
+          <tr>
+            <th scope="row">Team</th>
+            <td><a href="/team/medway">Medway</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Capacity</th>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <th scope="row">Cases</th>
+            <td>44</td>
+          </tr>
+          <tr>
+            <th scope="row">Contracted hours</th>
+            <td>37</td>
+          </tr>
+          <tr>
+            <th scope="row">Reduction</th>
+            <td>7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+</main>
+{% endblock %}

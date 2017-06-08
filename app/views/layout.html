@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block proposition_header %}
-
   <div class="header-proposition">
     <div class="content">
       <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
@@ -21,14 +20,17 @@
       </nav>
     </div>
   </div>
-
 {% endblock %}
+
 
 {% block header_class %}
   with-proposition
 {% endblock %}
 
+
+
 {% block body_end %}
   {% include "includes/scripts.html" %}
+  {% block page_specific_scripts %}{% endblock %}
   <!-- GOV.UK Prototype kit {{releaseVersion}} -->
 {% endblock %}
