@@ -1,6 +1,8 @@
-<header class="heading-xlarge">
-  <span class="heading-secondary">
-    {{entitiyLevel}}
-  </span>
+<header class="heading-xlarge" style="margin-top:0">
+  {% if entitiyLevel %}
+    <span class="heading-secondary">
+      {{entitiyLevel}}
+    </span>
+  {% endif %}
   {{entityTitle | title}}
 </header>

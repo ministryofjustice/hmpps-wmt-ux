@@ -1,6 +1,6 @@
 trace1 = {
-  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  y: ['88', '90', '100', '118', '117', '111', '107', '118', '100', '100', '102', '105'],
+  x: ['July \'16', 'Aug \'16', 'Sept \'16', 'Oct \'16', 'Nov \'16', 'Dec \'16', 'Jan \'17', 'Feb \'17', 'Mar \'17', 'Apr \'17', 'May \'17', 'June \'17'],
+  y: ['88', '90', '100', '118', '117', '111', '107', '118', '100', '100', '102', '58'],
   hoverinfo: 'y+name',
   line: {width: 3.5},
   marker: {
@@ -8,12 +8,12 @@ trace1 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Your capacity',
+  name: 'Clare Hastings\' capacity',
   type: 'scatter',
 };
 
 trace2 = {
-  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  x: ['July \'16', 'Aug \'16', 'Sept \'16', 'Oct \'16', 'Nov \'16', 'Dec \'16', 'Jan \'17', 'Feb \'17', 'Mar \'17', 'Apr \'17', 'May \'17', 'June \'17'],
   y: ['0', '10', '0', '0', '20', '10', '0', '5', '0', '0', '10', '10'],
   hoverinfo: 'y+name',
   line: {
@@ -25,12 +25,12 @@ trace2 = {
     size: 9
   },
   mode: 'lines+markers',
-  name: 'Your reduction',
+  name: 'Clare Hastings\' reduction',
   type: 'scatter'
 };
 
 trace3 = {
-  x: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  x: ['July \'16', 'Aug \'16', 'Sept \'16', 'Oct \'16', 'Nov \'16', 'Dec \'16', 'Jan \'17', 'Feb \'17', 'Mar \'17', 'Apr \'17', 'May \'17', 'June \'17'],
   y: ['100', '95', '120', '120', '110', '110', '100', '100', '120', '100', '100', '110'],
   hoverinfo: 'y+name',
   line: {
@@ -64,24 +64,24 @@ layout = {
     b: 30,
     l: 45
   },
-  // shapes: [
-  //   {
-  //     fillcolor: 'rgb(0, 94, 165)',
-  //     line: {
-  //       color: 'rgba(68, 68, 68, 100)',
-  //       dash: 'none',
-  //       width: 0
-  //     },
-  //     opacity: 0.3,
-  //     type: 'rectangle',
-  //     x0: 0,
-  //     x1: 1,
-  //     xref: 'paper',
-  //     y0: 90,
-  //     y1: 110,
-  //     yref: 'y'
-  //   }
-  // ],
+  shapes: [
+    {
+      fillcolor: 'rgb(0, 94, 165)',
+      line: {
+        color: 'rgba(68, 68, 68, 100)',
+        dash: 'none',
+        width: 0
+      },
+      opacity: 0.3,
+      type: 'rectangle',
+      x0: 0,
+      x1: 1,
+      xref: 'paper',
+      y0: 90,
+      y1: 110,
+      yref: 'y'
+    }
+  ],
   showlegend: true,
   xaxis: {
     autorange: true,
@@ -95,7 +95,6 @@ layout = {
     showticklabels: true,
     side: 'bottom',
     ticks: 'outside',
-    title: 'Months 2016',
     titlefont: {size: 16},
     type: 'category',
     zeroline: true,

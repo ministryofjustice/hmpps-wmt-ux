@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <form action="">
+    <div class="search-bar">
+        <div class="search-bar__control-group">
+            <input class="search-bar__search-input" type="search" title="Search" id="search-main" name="q" value="{{ searchCriteria }}">
+            <input class="search-bar__search-submit" type="submit" value="Search">
+        </div>
+    </div>
+  </form>
+
+
+
+  {% if searchResults %}
+    <h2 class="heading-large">Search results</h2>
+    <ol>
+    {% for result in searchResults %}
+      <li>
+        <a class="heading-medium" href="{{ result.link }}">
+          {{ result.title }}
+        </a>
+        <p class="heading-secondary">{{ result.entity }} from {{ result.parent }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+    {% if searchCriteria %}
+      <h2 class="heading-large">Search results</h2>
+      <p>Sorry we couldn't find anything thats matches <span class="small-bold">{{ searchCriteria }}</span></p>
+    {% endif %}
+  {% endif %}
+</main>
+{% endblock %}

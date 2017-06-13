@@ -15,7 +15,6 @@ jQuery.fn.tabs = function(settings){
 	},settings);
 
 	return $(this).each(function(){
-    console.log($(this))
 		//reference to tabs container
 		var tabs = $(this);
 
@@ -139,8 +138,9 @@ jQuery.fn.tabs = function(settings){
 		//function to select a tab from the url hash
 		function selectTabFromHash(hash){
 			var currHash = hash || window.location.hash;
-			var hashedTab = tabsNav.find('a[href=#'+ currHash.replace('#','') +']');
-		    if( hashedTab.size() > 0){
+			var hashedTab = tabsNav.find('[href="'+ currHash +'"]');
+
+        if( hashedTab.size() > 0){
 		    	selectTab(hashedTab,true);
 		    }
 		    else {

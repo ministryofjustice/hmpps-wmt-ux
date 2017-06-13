@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  {% include "includes/sub_nav.html" %}
+
+  <br />
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">Region</th>
+            <td><a href="#">South East And Easter</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Teams</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Cases</th>
+            <td>2904</td>
+          </tr>
+          <tr>
+            <th scope="row">Capacity</th>
+            <td>105%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+  <table id="example" class="data-table dataTable" style="width: 100%;">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th colspan="2">Capacity</th>
+        <th colspan="2">Hours</th>
+        <th>Cases</th>
+      </tr>
+
+      <tr>
+        <th>Name</th>
+        <th>Current (%)</th>
+        <th>Points</th>
+        <th>Contracted</th>
+        <th>Reduced</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#">Canterbury</a></td>
+        <td>129%</td>
+        <td>-2956</td>
+        <td>229.40</td>
+        <td>57.50</td>
+        <td>393</td>
+      </tr>
+      <tr>
+        <td><a href="#">Dartmund &amp; Gravesham</a></td>
+        <td>107%</td>
+        <td>-1084</td>
+        <td>135.86</td>
+        <td>57.50</td>
+        <td>333</td>
+      </tr>
+      <tr>
+        <td><a href="#">Maidstone</a></td>
+        <td>94%</td>
+        <td>1096</td>
+        <td>147.90</td>
+        <td>57.50</td>
+        <td>284</td>
+      </tr>
+      <tr>
+        <td><a href="/team/medway">Medway</a></td>
+        <td>108%</td>
+        <td>-1797</td>
+        <td>241.00</td>
+        <td>57.50</td>
+        <td>498</td>
+      </tr>
+      <tr>
+        <td><a href="#">South East Kent</a></td>
+        <td>114%</td>
+        <td>-3477</td>
+        <td>461.30</td>
+        <td>31.20</td>
+        <td>530</td>
+      </tr>
+      <tr>
+        <td><a href="#">Swale</a></td>
+        <td>106%</td>
+        <td>-734</td>
+        <td>207.50</td>
+        <td>2.00</td>
+        <td>246</td>
+      </tr>
+      <tr>
+        <td><a href="#">Thanet</a></td>
+        <td>91%</td>
+        <td>1759</td>
+        <td>362.60</td>
+        <td>37.00</td>
+        <td>325</td>
+      </tr>
+      <tr>
+        <td><a href="#">West Kent</a></td>
+        <td>95%</td>
+        <td>995</td>
+        <td>340.70</td>
+        <td>31.90</td>
+        <td>295</td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+{% endblock %}

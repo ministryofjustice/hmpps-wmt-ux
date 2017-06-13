@@ -4,22 +4,6 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  {% set breadcrumbs = {
-      items: [
-        {
-          link: 'index',
-          title: 'South East and Easter'
-        },
-        {
-          link: '/beta/v5/ldu/capacity',
-          title: 'Kent'
-        },
-        {
-          title: 'Medway'
-        }
-      ]
-    }
-  %}
   {% include "includes/breadcrumbs.html" %}
 
   {% include "includes/entity_header.html" %}
@@ -55,7 +39,7 @@
         <tbody>
           <tr>
             <th scope="row">LDU</th>
-            <td><a href="/beta/v5/LDU/capacity">Kent</a></td>
+            <td><a href="/ldu/kent">Kent</a></td>
           </tr>
           <tr>
             <th scope="row">Offender managers</th>
@@ -63,15 +47,15 @@
           </tr>
           <tr>
             <th scope="row">Capacity</th>
-            <td>100%</td>
+            <td>108%</td>
           </tr>
           <tr>
-            <th scope="row">Reduction</th>
-            <td>10%</td>
+            <th scope="row">Reduced hours</th>
+            <td>241</td>
           </tr>
           <tr>
             <th scope="row">Number of cases</th>
-            <td>352</td>
+            <td>498</td>
           </tr>
         </tbody>
       </table>
@@ -95,7 +79,7 @@
         <th>Name</th>
         <th>Grade</th>
         <th>Current (%)</th>
-        <th>Remaining points</th>
+        <th>Points</th>
         <th>Contracted</th>
         <th>Reduction</th>
         <th>Total</th>
@@ -103,109 +87,109 @@
     </thead>
     <tbody>
       <tr>
-        <td>Ademola Akinola</td>
+        <td><a href="#">Ademola Akinola</a></td>
         <td>PSO</td>
         <td>83%</td>
-        <td>1462</td>
+        <td>302</td>
         <td>37</td>
         <td>7</td>
         <td>35</td>
       </tr>
       <tr>
-        <td>Amanda Steyn</td>
+        <td><a href="#">Amanda Steyn</a></td>
         <td>PO</td>
         <td>109%</td>
-        <td>2369</td>
+        <td>-193</td>
         <td>37</td>
         <td>0</td>
         <td>39</td>
       </tr>
       <tr>
-        <td>Chelsea Luckham</td>
+        <td><a href="#">Chelsea Luckham</a></td>
         <td>PSO</td>
         <td>9%</td>
-        <td>80</td>
+        <td>767</td>
         <td>37</td>
         <td>22.60</td>
         <td>2</td>
       </tr>
       <tr>
-        <td>Clare Hastings</td>
+        <td><a href="/om/15?name=Clare%20Hastings">Clare Hastings</a></td>
         <td>PO</td>
         <td>58%</td>
-        <td>1262</td>
+        <td>914</td>
         <td>37</td>
         <td>0</td>
         <td>19</td>
       </tr>
       <tr>
-        <td>David Ashley</td>
+        <td><a href="#">David Ashley</a></td>
         <td>PO</td>
         <td>108%</td>
-        <td>2353</td>
+        <td>-177</td>
         <td>37</td>
         <td>0</td>
         <td>38</td>
       </tr>
       <tr>
-        <td>Evonne Samuda</td>
+        <td><a href="#">Evonne Samuda</a></td>
         <td>PO</td>
         <td>104%</td>
-        <td>2140</td>
+        <td>-82</td>
         <td>37</td>
         <td>2</td>
         <td>36</td>
       </tr>
       <tr>
-        <td><a href="/om/15?name=Jane%20Brown">Jane Brown</a></td>
+        <td><a href="#">Jane Brown</a></td>
         <td>PO</td>
         <td>116%</td>
-        <td>2515</td>
+        <td>-339</td>
         <td>37</td>
         <td>0</td>
         <td>44</td>
       </tr>
       <tr>
-        <td>Martin Smith</td>
+        <td><a href="#">Martin Smith</a></td>
         <td>PSO</td>
         <td>0%</td>
-        <td>533</td>
+        <td>-533</td>
         <td>37</td>
         <td>37</td>
         <td>16</td>
       </tr>
       <tr>
-        <td>Mavis Tonkin</td>
+        <td><a href="#">Mavis Tonkin</a></td>
         <td>PSO</td>
         <td>56%</td>
-        <td>484</td>
+        <td>386</td>
         <td>37</td>
         <td>22.20</td>
         <td>16</td>
       </tr>
       <tr>
-        <td>Mick Essen</td>
+        <td><a href="#">Mick Essen</a></td>
         <td>PO</td>
         <td>110%</td>
-        <td>2386</td>
+        <td>-210</td>
         <td>37</td>
         <td>0</td>
         <td>39</td>
       </tr>
       <tr>
-        <td>Pauline Hughes</td>
+        <td><a href="#">Pauline Hughes</a></td>
         <td>PO</td>
         <td>81%</td>
-        <td>1598</td>
+        <td>378</td>
         <td>33.60</td>
         <td>0</td>
         <td>31</td>
       </tr>
       <tr>
-        <td>Rebecca Ashade</td>
+        <td><a href="#">Rebecca Ashade</a></td>
         <td>PSO</td>
         <td>72%</td>
-        <td>426</td>
+        <td>152</td>
         <td>30</td>
         <td>20</td>
         <td>7</td>
@@ -214,4 +198,16 @@
   </table>
 
 </main>
+{% endblock %}
+
+{% block page_specific_scripts %}
+  <script>
+    $(document).ready(function() {
+      $('#example').dataTable({
+        paging: false,
+        searching: false,
+        info: false
+      });
+    });
+  </script>
 {% endblock %}

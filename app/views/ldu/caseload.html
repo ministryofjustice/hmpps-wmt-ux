@@ -4,38 +4,11 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  {% set breadcrumbs = {
-      items: [
-        {
-          link: 'index',
-          title: 'South East and Easter'
-        },
-        {
-          link: '/beta/v5/ldu/capacity',
-          title: 'Kent'
-        },
-        {
-          title: 'Caseload'
-        }
-      ]
-    }
-  %}
   {% include "includes/breadcrumbs.html" %}
 
-  <ul id="sub-nav">
-    <li><a href="/beta/v5/ldu">Overview</a></li>
-    <li><a href="/beta/v5/ldu/capacity">Capacity</a></li>
-    <li><a href="#" class="active">Caseload</a></li>
-    <li><a href="#">Case progress</a></li>
-    <li><a href="#">Notes</a></li>
-  </ul>
-
-  <header class="heading-xlarge">
-    <span class="heading-secondary">
-      Kent LDU
-    </span>
-    Caseload
-  </header>
+  {% include "includes/entity_header.html" %}
+  {% include "includes/sub_nav.html" %}
+  <br>  
 
   <h2 class="heading-medium">Caseload by grade</h2>
   <table class="data-table">

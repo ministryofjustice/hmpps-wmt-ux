@@ -4,26 +4,6 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  {% set breadcrumbs = {
-      items: [
-        {
-          link: 'index',
-          title: 'South East and Easter'
-        },
-        {
-          link: '/beta/v5/ldu/capacity',
-          title: 'Kent'
-        },
-        {
-          link: '/beta/v5/team',
-          title: 'Medway'
-        },
-        {
-          title: 'Caseload'
-        }
-      ]
-    }
-  %}
   {% include "includes/breadcrumbs.html" %}
 
   {% include "includes/entity_header.html" %}
@@ -58,14 +38,15 @@
 
   <div class="js-tabs">
 		<ul class="js-tabs-links">
-			<li><a href="#news">Custody</a></li>
-			<li><a href="#sports">Community</a></li>
-			<li><a href="#weather">License</a></li>
+			<li><a href="#overall">Overall</a></li>
+			<li><a href="#custody">Custody</a></li>
+			<li><a href="#community">Community</a></li>
+			<li><a href="#license">License</a></li>
 		</ul>
 
 		<div class="js-tabs-content">
-			<div id="news">
-        <h3 class="heading-medium">Custody caseload</h3>
+      <div id="overall">
+        <h3 class="heading-medium">Overall caseload by grade</h3>
 
         <table class="data-table">
           <thead>
@@ -90,7 +71,7 @@
 
           <tbody class="">
             <tr>
-              <td><a href="/om/15?name=Ademola%20Akinola">Ademola Akinola</a></td>
+              <td><a href="#">Ademola Akinola</a></td>
               <td>PSO</td>
               <td>1</td>
               <td>3</td>
@@ -103,7 +84,7 @@
               <td>13</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Amanda%20Steyn">Amanda Steyn</a></td>
+              <td><a href="#">Amanda Steyn</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -116,7 +97,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Chelsea%20Luckham">Chelsea Luckham</a></td>
+              <td><a href="#">Chelsea Luckham</a></td>
               <td>PSO</td>
               <td>1</td>
               <td>3</td>
@@ -142,7 +123,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=David%20Ashley">David Ashley</a></td>
+              <td><a href="#">David Ashley</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -155,7 +136,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Evonne%20Samuda">Evonne Samuda</a></td>
+              <td><a href="#">Evonne Samuda</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -168,7 +149,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Jane%20Brown">Jane Brown</a></td>
+              <td><a href="#">Jane Brown</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -181,7 +162,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Martin%20Smith">Martin Smith</a></td>
+              <td><a href="#">Martin Smith</a></td>
               <td>PSO</td>
               <td>1</td>
               <td>3</td>
@@ -194,7 +175,7 @@
               <td>13</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Mavis%20Tonkin">Mavis Tonkin</a></td>
+              <td><a href="#">Mavis Tonkin</a></td>
               <td>PSO</td>
               <td>1</td>
               <td>3</td>
@@ -207,7 +188,7 @@
               <td>13</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Mick%20Essen">Mick Essen</a></td>
+              <td><a href="#">Mick Essen</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -220,7 +201,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Pauline%20Hughes">Pauline Hughes</a></td>
+              <td><a href="#">Pauline Hughes</a></td>
               <td>PO</td>
               <td>0</td>
               <td>0</td>
@@ -233,7 +214,7 @@
               <td>15</td>
             </tr>
             <tr>
-              <td><a href="/om/15?name=Rebecca%20Ashade">Rebecca Ashade</a></td>
+              <td><a href="#">Rebecca Ashade</a></td>
               <td>PSO</td>
               <td>1</td>
               <td>3</td>
@@ -248,18 +229,203 @@
           </tbody>
         </table>
 			</div>
-			<div id="sports">
+			<div id="custody">
+        <h3 class="heading-medium">Custody caseload by grade</h3>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th colspan="2">Offender manager</th>
+              <th colspan="9">Custody tiers</th>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <th>Grade</th>
+              <th>Untiered</th>
+              <th>D2</th>
+              <th>D1</th>
+              <th>C2</th>
+              <th>C1</th>
+              <th>B2</th>
+              <th>B1</th>
+              <th>A</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody class="">
+            <tr>
+              <td><a href="#">Ademola Akinola</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Amanda Steyn</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Chelsea Luckham</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="/om/15?name=Clare%20Hastings">Clare Hastings</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">David Ashley</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Evonne Samuda</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Jane Brown</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Martin Smith</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mavis Tonkin</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mick Essen</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Pauline Hughes</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Rebecca Ashade</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+          </tbody>
+        </table>
+			</div>
+			<div id="community">
         <h3 class="heading-medium">Community caseload by grade</h3>
 
         <table class="data-table">
           <thead>
             <tr>
-              <th>Offender manager</th>
-              <th colspan="8">Cases by tier</th>
+              <th colspan="2">Offender manager</th>
+              <th colspan="9">Custody tiers</th>
             </tr>
             <tr>
+              <th>Name</th>
               <th>Grade</th>
-              <th>Overall</th>
+              <th>Untiered</th>
               <th>D2</th>
               <th>D1</th>
               <th>C2</th>
@@ -267,46 +433,183 @@
               <th>B2</th>
               <th>B1</th>
               <th>A</th>
+              <th>Total</th>
             </tr>
           </thead>
 
           <tbody class="">
             <tr>
-              <td>PO</td>
-              <td>63.2%</td>
-              <td>5.3%</td>
-              <td>16.7%</td>
-              <td>21.4%</td>
-              <td>43.4%</td>
-              <td>94.6%</td>
-              <td>93.4%</td>
-              <td>100%</td>
+              <td><a href="#">Ademola Akinola</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
             </tr>
             <tr>
+              <td><a href="#">Amanda Steyn</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Chelsea Luckham</a></td>
               <td>PSO</td>
-              <td>36.8%</td>
-              <td>94.7%</td>
-              <td>83.3%</td>
-              <td>78.6%</td>
-              <td>56.7%</td>
-              <td>5.4%</td>
-              <td>6.6%</td>
-              <td>0%</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="/om/15?name=Clare%20Hastings">Clare Hastings</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">David Ashley</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Evonne Samuda</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Jane Brown</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Martin Smith</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mavis Tonkin</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mick Essen</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Pauline Hughes</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Rebecca Ashade</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
             </tr>
           </tbody>
         </table>
 			</div>
-			<div id="weather">
+			<div id="license">
         <h3 class="heading-medium">License caseload by grade</h3>
+
         <table class="data-table">
           <thead>
             <tr>
-              <th>Offender manager</th>
-              <th colspan="8">Cases by tier</th>
+              <th colspan="2">Offender manager</th>
+              <th colspan="9">Custody tiers</th>
             </tr>
             <tr>
+              <th>Name</th>
               <th>Grade</th>
-              <th>Overall</th>
+              <th>Untiered</th>
               <th>D2</th>
               <th>D1</th>
               <th>C2</th>
@@ -314,31 +617,166 @@
               <th>B2</th>
               <th>B1</th>
               <th>A</th>
+              <th>Total</th>
             </tr>
           </thead>
 
           <tbody class="">
             <tr>
-              <td>PO</td>
-              <td>63.2%</td>
-              <td>5.3%</td>
-              <td>16.7%</td>
-              <td>21.4%</td>
-              <td>43.4%</td>
-              <td>94.6%</td>
-              <td>93.4%</td>
-              <td>100%</td>
+              <td><a href="#">Ademola Akinola</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
             </tr>
             <tr>
+              <td><a href="#">Amanda Steyn</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Chelsea Luckham</a></td>
               <td>PSO</td>
-              <td>36.8%</td>
-              <td>94.7%</td>
-              <td>83.3%</td>
-              <td>78.6%</td>
-              <td>56.7%</td>
-              <td>5.4%</td>
-              <td>6.6%</td>
-              <td>0%</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="/om/15?name=Clare%20Hastings">Clare Hastings</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">David Ashley</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Evonne Samuda</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Jane Brown</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Martin Smith</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mavis Tonkin</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td><a href="#">Mick Essen</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Pauline Hughes</a></td>
+              <td>PO</td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+              <td>4</td>
+              <td>0</td>
+              <td>3</td>
+              <td>4</td>
+              <td>2</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td><a href="#">Rebecca Ashade</a></td>
+              <td>PSO</td>
+              <td>1</td>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>13</td>
             </tr>
           </tbody>
         </table>
@@ -360,5 +798,6 @@
     $(function(){
       $('.js-tabs').tabs();
     });
+
   </script>
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  {% include "includes/sub_nav.html" %}
+
+  <h2 class="heading-large">Capacity</h2>
+  <h3 class="heading-medium">{{entityTitle}} average capacity</h3>
+  <form>
+  <select class="form-control" id="date-from">
+    <option selected value="2017-06-01T00:00:00Z">Jun 2017</option><option value="2017-05-01T00:00:00Z">May 2017</option><option value="2017-04-01T00:00:00Z">Apr 2017</option><option value="2017-03-01T00:00:00Z">Mar 2017</option><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option>
+  </select>
+   to
+  <select class="form-control" id="date-to">
+    <option value="2017-06-01T00:00:00Z">Jun 2017</option><option value="2017-05-01T00:00:00Z">May 2017</option><option value="2017-04-01T00:00:00Z">Apr 2017</option><option value="2017-03-01T00:00:00Z">Mar 2017</option><option value="2017-02-01T00:00:00Z">Feb 2017</option><option value="2017-01-01T00:00:00Z">Jan 2017</option><option value="2016-12-01T00:00:00Z">Dec 2016</option><option value="2016-11-01T00:00:00Z">Nov 2016</option><option value="2016-10-01T00:00:00Z">Oct 2016</option><option value="2016-09-01T00:00:00Z">Sep 2016</option><option value="2016-08-01T00:00:00Z">Aug 2016</option><option value="2016-07-01T00:00:00Z">July 2016</option><option selected value="2016-06-01T00:00:00Z">June 2016</option><option value="2016-05-01T00:00:00Z">May 2016</option><option value="2016-04-01T00:00:00Z">Apr 2016</option><option value="2016-03-01T00:00:00Z">Mar 2016</option><option value="2016-02-01T00:00:00Z">Feb 2016</option><option value="2016-01-01T00:00:00Z">Jan 2016</option><option value="2015-12-01T00:00:00Z">Dec 2015</option><option value="2015-11-01T00:00:00Z">Nov 2015</option><option value="2015-10-01T00:00:00Z">Oct 2015</option><option value="2015-09-01T00:00:00Z">Sep 2015</option><option value="2015-08-01T00:00:00Z">Aug 2015</option><option value="2015-07-01T00:00:00Z">July 2015</option><option value="2015-06-01T00:00:00Z">June 2015</option><option value="2015-05-01T00:00:00Z">May 2015</option><option value="2015-04-01T00:00:00Z">Apr 2015</option><option value="2015-03-01T00:00:00Z">Mar 2015</option><option value="2015-02-01T00:00:00Z">Feb 2015</option><option value="2015-01-01T00:00:00Z">Jan 2015</option><option value="2014-12-01T00:00:00Z">Dec 2014</option><option value="2014-11-01T00:00:00Z">Nov 2014</option><option value="2014-10-01T00:00:00Z">Oct 2014</option><option value="2014-09-01T00:00:00Z">Sep 2014</option><option value="2014-08-01T00:00:00Z">Aug 2014</option><option value="2014-07-01T00:00:00Z">July 2014</option><option value="2014-06-01T00:00:00Z">June 2014</option><option value="2014-05-01T00:00:00Z">May 2014</option><option value="2014-04-01T00:00:00Z">Apr 2014</option><option value="2014-03-01T00:00:00Z">Mar 2014</option><option value="2014-02-01T00:00:00Z">Feb 2014</option><option value="2014-01-01T00:00:00Z">Jan 2014</option><option value="2013-12-01T00:00:00Z">Dec 2013</option><option value="2013-11-01T00:00:00Z">Nov 2013</option><option value="2013-10-01T00:00:00Z">Oct 2013</option>
+  </select>
+
+  <input type="submit" class="button" value="Update">
+
+  </form>
+
+  <div id="profile-capacity"></div>
+
+</main>
+{% endblock %}
+
+{% block page_specific_scripts %}
+  <script src="/public/javascripts/profile-capacity.js"></script>
+{% endblock %}
