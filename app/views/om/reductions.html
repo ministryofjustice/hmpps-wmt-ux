@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  {% include "includes/sub_nav.html" %}
+
+  {% if newReduction %}
+    <div class="message message--success">You have successfully added a new reduction</div>
+  {% endif %}
+
+  <a href="/om/{{omID}}/reductions/add?name={{entityTitle}}" class="button">Add a reduction</a>
+
+  <h2 class="heading-large">Active<span class="visuallyhidden"> reductions</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Hours</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if newReduction %}
+        <tr>
+          <td>{{ newReduction.reason }}</td>
+          <td>{{ newReduction.hours }}</td>
+          <td>{{ newReduction.startDate }}</td>
+          <td>{{ newReduction.endDate }}</td>
+          <td><a href="/om/{{omID}}/reductions/234">View<span class="visuallyhidden"> this reduction</span></a></td>
+        </tr>
+      {% endif %}
+      <tr>
+        <td>Other paid leave</td>
+        <td>7</td>
+        <td>28 June 17</td>
+        <td>29 June 17</td>
+        <td><a href="/om/{{omID}}/reductions/234">View<span class="visuallyhidden"> this reduction</span></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-large">Scheduled<span class="visuallyhidden"> reductions</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Hours</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Managing courts</td>
+        <td>7</td>
+        <td>26 June 17</td>
+        <td>17 July 17</td>
+        <td><a href="/reductions/234">View<span class="visuallyhidden"> this reduction</span></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-large">Archived<span class="visuallyhidden"> reductions</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Hours</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Managing courts</td>
+        <td>7</td>
+        <td>26 June 17</td>
+        <td>17 July 17</td>
+        <td><a href="/reductions/234">View<span class="visuallyhidden"> this reduction</span></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</main>
+{% endblock %}

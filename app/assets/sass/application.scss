@@ -2,6 +2,8 @@
 // in the govuk frontend toolkit's url-helpers partial
 $path: "/public/images/";
 
+@import 'm-iconHelper';
+
 // Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 @import 'govuk-elements';
@@ -218,9 +220,10 @@ select {
 background-color: #fff;
 // border-top: 1px solid #bfc1c3;
 border-bottom: 1px solid #bfc1c3;
-padding-top: 15px;
-padding-bottom: 15px;
+// padding-top: 15px;
+// padding-bottom: 15px;
 padding: 0;
+margin-bottom: 30px;
 
 }
 .sub-nav li{
@@ -705,7 +708,8 @@ h3.heading-medium{
 .tabs-body div.tabs-panel dl dt { color:#777; display:block; float:left; text-align:right; width:80px; margin:2px 15px 3px 0; text-transform:uppercase; font-size:80%; font-weight:bold; }
 .tabs-body div.tabs-panel dl dd { margin:0 0 2px; display:block; border-top:1px solid #ddd; }
 
-@import 'search-bar';
+// @import 'search-bar';
+@import 'message';
 
 select.form-control {
     width: auto !important;

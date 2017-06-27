@@ -1,5 +1,7 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
+const moment = require('moment')
+
 
 const lduBreadcrumbs = (lduName) => {
   return {
@@ -65,7 +67,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/om/:id', function (req, res) {
-  let omName = req.query.name
+  let omName = 'Clare Hastings'
   let omID = req.params.id
   let subnav = {
     links: [
@@ -83,11 +85,13 @@ router.get('/om/:id', function (req, res) {
         title: 'Caseload'
       },
       {
-        link: '#',
-        title: 'Reductions'
+        link: '/om/'+omID+'/reductions?name='+omName,
+         title: 'Reductions'
       }
     ]
   }
+
+  req.session.omName = omName
 
   res.render('om/overview', {
     'entitiyLevel': 'Offender manager',
@@ -98,7 +102,7 @@ router.get('/om/:id', function (req, res) {
 })
 
 router.get('/om/:id/capacity', function (req, res) {
-  let omName = req.query.name
+  let omName = 'Clare Hastings'
   let omID = req.params.id
   let subnav = {
     links: [
@@ -116,7 +120,7 @@ router.get('/om/:id/capacity', function (req, res) {
         title: 'Caseload'
       },
       {
-        link: '#',
+        link: '/om/'+omID+'/reductions?name='+omName,
         title: 'Reductions'
       }
     ]
@@ -125,10 +129,97 @@ router.get('/om/:id/capacity', function (req, res) {
   res.render('om/capacity', {
     'entitiyLevel': 'Offender manager',
     'entityTitle': omName,
+    'omID': omID,
     'subnav': subnav,
     'breadcrumbs': omBreadcrumbs(omName)
   })
 })
+
+router.get('/om/:id/reductions', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+  let subnav = {
+    links: [
+      {
+        link: '/om/'+omID+'?name='+omName,
+        title: 'Overview'
+      },
+      {
+        link: '/om/'+omID+'/capacity?name='+omName,
+        title: 'Capacity'
+      },
+      {
+        link: '#',
+        title: 'Caseload'
+      },
+      {
+        link: '/om/'+omID+'/reductions?name='+omName,
+        title: 'Reductions',
+        active: true
+      }
+    ]
+  }
+  let newReduction = false
+
+  if (req.session.newReduction) {
+    newReduction = req.session.newReduction
+    req.session.destroy()
+  }
+
+  res.render('om/reductions', {
+    'entitiyLevel': 'Offender manager',
+    'entityTitle': omName,
+    'omID': omID,
+    'subnav': subnav,
+    'breadcrumbs': omBreadcrumbs(omName),
+    'newReduction': newReduction
+  })
+})
+
+router.get('/om/:id/reductions/add', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+
+
+  res.render('om/reductions-add', {
+    'entityTitle': 'New reduction',
+    'omName': omName,
+    'omID': omID
+  })
+})
+
+router.post('/om/:id/reductions/add', function (req, res) {
+  let omID = req.params.id
+  let newReduction = {
+    reason: req.body.reason,
+    hours: req.body.hours,
+    notes: req.body.notes
+  }
+
+  newReduction.startDate = moment(new Date(req.body.red_start_year, req.body.red_start_month-1, req.body.red_start_day)).format('D MMM YY')
+  newReduction.endDate = moment(new Date(req.body.red_end_year, req.body.red_end_month-1, req.body.red_end_day)).format('D MMM YY')
+
+  req.session.newReduction = newReduction
+
+  res.redirect('/om/'+omID+'/reductions')
+})
+
+// ----------
+
+router.get('/om/:id/reductions/:red_id', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+
+
+  res.render('om/reductions-add', {
+    'entityTitle': 'New reduction',
+    'omName': omName,
+    'omID': omID,
+    'isView': true
+  })
+})
+
+// ----------
 
 router.get('/team/:name', function (req, res) {
   let teamName = req.params.name
@@ -359,6 +450,19 @@ router.get('/search', (req, res) => {
   })
 })
 
+
+router.get('/date-change', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.query.omID
+
+
+  res.render('change-date', {
+    'entitiyLevel': 'Change date range',
+    'entityTitle': 'OM average capacity',
+    'omName': omName,
+    'omID': omID
+  })
+})
 
 
 module.exports = router
