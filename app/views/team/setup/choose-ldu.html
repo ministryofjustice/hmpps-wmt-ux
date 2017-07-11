@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="/team/setup/region">Back <span class="visuallyhidden"> to region selection</span></a>
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend>
+          <div class="heading-medium">Please select an LDU to filter team results by</div>
+        </legend>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label for="radio-1">Bedfordshire</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+          <label for="radio-2">Cambridgeshire</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+          <label for="radio-3">Court</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-4" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+          <label for="radio-4">Essex North</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-5" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+          <label for="radio-5">Essex South</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-6" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-6">Hertfordshire</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-6" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-6">Hertfordshire</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-7" type="radio" name="radio-group" value="I am a British citizen living abroad" checked>
+          <label for="radio-7">Kent</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-8" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-8">Norfolk, Suffolk</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-9" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-9">Northamptonshire</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-10" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-10">Surrey</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-11" type="radio" name="radio-group" value="I am a British citizen living abroad">
+          <label for="radio-11">Sussex</label>
+        </div>
+      </fieldset>
+      <br>
+      <br>
+      <div class="form-group">
+        <a href="/team/setup/team" class="button">Continue to select a team</a>
+        <div class="u-space-t10">
+          or <a href="/team/setup/region">go back to LDU selection</a>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</main>
+{% endblock %}

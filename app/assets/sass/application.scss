@@ -714,3 +714,7 @@ h3.heading-medium{
 select.form-control {
     width: auto !important;
 }
+
+@each $value in (5, 10, 15, 30, 45) {
+  .u-space-t#{$value} { margin-top: #{$value}px; }
+}

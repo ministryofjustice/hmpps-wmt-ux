@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  {% include "includes/sub_nav.html" %}
+
+  <h2 class="heading-large">Case progress</h2>
+  <div id="plotly-div-cases"></div>
+
+</main>
+{% endblock %}
+
+{% block page_specific_scripts %}
+  <script src="/public/javascripts/plot-cases.js"></script>
+{% endblock %}

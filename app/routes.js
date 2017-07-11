@@ -63,7 +63,9 @@ const omBreadcrumbs = (omName) => {
 
 // Route index page
 router.get('/', function (req, res) {
-  res.redirect('/team/medway');
+  res.render('home', {
+    'entityTitle': 'Workload management tool'
+  });
 })
 
 router.get('/om/:id', function (req, res) {
@@ -221,6 +223,35 @@ router.get('/om/:id/reductions/:red_id', function (req, res) {
 
 // ----------
 
+router.get('/team/setup/region', function (req, res) {
+  res.render('team/setup/choose-region', {
+    breadcrumbs: {
+      items: [
+        {
+          title: 'home',
+          link: '/'
+        },{}
+      ]
+    },
+    entitiyLevel: 'Step 1 of 3:',
+    entityTitle: 'Region selection'
+  })
+})
+
+router.get('/team/setup/ldu', function (req, res) {
+  res.render('team/setup/choose-ldu', {
+    entitiyLevel: 'Step 2 of 3:',
+    entityTitle: 'LDU selection'
+  })
+})
+
+router.get('/team/setup/team', function (req, res) {
+  res.render('team/setup/choose-team', {
+    entitiyLevel: 'Step 3 of 3:',
+    entityTitle: 'Team selection'
+  })
+})
+
 router.get('/team/:name', function (req, res) {
   let teamName = req.params.name
   let subnav = {
@@ -239,15 +270,25 @@ router.get('/team/:name', function (req, res) {
         title: 'Caseload'
       },
       {
+        link: '/team/'+teamName+'/case-progress',
+        title: 'Case progress'
+      },
+      {
         link: '#',
         title: 'Reductions'
       }
     ]
   }
 
+  const capitalise = (inStr) => {
+    return inStr.replace(/\w\S*/g, (tStr) => {
+        return tStr.charAt(0).toUpperCase() + tStr.substr(1).toLowerCase();
+     });
+  }
+
   res.render('team/overview', {
     'entitiyLevel': 'Team',
-    'entityTitle': teamName,
+    'entityTitle': capitalise(teamName),
     'subnav': subnav,
     'breadcrumbs': teamBreadcrumbs(teamName)
   })
@@ -269,6 +310,10 @@ router.get('/team/:name/capacity', function (req, res) {
       {
         link: '/team/'+teamName+'/caseload',
         title: 'Caseload'
+      },
+      {
+        link: '/team/'+teamName+'/case-progress',
+        title: 'Case progress'
       },
       {
         link: '#',
@@ -303,6 +348,10 @@ router.get('/team/:name/caseload', function (req, res) {
         active: true
       },
       {
+        link: '/team/'+teamName+'/case-progress',
+        title: 'Case progress'
+      },
+      {
         link: '#',
         title: 'Reductions'
       }
@@ -310,6 +359,42 @@ router.get('/team/:name/caseload', function (req, res) {
   }
 
   res.render('team/caseload', {
+    'entitiyLevel': 'Team',
+    'entityTitle': teamName,
+    'subnav': subnav,
+    'breadcrumbs': teamBreadcrumbs(teamName)
+  })
+})
+
+router.get('/team/:name/case-progress', function (req, res) {
+  let teamName = req.params.name
+  let subnav = {
+    links: [
+      {
+        link: '/team/'+teamName,
+        title: 'Overview'
+      },
+      {
+        link: '/team/'+teamName+'/capacity',
+        title: 'Capacity'
+      },
+      {
+        link: '/team/'+teamName+'/caseload',
+        title: 'Caseload'
+      },
+      {
+        link: '/team/'+teamName+'/case-progress',
+        title: 'Case progress',
+        active: true
+      },
+      {
+        link: '#',
+        title: 'Reductions'
+      }
+    ]
+  }
+
+  res.render('team/case-progress', {
     'entitiyLevel': 'Team',
     'entityTitle': teamName,
     'subnav': subnav,
