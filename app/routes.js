@@ -2,6 +2,11 @@ const express = require('express')
 const router = express.Router()
 const moment = require('moment')
 
+const capitalise = (inStr) => {
+  return inStr.replace(/\w\S*/g, (tStr) => {
+      return tStr.charAt(0).toUpperCase() + tStr.substr(1).toLowerCase();
+   });
+}
 
 const lduBreadcrumbs = (lduName) => {
   return {
@@ -280,12 +285,6 @@ router.get('/team/:name', function (req, res) {
     ]
   }
 
-  const capitalise = (inStr) => {
-    return inStr.replace(/\w\S*/g, (tStr) => {
-        return tStr.charAt(0).toUpperCase() + tStr.substr(1).toLowerCase();
-     });
-  }
-
   res.render('team/overview', {
     'entitiyLevel': 'Team',
     'entityTitle': capitalise(teamName),
@@ -324,7 +323,7 @@ router.get('/team/:name/capacity', function (req, res) {
 
   res.render('team/capacity', {
     'entitiyLevel': 'Team',
-    'entityTitle': teamName,
+    'entityTitle': capitalise(teamName),
     'subnav': subnav,
     'breadcrumbs': teamBreadcrumbs(teamName)
   })
@@ -360,7 +359,7 @@ router.get('/team/:name/caseload', function (req, res) {
 
   res.render('team/caseload', {
     'entitiyLevel': 'Team',
-    'entityTitle': teamName,
+    'entityTitle': capitalise(teamName),
     'subnav': subnav,
     'breadcrumbs': teamBreadcrumbs(teamName)
   })
@@ -396,7 +395,7 @@ router.get('/team/:name/case-progress', function (req, res) {
 
   res.render('team/case-progress', {
     'entitiyLevel': 'Team',
-    'entityTitle': teamName,
+    'entityTitle': capitalise(teamName),
     'subnav': subnav,
     'breadcrumbs': teamBreadcrumbs(teamName)
   })
