@@ -277,10 +277,6 @@ router.get('/team/:name', function (req, res) {
       {
         link: '/team/'+teamName+'/case-progress',
         title: 'Case progress'
-      },
-      {
-        link: '#',
-        title: 'Reductions'
       }
     ]
   }
@@ -313,10 +309,6 @@ router.get('/team/:name/capacity', function (req, res) {
       {
         link: '/team/'+teamName+'/case-progress',
         title: 'Case progress'
-      },
-      {
-        link: '#',
-        title: 'Reductions'
       }
     ]
   }
@@ -349,10 +341,6 @@ router.get('/team/:name/caseload', function (req, res) {
       {
         link: '/team/'+teamName+'/case-progress',
         title: 'Case progress'
-      },
-      {
-        link: '#',
-        title: 'Reductions'
       }
     ]
   }
@@ -385,10 +373,6 @@ router.get('/team/:name/case-progress', function (req, res) {
         link: '/team/'+teamName+'/case-progress',
         title: 'Case progress',
         active: true
-      },
-      {
-        link: '#',
-        title: 'Reductions'
       }
     ]
   }
