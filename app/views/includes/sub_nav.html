@@ -1,7 +1,9 @@
-{% if subnav %}
-<ul class="sub-nav">
+{% if subNav %}
+<ul class="sln-subnav wmt-sub-nav">
 {% for item in subnav.links %}
-    <li class="bold-medium"><a{% if item.active %} class="is-active" {% endif %} href="{{ item.link }}">{{ item.title }}</a></li>
+    <li class="wmt-sub-nav__item bold-medium">
+      <a class="wmt-sub-nav__link{% if item.active %} is-active{% endif %}" href="{{ item.link }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    </li>
 {% endfor %}
 </ul>
 {% endif %}

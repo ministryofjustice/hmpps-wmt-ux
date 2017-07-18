@@ -12,6 +12,10 @@ $path: "/public/images/";
 @import 'patterns/check-your-answers';
 @import 'patterns/checkbox-filter';
 
+// WMT components
+@import '_wmt/wmt-page-heading';
+@import '_wmt/wmt-sub-nav';
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
