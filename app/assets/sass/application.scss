@@ -213,59 +213,6 @@ select {
     max-width:100%!important;
     overflow:hidden;
 }
-//
-
-.sub-nav{
-
-background-color: #fff;
-// border-top: 1px solid #bfc1c3;
-border-bottom: 1px solid #bfc1c3;
-// padding-top: 15px;
-// padding-bottom: 15px;
-padding: 0;
-margin-bottom: 30px;
-
-}
-.sub-nav li{
-position:relative;
-display:inline-block;
-}
-
-.sub-nav a{
-display: inline-block;
-font-weight: bold;
-margin: 0;
-outline: 0;
-padding: 15px;
-text-decoration: none;
-}
-
-
-.sub-nav li:hover a{
-color: $govuk-blue;
-text-decoration:underline;
-}
-
-.sub-nav li a {
-  color: $black;
-}
-
-.sub-nav li a.is-active {
-  // font-weight: bold;
-  color: $govuk-blue;
-
-  &:after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    bottom: -1px;
-    left: 0;
-    height: 4px;
-    background-color: $govuk-blue;
-  }
-}
-
-
 
 
 
