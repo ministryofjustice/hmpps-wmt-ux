@@ -69,7 +69,7 @@ const omBreadcrumbs = (omName) => {
 // Route index page
 router.get('/', function (req, res) {
   res.render('home', {
-    'entityTitle': 'Workload management tool'
+    'entityTitle': 'Workload Measurement Tool'
   });
 })
 
