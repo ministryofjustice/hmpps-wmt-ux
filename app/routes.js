@@ -98,13 +98,20 @@ router.get('/om/:id', function (req, res) {
     ]
   }
 
-  req.session.omName = omName
+  let contractedHours = false
+
+  if (req.session.contractedHours) {
+    contractedHours = req.session.contractedHours
+    req.session.destroy()
+  }
 
   res.render('om/overview', {
     'entitiyLevel': 'Offender manager',
     'entityTitle': omName,
+    'omID': omID,
     'subnav': subnav,
-    'breadcrumbs': omBreadcrumbs(omName)
+    'breadcrumbs': omBreadcrumbs(omName),
+    'contractedHours': contractedHours
   })
 })
 
@@ -224,6 +231,32 @@ router.get('/om/:id/reductions/:red_id', function (req, res) {
     'omID': omID,
     'isView': true
   })
+})
+
+// ----------
+
+router.get('/om/:id/contracted-hours', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+
+  res.render('om/contracted-hours', {
+    'entityTitle': 'Change contracted hours',
+    'omName': omName,
+    'omID': omID
+  })
+})
+
+router.post('/om/:id/contracted-hours', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+  let contractedHours = req.body.hours
+
+  req.session.contractedHours = {
+    updated: true,
+    hours: contractedHours
+  }
+
+  res.redirect('/om/'+omID)
 })
 
 // ----------

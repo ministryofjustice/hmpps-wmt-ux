@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <p class="lede">Change the contract hours for <span class="bold">{{omName}}</span></p>
+
+  <form action="/om/{{omID}}/contracted-hours" method="post">
+
+    <div class="form-group">
+      <label class="form-label-bold" for="first-name-2">Contracted hours</label>
+      <input class="form-control" id="first-name-2" name="hours" type="text" style="width: 100px" value="37">
+    </div>
+
+
+    <br>
+    <div class="form-group">
+      <input class="button" type="submit" value="Save changes">
+      <div class="u-space-t10">
+        or <a href="/om/{{onID}}">cancel and return to overview</a>
+      </div>
+    </div>
+  </form>
+
+</main>
+{% endblock %}

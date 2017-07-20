@@ -9,6 +9,10 @@
   {% include "includes/entity_header.html" %}
 
   {% include "includes/sub_nav.html" %}
+
+  {% if contractedHours %}
+    <div class="message message--success">You have successfully updated the contracted hours for {{entityTitle}}</div>
+  {% endif %}
   <br>
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -16,27 +20,32 @@
         <tbody>
           <tr>
             <th scope="row">Grade</th>
-            <td>PO</td>
+            <td class="numeric">PO</td>
           </tr>
           <tr>
             <th scope="row">Team</th>
-            <td><a href="/team/medway">Medway</a></td>
+            <td class="numeric"><a href="/team/medway">Medway</a></td>
           </tr>
           <tr>
             <th scope="row">Capacity</th>
-            <td>58%</td>
+            <td class="numeric">58%</td>
           </tr>
           <tr>
             <th scope="row">Cases</th>
-            <td>19</td>
+            <td class="numeric">19</td>
           </tr>
           <tr>
             <th scope="row">Contracted hours</th>
-            <td>37</td>
+            <td class="numeric">
+              37
+              <div class="">
+                <a class="font-xsmall" href="/om/{{ omID }}/contracted-hours">Change <span class="visuallyhidden">contracted hours</span></a>
+              </div>
+            </td>
           </tr>
           <tr>
             <th scope="row">Reduction</th>
-            <td>0</td>
+            <td class="numeric">0</td>
           </tr>
         </tbody>
       </table>
