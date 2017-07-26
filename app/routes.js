@@ -187,20 +187,12 @@ router.get('/om/:id', function (req, res) {
     ]
   }
 
-  let contractedHours = false
-
-  if (req.session.contractedHours) {
-    contractedHours = req.session.contractedHours
-    req.session.destroy()
-  }
-
   res.render('om/overview', {
     'entitiyLevel': 'Offender manager',
     'entityTitle': omName,
     'omID': omID,
     'subnav': subnav,
-    'breadcrumbs': omBreadcrumbs(omName),
-    'contractedHours': contractedHours
+    'breadcrumbs': omBreadcrumbs(omName)
   })
 })
 
@@ -271,7 +263,10 @@ router.get('/om/:id/contracted-hours', function (req, res) {
     ]
   }
 
-  let contractedHours = false
+  let contractedHours = {
+    updated: false,
+    hours: 37
+  }
 
   if (req.session.contractedHours) {
     contractedHours = req.session.contractedHours

@@ -10,9 +10,6 @@
 
   {% include "includes/sub_nav.html" %}
 
-  {% if contractedHours %}
-    <div class="message message--success">You have successfully updated the contracted hours for {{entityTitle}}</div>
-  {% endif %}
   <br>
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -36,12 +33,7 @@
           </tr>
           <tr>
             <th scope="row">Contracted hours</th>
-            <td class="numeric">
-              37
-              <div class="">
-                <a class="font-xsmall" href="/om/{{ omID }}/contracted-hours">Change <span class="visuallyhidden">contracted hours</span></a>
-              </div>
-            </td>
+            <td class="numeric">37</td>
           </tr>
           <tr>
             <th scope="row">Reduction</th>
