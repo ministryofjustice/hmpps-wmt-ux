@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <form action="/admin/user-rights/{{username}}" method="post">
+    <div class="form-group">
+      <fieldset>
+
+        <legend>
+          <p class="lede">Which user rights would you like to give <span class="bold">{{username}}</span>?</p>
+        </legend>
+
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="rights" value="data admin">
+          <label for="radio-1">Data admin</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="rights" value="system admin">
+          <label for="radio-2">System admin</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="rights" value="manager">
+          <label for="radio-3">Manager</label>
+        </div>
+        <p class="form-block">or</p>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="rights" value="staff">
+          <label for="radio-3">Staff</label>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input class="button" type="submit" value="Submit">
+    </div>
+  </form>
+
+</main>
+{% endblock %}

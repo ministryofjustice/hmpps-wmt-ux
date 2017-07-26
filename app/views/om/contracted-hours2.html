@@ -8,10 +8,18 @@
 
   {% include "includes/entity_header.html" %}
 
+  {% include "includes/sub_nav.html" %}
+
+  {% if contractedHours %}
+    <div class="message message--success">You have successfully updated the contracted hours for {{entityTitle}}</div>
+  {% endif %}
+
+  <h2 class="heading-large">Contracted hours</h2>
+
   <p class="lede">Change the contracted hours for <span class="bold">{{omName}}</span></p>
 
   <form action="/om/{{omID}}/contracted-hours" method="post">
-
+    <input type="hidden" name="sub_page" value="true">
     <div class="form-group">
       <label class="form-label-bold" for="first-name-2">Contracted hours</label>
       <input class="form-control" id="first-name-2" name="hours" type="text" style="width: 100px" value="37">

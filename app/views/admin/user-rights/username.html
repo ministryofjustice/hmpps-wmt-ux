@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <p class="lede">Enter the username you would like to add or amend user rights for</p>
+
+  {% if userRights %}
+    <div class="message message--success">You have successfully assigned <span class="bold">{{userRights.rights}}</span> user rights to <span class="bold">{{userRights.username}}</span></div>
+  {% endif %}
+
+  <form action="/admin/user-rights" method="post">
+    <div class="form-group">
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" id="username" type="text" name="username">
+    </div>
+    <input class="button" type="submit" value="Continue">
+
+  </form>
+
+
+</main>
+{% endblock %}

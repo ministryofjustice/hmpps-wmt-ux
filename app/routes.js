@@ -73,6 +73,91 @@ router.get('/', function (req, res) {
   });
 })
 
+// ----------
+// Admin
+// ----------
+
+router.get('/admin', (req, res) => {
+  res.render('admin/home', {
+    'entityTitle': 'Admin',
+    // 'breadcrumbs': {
+    //   items: [
+    //     {
+    //       link: '/',
+    //       title: 'Start menu'
+    //     }
+    //   ]
+    // }
+  })
+})
+
+router.get('/admin/user-rights', (req, res) => {
+  let userRights = false
+
+  if (req.session.userRights) {
+    userRights = req.session.userRights
+    req.session.destroy()
+  }
+
+  res.render('admin/user-rights/username', {
+    'entityLevel': 'Admin',
+    'entityTitle': 'User rights',
+    'userRights': userRights,
+    'breadcrumbs': {
+      items: [
+        {
+          link: '/admin',
+          title: 'Admin'
+        },
+        {
+          title: 'User rights'
+        }
+      ]
+    }
+  })
+})
+
+router.post('/admin/user-rights', function (req, res) {
+  let username = req.body.username
+
+  res.redirect('/admin/user-rights/'+username)
+})
+
+router.get('/admin/user-rights/:username', (req,res) => {
+  let username = req.params.username
+
+  res.render('admin/user-rights/rights', {
+    'entityLevel': 'Admin',
+    'entityTitle': 'User rights',
+    'username': username,
+    'breadcrumbs': {
+      items: [
+        {
+          link: '/admin',
+          title: 'Admin'
+        },
+        {
+          title: 'User rights'
+        }
+      ]
+    }
+  })
+})
+
+router.post('/admin/user-rights/:username', (req, res) => {
+  let username = req.params.username
+  let rights = req.body.rights
+
+  req.session.userRights = {
+    'username': username,
+    'rights': rights
+  }
+
+  res.redirect('/admin/user-rights')
+})
+
+// ----------
+
 router.get('/om/:id', function (req, res) {
   let omName = 'Clare Hastings'
   let omID = req.params.id
@@ -90,6 +175,10 @@ router.get('/om/:id', function (req, res) {
       {
         link: '#',
         title: 'Caseload'
+      },
+      {
+        link: '/om/'+omID+'/contracted-hours?name='+omName,
+        title: 'Contracted hours'
       },
       {
         link: '/om/'+omID+'/reductions?name='+omName,
@@ -134,6 +223,10 @@ router.get('/om/:id/capacity', function (req, res) {
         title: 'Caseload'
       },
       {
+        link: '/om/'+omID+'/contracted-hours?name='+omName,
+        title: 'Contracted hours'
+      },
+      {
         link: '/om/'+omID+'/reductions?name='+omName,
         title: 'Reductions'
       }
@@ -145,6 +238,53 @@ router.get('/om/:id/capacity', function (req, res) {
     'entityTitle': omName,
     'omID': omID,
     'subnav': subnav,
+    'breadcrumbs': omBreadcrumbs(omName)
+  })
+})
+
+router.get('/om/:id/contracted-hours', function (req, res) {
+  let omName = 'Clare Hastings'
+  let omID = req.params.id
+  let subnav = {
+    links: [
+      {
+        link: '/om/'+omID+'?name='+omName,
+        title: 'Overview'
+      },
+      {
+        link: '/om/'+omID+'/capacity?name='+omName,
+        title: 'Capacity'
+      },
+      {
+        link: '#',
+        title: 'Caseload'
+      },
+      {
+        link: '/om/'+omID+'/contracted-hours?name='+omName,
+        title: 'Contracted hours',
+        active: true
+      },
+      {
+        link: '/om/'+omID+'/reductions?name='+omName,
+        title: 'Reductions'
+      }
+    ]
+  }
+
+  let contractedHours = false
+
+  if (req.session.contractedHours) {
+    contractedHours = req.session.contractedHours
+    req.session.destroy()
+  }
+
+  res.render('om/contracted-hours2', {
+    'entitiyLevel': 'Offender manager',
+    'entityTitle': omName,
+    'omID': omID,
+    'omName': omName,
+    'subnav': subnav,
+    'contractedHours': contractedHours,
     'breadcrumbs': omBreadcrumbs(omName)
   })
 })
@@ -165,6 +305,10 @@ router.get('/om/:id/reductions', function (req, res) {
       {
         link: '#',
         title: 'Caseload'
+      },
+      {
+        link: '/om/'+omID+'/contracted-hours?name='+omName,
+        title: 'Contracted hours'
       },
       {
         link: '/om/'+omID+'/reductions?name='+omName,
@@ -256,7 +400,11 @@ router.post('/om/:id/contracted-hours', function (req, res) {
     hours: contractedHours
   }
 
-  res.redirect('/om/'+omID)
+  if (req.body.sub_page) {
+    res.redirect('/om/'+omID+'/contracted-hours')
+  } else {
+    res.redirect('/om/'+omID)
+  }
 })
 
 // ----------

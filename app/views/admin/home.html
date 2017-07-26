@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <!-- <p class="lede">Something about the screen</p> -->
+
+  <div class="grid-row">
+    <div class="column-one-half">
+      <h2 class="heading-medium">
+        <a href="">System messages</a>
+      </h2>
+      <p>Setting/activating system messages</p>
+      <p><a href="">View</a></p>
+    </div>
+    <div class="column-one-half">
+      <h2 class="heading-medium">
+        <a href="">Workload points</a>
+      </h2>
+      <p>Set workload points</p>
+      <p><a href="">View</a></p>
+    </div>
+    <div class="column-one-half">
+      <h2 class="heading-medium">
+        <a href="/admin/user-rights">User rights</a>
+      </h2>
+      <p>Manage user rights</p>
+      <p><a href="/admin/user-rights">View</a></p>
+    </div>
+    <div class="column-one-half">
+      <h2 class="heading-medium">
+        <a href="">Display settings</a>
+      </h2>
+      <p>Setting labels and units</p>
+      <p><a href="">View</a></p>
+    </div>
+  </div>
+
+
+</main>
+{% endblock %}
