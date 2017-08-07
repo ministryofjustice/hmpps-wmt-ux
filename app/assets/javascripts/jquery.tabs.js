@@ -26,7 +26,7 @@ jQuery.fn.tabs = function(settings){
 		*/
 
 		//nav is first ul
-		var tabsNav = tabs.find('ul:first');
+		var tabsNav = tabs.find('.js-tabs-nav');
 
 		//body is nav's next sibling
 		var tabsBody = $(tabsNav.find('a:eq(0)').attr('href')).parent();
@@ -37,11 +37,7 @@ jQuery.fn.tabs = function(settings){
 
 		//add class to nav, tab body
 		tabsNav
-			.addClass('tabs-nav')
 			.attr('role','tablist');
-
-		tabsBody
-			.addClass('tabs-body');
 
 		//find tab panels, add class and aria
 		tabsBody.find('>div').each(function(){
@@ -66,21 +62,18 @@ jQuery.fn.tabs = function(settings){
 		//generic select tab function
 		function selectTab(tab,fromHashChange){
 				//unselect tabs
-				tabsNav.find('li.tabs-selected')
-					.removeClass('tabs-selected')
-					.find('a')
-						.attr('tabindex','-1');
+				tabsNav.find('.is-active')
+					.removeClass('is-active')
+					.attr('tabindex','-1');
 				//set selected tab item
 				tab
 					.attr('tabindex','0')
-					.parent()
-						.addClass('tabs-selected')
-						.find("a")
-						.focus();
+		      .addClass('is-active')
+					.focus();
 				//unselect  panels
-				tabsBody.find('div.tabs-panel-selected').attr('aria-hidden',true).removeClass('tabs-panel-selected');
+				tabsBody.find('.is-active').attr('aria-hidden',true).removeClass('is-active');
 				//select active panel
-				$( tab.attr('href') + tabIDsuffix ).addClass('tabs-panel-selected').attr('aria-hidden',false);
+				$( tab.attr('href') + tabIDsuffix ).addClass('is-active').attr('aria-hidden',false);
 
 				//update hash if option is true
 				if( o.updateHash ){

@@ -415,14 +415,14 @@ router.get('/team/setup/region', function (req, res) {
       ]
     },
     entitiyLevel: 'Step 1 of 3:',
-    entityTitle: 'First select a region'
+    entityTitle: 'First select a division'
   })
 })
 
 router.get('/team/setup/ldu', function (req, res) {
   res.render('team/setup/choose-ldu', {
     entitiyLevel: 'Step 2 of 3:',
-    entityTitle: 'Now select an LDU'
+    entityTitle: 'Now select an LDU cluster'
   })
 })
 

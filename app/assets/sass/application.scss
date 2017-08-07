@@ -15,6 +15,7 @@ $path: "/public/images/";
 // WMT components
 @import '_wmt/wmt-page-heading';
 @import '_wmt/wmt-sub-nav';
+@import '_wmt/wmt-tabs';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -589,20 +590,7 @@ h3.heading-medium{
 
 
 /* tabs structure */
-.tabs-nav { height:2em; margin:0; padding:0;  bottom:-1px; list-style:none; position:relative; }
-.tabs-nav li { float:left; margin:0; padding:0; }
-.tabs-nav li a { float:left; padding:.3em 1.4em .4em; cursor:pointer; text-decoration:none; border:1px solid #aaa; border-bottom:0; margin-right:-1px; color:#222; }
-.tabs-nav li a:hover { background:#eee 50% 50% repeat-x; color:#000; }
-.tabs-nav li.tabs-selected {  }
-.tabs-nav li.tabs-selected a { position:relative; background:#fff; padding-top:.5em; margin-top:-.2em; border-bottom:1px solid #fff;}
-.tabs-body { clear:both; overflow:auto; border-top:1px solid #aaa; width:100%;}
-.tabs-body div.tabs-panel { padding:30px 10px; overflow:auto; display:none; font-size:1.4em; }
-.tabs-body div.tabs-panel-selected { display:block; }
-.tabs-body div.tabs-panel h2 { font-size:1em; margin-bottom:8px; }
-.tabs-body div.tabs-panel ul,dl { margin:0; padding:0; list-style:none; }
-.tabs-body div.tabs-panel ul li { margin-bottom:3px; }
-.tabs-body div.tabs-panel dl dt { color:#777; display:block; float:left; text-align:right; width:80px; margin:2px 15px 3px 0; text-transform:uppercase; font-size:80%; font-weight:bold; }
-.tabs-body div.tabs-panel dl dd { margin:0 0 2px; display:block; border-top:1px solid #ddd; }
+
 
 // @import 'search-bar';
 @import 'message';

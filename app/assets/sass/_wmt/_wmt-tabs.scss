@@ -1,0 +1,61 @@
+.wmt-tabs {
+
+}
+
+.wmt-tabs__nav {
+  display: none; // Hide if no JS
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  bottom: -1px;
+  list-style: none;
+  position: relative;
+}
+
+.wmt-tabs__tab {
+  float: left;
+  padding:.3em 1.4em .4em;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  margin-right: -1px;
+  color: #222;
+
+  &:hover {
+    background-color:#eee;
+    color: #000;
+  }
+
+  &.is-active {
+    position: relative;
+    background: #fff;
+    padding-top: .5em;
+    margin-top: -.2em;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.wmt-tabs__body {
+  clear:both;
+  overflow:auto;
+  // border-top: 1px solid #aaa;
+  width:100%;
+}
+
+.wmt-tabs__panel {
+  display: block;
+  padding: 30px 10px;
+  overflow: auto;
+  // display: none;
+  font-size: 1.4em;
+}
+
+.js-enabled {
+  .wmt-tabs__nav { display: block; }
+
+  .wmt-tabs__body { border-top: 1px solid #aaa; }
+
+  .wmt-tabs__panel { display: none; }
+  .wmt-tabs__panel.is-active { display: block; }
+}

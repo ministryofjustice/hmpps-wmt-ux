@@ -36,16 +36,16 @@
 
   <h2 class="heading-large">Caseload type breakdown</h2>
 
-  <div class="js-tabs">
-		<ul class="js-tabs-links">
-			<li><a href="#overall">Overall</a></li>
-			<li><a href="#custody">Custody</a></li>
-			<li><a href="#community">Community</a></li>
-			<li><a href="#license">License</a></li>
-		</ul>
+  <div class="js-tabs wmt-tabs">
+		<nav class="js-tabs-nav wmt-tabs__nav">
+			<a class="wmt-tabs__tab" href="#overall">Overall</a>
+			<a class="wmt-tabs__tab" href="#custody">Custody</a>
+			<a class="wmt-tabs__tab" href="#community">Community</a>
+			<a class="wmt-tabs__tab" href="#license">License</a>
+		</nav>
 
-		<div class="js-tabs-content">
-      <div id="overall">
+		<div class="js-tabs-content wmt-tabs__body">
+      <div class="wmt-tabs__panel" id="overall">
         <h3 class="heading-medium">Overall caseload by tier</h3>
 
         <table class="data-table">
@@ -229,7 +229,7 @@
           </tbody>
         </table>
 			</div>
-			<div id="custody">
+			<div class="wmt-tabs__panel" id="custody">
         <h3 class="heading-medium">Custody caseload by tier</h3>
 
         <table class="data-table">
@@ -413,7 +413,7 @@
           </tbody>
         </table>
 			</div>
-			<div id="community">
+			<div class="wmt-tabs__panel" id="community">
         <h3 class="heading-medium">Community caseload by tier</h3>
 
         <table class="data-table">
@@ -597,7 +597,7 @@
           </tbody>
         </table>
 			</div>
-			<div id="license">
+			<div class="wmt-tabs__panel" id="license">
         <h3 class="heading-medium">License caseload by tier</h3>
 
         <table class="data-table">
