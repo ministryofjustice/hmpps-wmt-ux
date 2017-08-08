@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "includes/breadcrumbs.html" %}
+
+  {% include "includes/entity_header.html" %}
+
+  <p>Workload points are set here and are used to calculate capacity points for all Offender Managers throughout the Workload Management Tool.</p>
+
+  <p>Current Workload Points created by <span class="bold">USER</span> on <span class="bold">DATE</span></p> 
+
+  <form action="/admin/workload-points" method="post">
+
+  <div class="js-tabs">
+		<ul class="js-tabs-links">
+			<li><a href="#custody">Custody</a></li>
+			<li><a href="#license">License</a></li>
+			<li><a href="#community">Community</a></li>
+			<li><a href="#other">Other</a></li>
+		</ul>
+
+		<div class="js-tabs-content">
+  
+      <div id="custody">
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <div class="form-group">
+                  <tr>
+                    <th scope="row">Cus D2</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusd2" type="text" style="width: 50px" value="{{custody.cusd2}}">
+                      {% else %}
+                        {{ custody.cusd2 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus D1</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusd1" type="text" style="width: 50px" value="{{custody.cusd1}}">
+                      {% else %}
+                        {{ custody.cusd1 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus C2</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusc2" type="text" style="width: 50px" value="{{custody.cusc2}}">
+                      {% else %}
+                        {{ custody.cusc2 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus C1</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusc1" type="text" style="width: 50px" value="{{custody.cusc1}}">
+                      {% else %}
+                        {{ custody.cusc1 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus B2</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusb2" type="text" style="width: 50px" value="{{custody.cusb2}}">
+                      {% else %}
+                        {{ custody.cusb2 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus B1</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusb1" type="text" style="width: 50px" value="{{custody.cusb1}}">
+                      {% else %}
+                        {{ custody.cusb1 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus A</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusa" type="text" style="width: 50px" value="{{custody.cusa}}">
+                      {% else %}
+                        {{ custody.cusa }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="license">
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">Lic D2</th>
+                  <td class="numeric">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic D1</th>
+                  <td class="numeric">1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic C2</th>
+                  <td class="numeric">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic C1</th>
+                  <td class="numeric">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic B2</th>
+                  <td class="numeric">4</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic B1</th>
+                  <td class="numeric">4</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic A</th>
+                  <td class="numeric">5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div id="community">
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">Com D2</th>
+                  <td class="numeric">25</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com D1</th>
+                  <td class="numeric">13</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com C2</th>
+                  <td class="numeric">23</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com C1</th>
+                  <td class="numeric">24</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com B2</th>
+                  <td class="numeric">45</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com B1</th>
+                  <td class="numeric">46</td>
+                </tr>
+                <tr>
+                  <th scope="row">Com A</th>
+                  <td class="numeric">59</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div id="other">
+        
+        <p><span class="bold">Delivery Report Workload Points</span></p>
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">SDR</th>
+                  <td class="numeric">132</td>
+                </tr>
+                <tr>
+                  <th scope="row">FDR (SDR Conversion)</th>
+                  <td class="numeric">41</td>
+                </tr>
+                <tr>
+                  <th scope="row">PAROM</th>
+                  <td class="numeric">123</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <br>
+        <p><span class="bold">Weighting</span></p>
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">Overdue Terminations</th>
+                  <td class="numeric">0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Active Warrants</th>
+                  <td class="numeric">0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Only UPW Outstanding</th>
+                  <td class="numeric">100%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <br>
+        <p><span class="bold">Nominal Target (Points)</span></p>
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">PO</th>
+                  <td class="numeric">2176</td>
+                </tr>
+                <tr>
+                  <th scope="row">PSO</th>
+                  <td class="numeric">2176</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+       
+        <br>
+        <p><span class="bold">Default Contracted Hours - DOES THIS NEED TO BE SPLIT OUT INTO TWO?</span></p>
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row">PO</th>
+                  <td class="numeric">37</td>
+                </tr>
+                <tr>
+                  <th scope="row">PSO</th>
+                  <td class="numeric">37</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>      
+
+    </div>
+  </div>
+
+  {% if edit %}
+    <div class="message warning">Saving changes made here will cause reports to be updated. The report update process can take 30 minutes to complete, in which time no further changes can be saved.</div>
+    <div class="form-group">
+      <input class="button" type="submit" value="Save">
+    </div>
+  {% else %}
+    <a href="/admin/workload-points/edit" class="button">Edit</a>
+  {% endif %}
+
+  </form>
+
+</main>
+{% endblock %}
+
+{% block page_specific_scripts %}
+  <script src="/public/javascripts/jquery.tabs.js"></script>
+
+  <script>
+    $(function(){
+      $('.js-tabs').tabs();
+    });
+
+  </script>
+{% endblock %}
