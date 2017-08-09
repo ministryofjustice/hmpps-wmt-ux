@@ -105,7 +105,7 @@ router.get('/admin/workload-points/', (req,res) => {
     cusa: 58
   }
 
-  res.render('admin/workload-points/workload-points.html', {
+  res.render('admin/workload-points/workload-points', {
     'entityLevel': 'Admin',
     'entityTitle': 'Workload Points',
     'custody': custody,
@@ -138,7 +138,7 @@ router.get('/admin/workload-points/edit', (req,res) => {
     cusa: 58
   }
   
-  res.render('admin/workload-points/workload-points.html', {
+  res.render('admin/workload-points/workload-points', {
     'entityLevel': 'Admin',
     'entityTitle': 'Workload Points',
     'edit' : edit,
@@ -170,7 +170,7 @@ router.post('/admin/workload-points/', function (req, res) {
     cusa: req.body.cusa
   }
 
-  res.render('admin/workload-points/workload-points.html', {
+  res.render('admin/workload-points/workload-points', {
     'entityLevel': 'Admin',
     'entityTitle': 'Workload Points',
     'custody': custody,
