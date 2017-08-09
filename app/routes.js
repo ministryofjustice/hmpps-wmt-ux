@@ -91,6 +91,104 @@ router.get('/admin', (req, res) => {
   })
 })
 
+router.get('/admin/workload-points/', (req,res) => {
+
+  let edit = false
+
+  let custody = {
+    cusd2: 25,
+    cusd1: 13,
+    cusc2: 23,
+    cusc1: 24,
+    cusb2: 45, 
+    cusb1: 46,
+    cusa: 58
+  }
+
+  res.render('admin/workload-points/workload-points', {
+    'entityLevel': 'Admin',
+    'entityTitle': 'Workload Points',
+    'custody': custody,
+    'edit' : edit,
+    'breadcrumbs': {
+      items: [
+        {
+          link: '/admin',
+          title: 'Admin'
+        },
+        {
+          title: 'Workload Points'
+        }
+      ]
+    }
+  })
+})
+
+router.get('/admin/workload-points/edit', (req,res) => {
+
+  let edit = true
+  
+  let custody = {
+    cusd2: 25,
+    cusd1: 13,
+    cusc2: 23,
+    cusc1: 24,
+    cusb2: 45, 
+    cusb1: 46,
+    cusa: 58
+  }
+  
+  res.render('admin/workload-points/workload-points', {
+    'entityLevel': 'Admin',
+    'entityTitle': 'Workload Points',
+    'edit' : edit,
+    'custody': custody,
+    'breadcrumbs': {
+      items: [
+        {
+          link: '/admin',
+          title: 'Admin'
+        },
+        {
+          title: 'Workload Points'
+        }
+      ]
+    }
+  })
+})
+
+router.post('/admin/workload-points/', function (req, res) {
+
+  let edit = false
+  let custody = {
+    cusd2: req.body.cusd2,
+    cusd1: req.body.cusd1,
+    cusc2: req.body.cusc2,
+    cusc1: req.body.cusc1,
+    cusb2: req.body.cusb2, 
+    cusb1: req.body.cusb1,
+    cusa: req.body.cusa
+  }
+
+  res.render('admin/workload-points/workload-points', {
+    'entityLevel': 'Admin',
+    'entityTitle': 'Workload Points',
+    'custody': custody,
+    'edit' : edit,
+    'breadcrumbs': {
+      items: [
+        {
+          link: '/admin',
+          title: 'Admin'
+        },
+        {
+          title: 'Workload Points'
+        }
+      ]
+    }
+  })
+})
+
 router.get('/admin/user-rights', (req, res) => {
   let userRights = false
 
