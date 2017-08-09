@@ -11,7 +11,7 @@
 
   <p>Workload points are set here and are used to calculate capacity points for all Offender Managers throughout the Workload Management Tool.</p>
 
-  <p>Current Workload Points created by <span class="bold">USER</span> on <span class="bold">DATE</span></p> 
+  <p>Current Workload Points created by <span class="bold">test user</span> on <span class="bold">01/01/2017</span></p> 
 
   <form action="/admin/workload-points" method="post">
 
@@ -253,7 +253,7 @@
         </div>
        
         <br>
-        <p><span class="bold">Default Contracted Hours - DOES THIS NEED TO BE SPLIT OUT INTO TWO?</span></p>
+        <p><span class="bold">Default Contracted Hours</span></p>
         <div class="grid-row">
           <div class="column-two-thirds">
             <table>
@@ -276,7 +276,13 @@
   </div>
 
   {% if edit %}
-    <div class="message warning">Saving changes made here will cause reports to be updated. The report update process can take 30 minutes to complete, in which time no further changes can be saved.</div>
+    <div class="notice">
+      <i class="icon icon-important"></i>
+      <strong class="bold-small">
+        Saving changes made here will cause reports to be updated. The report update process can take 30 minutes to complete, in which time no further changes can be saved.
+      </strong>
+    </div>
+    <br>  
     <div class="form-group">
       <input class="button" type="submit" value="Save">
     </div>
