@@ -32,52 +32,12 @@
               <tbody>
                 <div class="form-group">
                   <tr>
-                    <th scope="row">Cus D2</th>
+                    <th scope="row">Cus A</th>
                     <td class="numeric">
                       {% if edit %}
-                        <input class="form-control numeric" name="cusd2" type="text" style="width: 50px" value="{{custody.cusd2}}">
+                        <input class="form-control numeric" name="cusa" type="text" style="width: 50px" value="{{custody.cusa}}">
                       {% else %}
-                        {{ custody.cusd2 }}
-                      {% endif %}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Cus D1</th>
-                    <td class="numeric">
-                      {% if edit %}
-                        <input class="form-control numeric" name="cusd1" type="text" style="width: 50px" value="{{custody.cusd1}}">
-                      {% else %}
-                        {{ custody.cusd1 }}
-                      {% endif %}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Cus C2</th>
-                    <td class="numeric">
-                      {% if edit %}
-                        <input class="form-control numeric" name="cusc2" type="text" style="width: 50px" value="{{custody.cusc2}}">
-                      {% else %}
-                        {{ custody.cusc2 }}
-                      {% endif %}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Cus C1</th>
-                    <td class="numeric">
-                      {% if edit %}
-                        <input class="form-control numeric" name="cusc1" type="text" style="width: 50px" value="{{custody.cusc1}}">
-                      {% else %}
-                        {{ custody.cusc1 }}
-                      {% endif %}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Cus B2</th>
-                    <td class="numeric">
-                      {% if edit %}
-                        <input class="form-control numeric" name="cusb2" type="text" style="width: 50px" value="{{custody.cusb2}}">
-                      {% else %}
-                        {{ custody.cusb2 }}
+                        {{ custody.cusa }}
                       {% endif %}
                     </td>
                   </tr>
@@ -92,12 +52,52 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">Cus A</th>
+                    <th scope="row">Cus B2</th>
                     <td class="numeric">
                       {% if edit %}
-                        <input class="form-control numeric" name="cusa" type="text" style="width: 50px" value="{{custody.cusa}}">
+                        <input class="form-control numeric" name="cusb2" type="text" style="width: 50px" value="{{custody.cusb2}}">
                       {% else %}
-                        {{ custody.cusa }}
+                        {{ custody.cusb2 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus C1</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusc1" type="text" style="width: 50px" value="{{custody.cusc1}}">
+                      {% else %}
+                        {{ custody.cusc1 }}
+                      {% endif %}
+                    </td>
+                  </tr>                  
+                  <tr>
+                    <th scope="row">Cus C2</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusc2" type="text" style="width: 50px" value="{{custody.cusc2}}">
+                      {% else %}
+                        {{ custody.cusc2 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus D1</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusd1" type="text" style="width: 50px" value="{{custody.cusd1}}">
+                      {% else %}
+                        {{ custody.cusd1 }}
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cus D2</th>
+                    <td class="numeric">
+                      {% if edit %}
+                        <input class="form-control numeric" name="cusd2" type="text" style="width: 50px" value="{{custody.cusd2}}">
+                      {% else %}
+                        {{ custody.cusd2 }}
                       {% endif %}
                     </td>
                   </tr>
@@ -113,24 +113,8 @@
           <div class="column-two-thirds">
             <table>
               <tbody>
-                <tr>
-                  <th scope="row">Lic D2</th>
-                  <td class="numeric">2</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lic D1</th>
-                  <td class="numeric">1</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lic C2</th>
-                  <td class="numeric">2</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lic C1</th>
-                  <td class="numeric">2</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lic B2</th>
+              <tr>
+                  <th scope="row">Lic A</th>
                   <td class="numeric">4</td>
                 </tr>
                 <tr>
@@ -138,9 +122,26 @@
                   <td class="numeric">4</td>
                 </tr>
                 <tr>
-                  <th scope="row">Lic A</th>
+                  <th scope="row">Lic B2</th>
                   <td class="numeric">5</td>
                 </tr>
+                <tr>
+                  <th scope="row">Lic C1</th>
+                  <td class="numeric">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic C2</th>
+                  <td class="numeric">1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic D1</th>
+                  <td class="numeric">2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lic D2</th>
+                  <td class="numeric">2</td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -153,15 +154,15 @@
             <table>
               <tbody>
                 <tr>
-                  <th scope="row">Com D2</th>
+                  <th scope="row">Com A</th>
                   <td class="numeric">25</td>
                 </tr>
                 <tr>
-                  <th scope="row">Com D1</th>
+                  <th scope="row">Com B1</th>
                   <td class="numeric">13</td>
                 </tr>
                 <tr>
-                  <th scope="row">Com C2</th>
+                  <th scope="row">Com B2</th>
                   <td class="numeric">23</td>
                 </tr>
                 <tr>
@@ -169,15 +170,15 @@
                   <td class="numeric">24</td>
                 </tr>
                 <tr>
-                  <th scope="row">Com B2</th>
+                  <th scope="row">Com C2</th>
                   <td class="numeric">45</td>
                 </tr>
                 <tr>
-                  <th scope="row">Com B1</th>
+                  <th scope="row">Com D1</th>
                   <td class="numeric">46</td>
                 </tr>
                 <tr>
-                  <th scope="row">Com A</th>
+                  <th scope="row">Com D2</th>
                   <td class="numeric">59</td>
                 </tr>
               </tbody>
